@@ -1,0 +1,37 @@
+#!/usr/bin/perl
+# vim: ft=perl
+
+use strict;
+use Data::Dumper;
+
+my $regex_file = shift @ARGV;
+
+
+open REGEX_FILE, $regex_file || die $!;
+
+my @regexes = [];
+
+while (<REGEX_FILE>)
+{
+  chomp;
+  push(@regexes, qr/$_/);
+}
+
+#print Dumper \@regexes;
+
+while(<>)
+{
+#print;
+  my $matched = 0;
+  foreach my $regex (@regexes)
+  {
+  #print $regex, "\n";
+    if ($_ =~ $regex)
+    {
+    #print "matched\n";
+      $matched = 1;
+      last;
+    }
+  }
+  print unless $matched;
+}
