@@ -4,6 +4,9 @@
 use strict;
 use Data::Dumper;
 
+my $debug = 0;
+#my $debug = 1;
+
 my $regex_file = shift @ARGV;
 
 
@@ -17,18 +20,18 @@ while (<REGEX_FILE>)
   push(@regexes, qr/$_/);
 }
 
-#print Dumper \@regexes;
+print Dumper \@regexes if $debug;
 
 while(<>)
 {
-#print;
+print if $debug;
   my $matched = 0;
   foreach my $regex (@regexes)
   {
-  #print $regex, "\n";
+  print $regex, "\n" if $debug;
     if ($_ =~ $regex)
     {
-    #print "matched\n";
+    print "matched\n" if $debug;
       $matched = 1;
       last;
     }

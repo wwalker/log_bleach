@@ -13,27 +13,29 @@ HEXNUM                     = '[A-Fa-f0-9][A-Fa-f0-9]+'
 FLOAT                      = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?'
 INTEGER                    = '[\-+]?\d+'
 REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]'
-FULL_FILE_PATH             = '(?:/[^/]+)+/?'
-RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in `\S+' + "\'`"
+FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
+RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
 WHITESPACE_REGION          = '\s+\s'
 
+
 STDIN.lines.each do |line|
-#  line.chomp!
+  line.chomp!
   # Find datestamp if any and replace it
   line.gsub!(/#{RN_LOG_PREFIX}/              , '<%= RN_LOG_PREFIX %>')
   line.gsub!(/#{ISODATE_WITH_USEC}/          , '<%= ISODATE_WITH_USEC %>')
   line.gsub!(/#{SYSLOG_PREFIX}/              , '<%= SYSLOG_PREFIX %>')
   line.gsub!(/#{TS_SYSLOG_WITH_WEEKDAY}/     , '<%= TS_SYSLOG_WITH_WEEKDAY %>')
   line.gsub!(/#{TS_SYSLOG}/                  , '<%= TS_SYSLOG %>')
+  line.gsub!(/#{RUBY_STACK_TRACE_FILE_LINE}/ , '<%= RUBY_STACK_TRACE_FILE_LINE %>')
+  line.gsub!(/#{FULL_FILE_PATH}/             , '<%= FULL_FILE_PATH %>')
   line.gsub!(/#{IP_ADDRESS}/                 , '<%= IP_ADDRESS %>')
   line.gsub!(/#{ISODATE}/                    , '<%= ISODATE %>')
   line.gsub!(/#{FLOAT}/                      , '<%= FLOAT %>')
   line.gsub!(/#{INTEGER}/                    , '<%= INTEGER %>')
-  line.gsub!(/#{FULL_FILE_PATH}/             , '<%= FULL_FILE_PATH %>')
-  line.gsub!(/#{RUBY_STACK_TRACE_FILE_LINE}/ , '<%= RUBY_STACK_TRACE_FILE_LINE %>')
-#  line.gsub!(/#{WHITESPACE_REGION}/          , '<%= WHITESPACE_REGION %>')
+  line.gsub!(/#{WHITESPACE_REGION}/          , '<%= WHITESPACE_REGION %>')
   line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
-#  line = '\\A' + line + '\\s*\\Z'
+  line = '\\A' + line + '\\s*\\Z'
   puts line
   STDERR.puts ERB.new(line).result
 end
+puts RUBY_STACK_TRACE_FILE_LINE
