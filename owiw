@@ -26,14 +26,14 @@ print Dumper \@regexes if $debug;
 
 while(<>)
 {
-print if $debug;
+  print if $debug;
   my $matched = 0;
   foreach my $regex (@regexes)
   {
-  print $regex, "\n" if $debug;
+    print $regex, "\n" if $debug;
     if ($_ =~ $regex)
     {
-    print "matched\n" if $debug;
+      print "matched\n" if $debug;
       $matched = 1;
       last;
     }
