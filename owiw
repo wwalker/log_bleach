@@ -6,9 +6,11 @@ use Data::Dumper;
 
 my $debug = 0;
 #my $debug = 1;
+my $basedir = $ENV{'HOME'} . '/.owir/';
+my $file_type = shift @ARGV;
+my $regex_file = $basedir . 'perlre/' . $file_type . '.perlre';
 
-my $regex_file = shift @ARGV;
-
+die 'no filter file found' if ! -r $regex_file;
 
 open REGEX_FILE, $regex_file || die $!;
 

@@ -2,6 +2,8 @@
 
 require 'erb'
 
+BASE_DIR = ENV['HOME'] + '/.owir/'
+
 IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
 TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
 TS_SYSLOG_WITH_WEEKDAY     = '(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s+' + TS_SYSLOG
@@ -17,8 +19,15 @@ FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
 RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
 WHITESPACE_REGION          = '\s+\s'
 
+basename = ARGV[0]
 
-STDIN.lines.each do |line|
+source = File.open(BASE_DIR + 'source/' + basename)
+parsed = File.open(BASE_DIR + 'parsed/' + basename + '.parsed', 'w')
+perlre = File.open(BASE_DIR + 'perlre/' + basename + '.perlre', 'w')
+
+
+
+source.lines.each do |line|
   line.chomp!
   # Find datestamp if any and replace it
   line.gsub!(/#{RN_LOG_PREFIX}/              , '<%= RN_LOG_PREFIX %>')
@@ -35,7 +44,6 @@ STDIN.lines.each do |line|
   line.gsub!(/#{WHITESPACE_REGION}/          , '<%= WHITESPACE_REGION %>')
   line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
   line = '\\A' + line + '\\s*\\Z'
-  puts line
-  STDERR.puts ERB.new(line).result
+  parsed.puts line
+  perlre.puts ERB.new(line).result
 end
-puts RUBY_STACK_TRACE_FILE_LINE
