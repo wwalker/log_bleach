@@ -2,7 +2,6 @@
 # vim: ft=perl
 
 use strict;
-use Data::Dumper;
 use YAML;
 
 my $debug = 0;
@@ -10,6 +9,7 @@ my $debug = 0;
 #my $debug = 1;
 
 package OWIR;
+use Data::Dumper;
 
 sub new {
     my $self = {};
@@ -20,8 +20,6 @@ sub new {
     die 'no filter file found' if !-r $self->{'file_config_yaml_name'};
     open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
     $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
-
-    print Dumper $self->{'file_config'} if $debug;
 
     bless $self;
     return $self;
@@ -34,34 +32,34 @@ sub get_file_type {
 
     my $file_type = undef;
     foreach my $key ( keys(%$file_config) ) {
-        print "$key\n" if $debug;
         foreach my $pattern ( @{ $file_config->{$key}->{'patterns'} } ) {
-            print "$pattern\n" if $debug;
             $file_type = $key if $input_file_name =~ $pattern;
         }
     }
     return $file_type;
 }
 
-sub regex_file_name {
+sub regex_file_names {
     my $self     = shift;
     my $filetype = $self->get_file_type();
-    return $self->{'basedir'} . 'perlre/' . $filetype . '.perlre';
+    my @results = @{$self->{'file_config'}->{$filetype}->{'config_filters'}};
+    my @results2 = map {$self->{'basedir'} . 'perlre/' . $_ . '.perlre'; } @results;
+    return @results2;
 }
 
 sub run {
     my $self = shift;
 
     $self->{'input_file_name'} = shift @ARGV;
-    my $regex_file = $self->regex_file_name();
-
-    open REGEX_FILE, $regex_file || die $!;
+    my @regex_files = $self->regex_file_names();
 
     my @regexes = [];
-
-    while (<REGEX_FILE>) {
-        chomp;
-        push( @regexes, qr/$_/ );
+    foreach my $regex_file (@regex_files) {
+        open REGEX_FILE, $regex_file || die $!;
+        while (<REGEX_FILE>) {
+            chomp;
+            push( @regexes, qr/$_/ );
+        }
     }
 
     print Dumper \@regexes if $debug;
