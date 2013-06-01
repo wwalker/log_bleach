@@ -2,7 +2,7 @@
 
 require 'erb'
 
-BASE_DIR = ENV['HOME'] + '/.owir/'
+BASE_DIR = ENV['HOME'] + '/.log_bleach/'
 
 IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
 TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'

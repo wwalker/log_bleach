@@ -8,13 +8,13 @@ my $debug = 0;
 
 #my $debug = 1;
 
-package OWIR;
+package LogBleach;
 use Data::Dumper;
 
 sub new {
     my $self = {};
 
-    $self->{'basedir'}               = $ENV{'HOME'} . '/.owir/';
+    $self->{'basedir'}               = $ENV{'HOME'} . '/.log_bleach/';
     $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
 
     die 'no filter file found' if !-r $self->{'file_config_yaml_name'};
@@ -80,6 +80,6 @@ sub run {
     }
 }
 
-my $owir = OWIR::new();
+my $log_bleach = LogBleach::new();
 
-$owir->run();
+$log_bleach->run();
