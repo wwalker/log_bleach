@@ -3,40 +3,85 @@
 
 use strict;
 use Data::Dumper;
+use YAML;
 
 my $debug = 0;
+
 #my $debug = 1;
-my $basedir = $ENV{'HOME'} . '/.owir/';
-my $file_type = shift @ARGV;
-my $regex_file = $basedir . 'perlre/' . $file_type . '.perlre';
 
-die 'no filter file found' if ! -r $regex_file;
+package OWIR;
 
-open REGEX_FILE, $regex_file || die $!;
+sub new {
+    my $self = {};
 
-my @regexes = [];
+    $self->{'basedir'}               = $ENV{'HOME'} . '/.owir/';
+    $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
 
-while (<REGEX_FILE>)
-{
-  chomp;
-  push(@regexes, qr/$_/);
+    die 'no filter file found' if !-r $self->{'file_config_yaml_name'};
+    open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
+    $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
+
+    print Dumper $self->{'file_config'} if $debug;
+
+    bless $self;
+    return $self;
 }
 
-print Dumper \@regexes if $debug;
+sub get_file_type {
+    my $self            = shift;
+    my $input_file_name = $self->{'input_file_name'};
+    my $file_config     = $self->{'file_config'};
 
-while(<>)
-{
-  print if $debug;
-  my $matched = 0;
-  foreach my $regex (@regexes)
-  {
-    print $regex, "\n" if $debug;
-    if ($_ =~ $regex)
-    {
-      print "matched\n" if $debug;
-      $matched = 1;
-      last;
+    my $file_type = undef;
+    foreach my $key ( keys(%$file_config) ) {
+        print "$key\n" if $debug;
+        foreach my $pattern ( @{ $file_config->{$key}->{'patterns'} } ) {
+            print "$pattern\n" if $debug;
+            $file_type = $key if $input_file_name =~ $pattern;
+        }
     }
-  }
-  print unless $matched;
+    return $file_type;
 }
+
+sub regex_file_name {
+    my $self     = shift;
+    my $filetype = $self->get_file_type();
+    return $self->{'basedir'} . 'perlre/' . $filetype . '.perlre';
+}
+
+sub run {
+    my $self = shift;
+
+    $self->{'input_file_name'} = shift @ARGV;
+    my $regex_file = $self->regex_file_name();
+
+    open REGEX_FILE, $regex_file || die $!;
+
+    my @regexes = [];
+
+    while (<REGEX_FILE>) {
+        chomp;
+        push( @regexes, qr/$_/ );
+    }
+
+    print Dumper \@regexes if $debug;
+
+    open INPUT_FILE, $self->{'input_file_name'};
+    while (<INPUT_FILE>) {
+        print if $debug;
+        my $matched = 0;
+        foreach my $regex (@regexes) {
+            print $regex, "\n" if $debug;
+            if ( $_ =~ $regex ) {
+                print "matched\n" if $debug;
+                $matched = 1;
+                last;
+            }
+        }
+        print unless $matched;
+    }
+}
+
+my $owir = OWIR::new();
+
+$owir->run();
