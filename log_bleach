@@ -27,7 +27,7 @@ my $debug = 0;
         $self->{'basedir'} = $ENV{'HOME'} . '/.log_bleach/';
         $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
 
-        print $self->{'file_config_yaml_name'}, "\n";
+        print $self->{'file_config_yaml_name'}, "\n" if $debug;
 
         die 'no file_config file found' if ! -r $self->{'file_config_yaml_name'};
         open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
