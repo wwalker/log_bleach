@@ -2,84 +2,113 @@
 # vim: ft=perl
 
 use strict;
-use YAML;
 
 my $debug = 0;
-
 #my $debug = 1;
 
-package LogBleach;
-use Data::Dumper;
+{
+    package LogBleach;
+    use Data::Dumper;
+    use Getopt::Long;
+    use YAML;
 
-sub new {
-    my $self = {};
+    sub new {
+        my $self = {};
 
-    $self->{'basedir'}               = $ENV{'HOME'} . '/.log_bleach/';
-    $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
+        $self->{opts} = {};
+        bless $self;
 
-    die 'no filter file found' if !-r $self->{'file_config_yaml_name'};
-    open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
-    $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
+        GetOptions( $self->{opts}, "init", "add-filter=s" );
 
-    bless $self;
-    return $self;
-}
-
-sub get_file_type {
-    my $self            = shift;
-    my $input_file_name = $self->{'input_file_name'};
-    my $file_config     = $self->{'file_config'};
-
-    my $file_type = undef;
-    foreach my $key ( keys(%$file_config) ) {
-        foreach my $pattern ( @{ $file_config->{$key}->{'patterns'} } ) {
-            $file_type = $key if $input_file_name =~ $pattern;
+        if ( $self->{'opts'}->{'init'} ) {
+            exit $self->init();
         }
-    }
-    return $file_type;
-}
 
-sub regex_file_names {
-    my $self     = shift;
-    my $filetype = $self->get_file_type();
-    my @results = @{$self->{'file_config'}->{$filetype}->{'config_filters'}};
-    my @results2 = map {$self->{'basedir'} . 'perlre/' . $_ . '.perlre'; } @results;
-    return @results2;
-}
+        $self->{'basedir'} = $ENV{'HOME'} . '/.log_bleach/';
+        $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
 
-sub run {
-    my $self = shift;
+        print $self->{'file_config_yaml_name'}, "\n";
 
-    $self->{'input_file_name'} = shift @ARGV;
-    my @regex_files = $self->regex_file_names();
+        die 'no file_config file found' if ! -r $self->{'file_config_yaml_name'};
+        open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
+        $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
 
-    my @regexes = [];
-    foreach my $regex_file (@regex_files) {
-        open REGEX_FILE, $regex_file || die $!;
-        while (<REGEX_FILE>) {
-            chomp;
-            push( @regexes, qr/$_/ );
-        }
+        return $self;
     }
 
-    print Dumper \@regexes if $debug;
+    sub get_file_type {
+        my $self            = shift;
+        my $input_file_name = $self->{'input_file_name'};
+        my $file_config     = $self->{'file_config'};
 
-    open INPUT_FILE, $self->{'input_file_name'};
-    while (<INPUT_FILE>) {
-        print if $debug;
-        my $matched = 0;
-        foreach my $regex (@regexes) {
-            print $regex, "\n" if $debug;
-            if ( $_ =~ $regex ) {
-                print "matched\n" if $debug;
-                $matched = 1;
-                last;
+        my $file_type = undef;
+        foreach my $key ( keys(%$file_config) ) {
+            foreach my $pattern ( @{ $file_config->{$key}->{'patterns'} } ) {
+                $file_type = $key if $input_file_name =~ $pattern;
             }
         }
-        print unless $matched;
+        return $file_type;
+    }
+
+    sub regex_file_names {
+        my $self     = shift;
+        my $filetype = $self->get_file_type();
+        my @results =
+          @{ $self->{'file_config'}->{$filetype}->{'config_filters'} };
+        my @results2 =
+          map { $self->{'basedir'} . 'perlre/' . $_ . '.perlre'; } @results;
+        return @results2;
+    }
+
+    sub run {
+        my $self = shift;
+        my $opts = $self->{'opts'};
+
+        if ( $opts->{'add-filter'} ) {
+            exit $self->add_filter( $opts->{'add-filter'} );
+        }
+        exit $self->filter();
+    }
+
+    sub filter {
+        my $self = shift;
+
+        $self->{'input_file_name'} = shift @ARGV;
+        my @regex_files = $self->regex_file_names();
+
+        my @regexes = [];
+        foreach my $regex_file (@regex_files) {
+            open REGEX_FILE, $regex_file || die $!;
+            while (<REGEX_FILE>) {
+                chomp;
+                push( @regexes, qr/$_/ );
+            }
+        }
+
+        print Dumper \@regexes if $debug;
+
+        open INPUT_FILE, $self->{'input_file_name'};
+        while (<INPUT_FILE>) {
+            print if $debug;
+            my $matched = 0;
+            foreach my $regex (@regexes) {
+                print $regex, "\n" if $debug;
+                if ( $_ =~ $regex ) {
+                    print "matched\n" if $debug;
+                    $matched = 1;
+                    last;
+                }
+            }
+            print unless $matched;
+        }
+        return 0;
+    }
+
+    sub init {
+        `mkdir -p $ENV{'HOME'}/.log_bleach/{source,parsed,perlre}`;
+        `echo -e "---\nmessages:\n  patterns:\n    - messages\n  type: messages\n  config_filters:\n    - messages\n" > $ENV{'HOME'}/.log_bleach/file_config.yaml`;
     }
 }
 
 my $log_bleach = LogBleach::new();
-
 $log_bleach->run();
