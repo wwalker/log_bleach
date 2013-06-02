@@ -6,29 +6,21 @@ LogBleach
 
   will output to stdout the _relevant_ log file lines
 
-  Currently, most things are not automatic, so...
+  Create your initial .log_bleach directory structure:
 
-    mkdir -p ~/.log_bleach/{source,parsed,perlre}
-    cat > ~/.log_bleach/file_config.yaml
-    ---
-    messages:
-      patterns:
-        - messages.*.gz
-        - messages
-        - messages-*.gz
-      type: messages
-      config_filters:
-        - messages
-        - openvpn
-    delivery_handler:
-      patterns:
-        - delivery_handler.log
-        - delivery_handler.log.gz
-        - delivery_handler.log-*.gz
-        - delivery_handler.log.*.gz
-      type: delivery_handler
-      config_filters:
-        - delivery_handler
+    log_bleach --init
+
+  Currently, some things are not automatic, so...
+
+    cat >> ~/.log_bleach/source/openvpn
+    May 26 03:13:18 speedy openvpn[1194]: Peer Connection Initiated with 72.24.19.66:5044
+    May 26 03:13:19 speedy openvpn[1194]: Initialization Sequence Completed
+    May 26 03:20:49 speedy openvpn[1194]: Inactivity timeout (--ping-restart), restarting
+    May 26 03:20:49 speedy openvpn[1194]: TCP/UDP: Closing socket
+    May 26 03:20:49 speedy openvpn[1194]: Closing TUN/TAP interface
+    May 26 03:20:49 speedy openvpn[1194]: /sbin/ip addr del dev tun0 local 10.9.8.46 peer 10.9.8.45
+    May 26 03:20:49 speedy avahi-daemon[833]: Withdrawing workstation service for tun0.
+    May 26 03:20:49 speedy openvpn[1194]: SIGUSR1[soft,ping-restart] received, process restarting
 
     cat >> ~/.log_bleach/source/messages
     Apr 29 11:44:31 speedy systemd[1]: Starting Show Plymouth Power Off Screen...
