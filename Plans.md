@@ -2,17 +2,17 @@ log_bleach - make the cruft disappear from your log files
 
 log_bleach log_file_name
 
-  look up log_file_name and figure out it's "type"
+* look up log_file_name and figure out it's "type"
 
-  apply the filters to log_file_name outputting to stdout only the relevant lines (more specifically removing known irrelevant lines)
+* apply the filters to log_file_name outputting to stdout only the relevant lines (more specifically removing known irrelevant lines)
 
 log_bleach log_file_source_directory  log_file_target_directory
 
-  for each file under the source directory, filter as above into a matching named extract file in the target directory
+* for each file under the source directory, filter as above into a matching named extract file in the target directory
 
-  In an ideal world, every file in the target directory would be empty!
+* In an ideal world, every file in the target directory would be empty!
 
-  Everything in the filtered extracts is either a bug, or something else to add to the irrelevant filter for that log file type
+* Everything in the filtered extracts is either a bug, or something else to add to the irrelevant filter for that log file type
 
 options would exist to specify the file "type", specify filter "level" (so you can choose to leave certain data in the output), force-tiemstamp (add timestamps to the output when the input file didn't have timestamps.
 
