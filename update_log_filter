@@ -50,6 +50,7 @@ source.lines.each do |line|
   line.gsub!(/#{FULL_FILE_PATH}/             , '<%=FULL_FILE_PATH%>')
   line.gsub!(/#{IP_ADDRESS}/                 , '<%=IP_ADDRESS%>')
   line.gsub!(/#{FLOAT}/                      , '<%=FLOAT%>')
+  line.gsub!(/#{HEXNUM}/                     , '<%=HEXNUM%>')
   line.gsub!(/#{INTEGER}/                    , '<%=INTEGER%>')
   line.gsub!(/#{WHITESPACE_REGION}/          , '<%=WHITESPACE_REGION%>')
   line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
