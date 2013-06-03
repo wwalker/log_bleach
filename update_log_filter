@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# Copyright 2013 L. Wayne Walker <wwalker@solid-constructs.com,wwalker@bybent.com> All Rights Reserved.
+
 require 'erb'
 
 BASE_DIR = ENV['HOME'] + '/.log_bleach/'

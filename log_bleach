@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 # vim: ft=perl
 
+# Copyright 2013 L. Wayne Walker <wwalker@solid-constructs.com,wwalker@bybent.com> All Rights Reserved.
+
 use strict;
 
 my $debug = 0;
