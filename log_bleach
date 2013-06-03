@@ -403,6 +403,7 @@ my $debug = 0;
         my @regex_files = $self->regex_file_names();
 
         my @regexes = [];
+        push @regexes, qr/^\s+$/;
         foreach my $regex_file (@regex_files) {
             open REGEX_FILE, $regex_file || die $!;
             while (<REGEX_FILE>) {
