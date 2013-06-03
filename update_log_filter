@@ -23,7 +23,9 @@ REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]'
 FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
 RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
 WHITESPACE_REGION          = '\s+'
+
 PATTERN_WORD               = '\S+'
+PATTERN_END_MATCHING       = '.*'
 
 basename = ARGV[0]
 
@@ -58,6 +60,7 @@ source.lines.each do |line|
   line.gsub!(/#{WHITESPACE_REGION}/          , '<%=WHITESPACE_REGION%>')
   line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
   line.gsub!(/PATTERN_WORD/, '<%=PATTERN_WORD%>')
+  line.gsub!(/PATTERN_END_MATCHING/, '<%=PATTERN_END_MATCHING%>')
   line = '\\A' + line + '\\s*\\Z'
   perlre.puts ERB.new(line).result
   line.gsub!(/<%=/, '<%= ')
