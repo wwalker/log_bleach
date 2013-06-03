@@ -18,6 +18,7 @@ REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]'
 FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
 RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
 WHITESPACE_REGION          = '\s+\s'
+PATTERN_WORD               = '\S+'
 
 basename = ARGV[0]
 
@@ -29,6 +30,7 @@ perlre = File.open(BASE_DIR + 'perlre/' + basename + '.perlre', 'w')
 
 source.lines.each do |line|
   line.chomp!
+  next if line.length < 4
   # Find datestamp if any and replace it
   line.gsub!(/#{RN_LOG_PREFIX}/              , '<%= RN_LOG_PREFIX %>')
   line.gsub!(/#{ISODATE_WITH_USEC}/          , '<%= ISODATE_WITH_USEC %>')
@@ -43,6 +45,7 @@ source.lines.each do |line|
   line.gsub!(/#{INTEGER}/                    , '<%= INTEGER %>')
   line.gsub!(/#{WHITESPACE_REGION}/          , '<%= WHITESPACE_REGION %>')
   line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
+  line.gsub!(/PATTERN_WORD/, '<%= PATTERN_WORD %>')
   line = '\\A' + line + '\\s*\\Z'
   parsed.puts line
   perlre.puts ERB.new(line).result
