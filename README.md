@@ -6,6 +6,15 @@ LogBleach
 
   will output to stdout the _relevant_ log file lines
 
+  Install it:
+* Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version)
+* Have perl 5.x available, install perl's YAML library (yum install perl-YAML)
+
+    git clone https://github.com/wwalker/log_bleach.git
+    cd log_bleach
+    ln -s `pwd`/log_bleach ~/bin/
+    ln -s `pwd`/update_log_filter ~/bin/
+
   Get the usage info:
 
     log_bleach --help
