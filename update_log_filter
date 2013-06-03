@@ -11,6 +11,7 @@ TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec
 THREE_LETTER_WEEKDAY       = '\b(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b'
 TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY + '\s+' + TS_SYSLOG
 SYSLOG_PREFIX              = TS_SYSLOG + ' \S+ \S+(?:\[\d+\])?: '
+SYSLOG_PREFIX_WITH_WEEKDAY = TS_SYSLOG_WITH_WEEKDAY + ' \S+ \S+(?:\[\d+\])?: '
 ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d'
 ISODATE_WITH_TZ_TLA        = ISODATE + '\s+[A-Z]{3}\b'
 ISODATE_WITH_USEC          = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d.\d\d\d\d\d\d'
@@ -40,6 +41,7 @@ source.lines.each do |line|
   line.gsub!(/#{ISODATE_WITH_TZ_TLA}/        , '<%=ISODATE_WITH_TZ_TLA%>')
   line.gsub!(/#{ISODATE_WITH_USEC}/          , '<%=ISODATE_WITH_USEC%>')
   line.gsub!(/#{ISODATE}/                    , '<%=ISODATE%>')
+  line.gsub!(/#{SYSLOG_PREFIX_WITH_WEEKDAY}/ , '<%=SYSLOG_PREFIX_WITH_WEEKDAY%>')
   line.gsub!(/#{SYSLOG_PREFIX}/              , '<%=SYSLOG_PREFIX%>')
   line.gsub!(/#{TS_SYSLOG_WITH_WEEKDAY}/     , '<%=TS_SYSLOG_WITH_WEEKDAY%>')
   line.gsub!(/#{TS_SYSLOG}/                  , '<%=TS_SYSLOG%>')
