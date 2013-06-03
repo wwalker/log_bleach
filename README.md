@@ -182,31 +182,18 @@ LogBleach
 
 
     IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
-
     TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
-
     TS_SYSLOG_WITH_WEEKDAY     = '(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s+' + TS_SYSLOG
-
     SYSLOG_PREFIX              = TS_SYSLOG + ' \S+ \S+(?:\[\d+\])?: '
-
     ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d'
-
     ISODATE_WITH_USEC          = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d.\d\d\d\d\d\d'
-
     RN_LOG_PREFIX              = ISODATE_WITH_USEC + '\s+\d+\s+(LINE|DEBUG|WARNING|NOTICE|INFO|CRITICAL|ERROR)\s+--\s+\d+\s+\| '
-
     HEXNUM                     = '[A-Fa-f0-9][A-Fa-f0-9]+'
-
     FLOAT                      = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?'
-
     INTEGER                    = '[\-+]?\d+'
-
     REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]'
-
     FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
-
     RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
-
     PATTERN_WORD               = '\S+'
 
 
