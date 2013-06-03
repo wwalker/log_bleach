@@ -1,0 +1,19 @@
+---
+secure:
+  config_filters:
+    - secure
+  patterns:
+    - secure
+    - secure\..*
+    - secure-.*
+messages:
+  config_filters:
+    - messages-fedora-18-reboot-signature
+    - messages-openvpn-restart
+    - messages-kinesis_plugin
+    - messages-md_check
+    - messages-systemd_service_activations
+  patterns:
+    - messages.*.gz
+    - messages
+    - messages-*.gz

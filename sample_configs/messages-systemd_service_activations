@@ -1,0 +1,4 @@
+Jun  2 17:30:17 uranium dbus-daemon[716]: dbus[716]: [system] Activating via systemd: service name='org.freedesktop.NetworkManager' unit='dbus-org.freedesktop.NetworkManager.service'
+Jun  2 17:30:17 uranium dbus[716]: [system] Activating via systemd: service name='org.freedesktop.NetworkManager' unit='dbus-org.freedesktop.NetworkManager.service'
+Jun  2 19:36:01 uranium dbus-daemon[716]: dbus[716]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'
+Jun  2 19:36:01 uranium dbus[716]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'

@@ -1,0 +1,38 @@
+Jun  2 19:23:06 ut sshd[11983]: Accepted password for PATTERN_WORD from 66.219.50.2 port 23101 ssh2
+Jun  2 06:18:26 ut sshd[14735]: Accepted publickey for PATTERN_WORD from 75.27.137.26 port 42027 ssh2
+May 29 18:17:11 ut sshd[24915]: Address 144.76.42.66 maps to PATTERN_WORD, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Jun  2 03:44:10 ut sshd[30975]: Connection closed by 71.19.156.39
+Jun  2 10:21:02 ut sshd[7206]: Did not receive identification string from 221.224.167.142
+Jun  2 10:47:02 ut sshd[9939]: Failed password for PATTERN_WORD from 221.224.167.142 port 15548 ssh2
+Jun  2 10:47:08 ut sshd[9968]: Failed password for invalid user PATTERN_WORD from 221.224.167.142 port 27593 ssh2
+Jun  2 10:47:05 ut sshd[9968]: Invalid user PATTERN_WORD from 221.224.167.142
+Jun  2 03:56:16 ut sshd[32466]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.134.65.120  user=PATTERN_WORD
+May 31 03:18:58 ut sshd[19794]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
+Jun  2 10:22:30 ut sshd[7350]: Received disconnect from 121.199.29.116: 11: Bye Bye
+Jun  2 06:30:15 ut sshd[14735]: Received disconnect from 75.27.137.26: 11: disconnected by user
+May 26 09:06:07 ut sshd[22691]: fatal: Read from socket failed: Connection reset by peer
+Jun  2 10:47:05 ut sshd[9969]: input_userauth_request: invalid user PATTERN_WORD
+Jun  1 18:21:51 ut auth: pam_succeed_if(dovecot:auth): error retrieving information about user PATTERN_WORD
+Jun  2 03:44:12 ut saslauthd[8507]: pam_succeed_if(smtp:auth): error retrieving information about user PATTERN_WORD
+Jun  2 10:47:05 ut sshd[9968]: pam_succeed_if(sshd:auth): error retrieving information about user PATTERN_WORD
+May 26 03:51:29 ut auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=PATTERN_WORD rhost=137.116.208.200
+May 26 04:36:46 ut auth: pam_unix(dovecot:auth): authentication failure; logname= uid=0 euid=0 tty=dovecot ruser=PATTERN_WORD rhost=137.116.208.200  user=PATTERN_WORD
+Jun  1 18:22:10 ut auth: pam_unix(dovecot:auth): check pass; user unknown
+Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost= 
+Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): check pass; user unknown
+Jun  2 10:47:05 ut sshd[9968]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=221.224.167.142 
+Jun  2 10:47:01 ut sshd[9939]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=221.224.167.142  user=PATTERN_WORD
+May 28 11:17:04 ut sshd[17514]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=PATTERN_WORD
+May 28 04:19:15 ut sshd[16606]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=PATTERN_WORD  user=PATTERN_WORD
+Jun  2 10:47:05 ut sshd[9968]: pam_unix(sshd:auth): check pass; user unknown
+Jun  2 06:30:15 ut sshd[14735]: pam_unix(sshd:session): session closed for user PATTERN_WORD
+Jun  2 06:18:26 ut sshd[14735]: pam_unix(sshd:session): session opened for user PATTERN_WORD by (uid=0)
+Jun  2 11:28:50 ut su: pam_unix(su-l:session): session closed for user PATTERN_WORD
+Jun  2 11:28:50 ut su: pam_unix(su-l:session): session opened for user PATTERN_WORD by (uid=0)
+Jun  2 23:19:56 ut su: pam_unix(su-l:session): session opened for user PATTERN_WORD by PATTERN_WORD(uid=0)
+Jun  2 23:19:56 ut su: pam_unix(su-l:session): session opened for user PATTERN_WORD by wwalker(uid=0)
+Jun  2 03:44:10 ut su: pam_unix(su:session): session closed for user PATTERN_WORD
+Jun  2 03:49:10 ut su: pam_unix(su:session): session opened for user PATTERN_WORD by (uid=0)
+Jun  2 03:44:10 ut su: pam_unix(su:session): session opened for user PATTERN_WORD postgres by (uid=0)
+May 28 11:37:00 ut sshd[19217]: reverse mapping checking getaddrinfo for PATTERN_WORD [207.36.180.130] failed - POSSIBLE BREAK-IN ATTEMPT!
+May 31 16:45:29 ut sshd[8670]: reverse mapping checking getaddrinfo for PATTERN_WORD [66.219.50.2] failed - POSSIBLE BREAK-IN ATTEMPT!

@@ -1,0 +1,5 @@
+Jun  2 04:02:32 uranium kernel: [813124.886157] md: data-check of RAID array md126
+Jun  2 04:02:32 uranium kernel: [813124.886160] md: minimum _guaranteed_  speed: 1000 KB/sec/disk.
+Jun  2 04:02:32 uranium kernel: [813124.886165] md: using maximum available idle IO bandwidth (but not more than 200000 KB/sec) for data-check.
+Jun  2 04:02:32 uranium kernel: [813124.886170] md: using 128k window, over a total of 102209408k.
+Jun  2 04:22:05 uranium kernel: [814298.145282] md: md126: data-check done.

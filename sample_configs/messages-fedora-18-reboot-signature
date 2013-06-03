@@ -1,0 +1,1049 @@
+Apr 29 11:44:31 speedy systemd[1]: Starting Show Plymouth Power Off Screen...
+Apr 29 11:44:31 speedy systemd[1]: Unmounting /tmp/vmware-wwalker/564d6281-b20d-10b4-cb40-9c6976e3413a...
+Apr 29 11:44:31 speedy systemd[1]: Deactivating swap /dev/sdb2...
+Apr 29 11:44:31 speedy systemd[1]: Deactivating swap /dev/sdb2...
+Apr 29 11:44:31 speedy systemd[1]: Deactivating swap /dev/sda2...
+Apr 29 11:44:31 speedy systemd[1]: Deactivating swap /dev/sda2...
+Apr 29 11:44:31 speedy systemd[1]: Stopping Sound Card.
+Apr 29 11:44:31 speedy systemd[1]: Stopped target Sound Card.
+Apr 29 11:44:31 speedy systemd[1]: Stopping Stop Read-Ahead Data Collection 10s After Completed Startup.
+Apr 29 11:44:31 speedy systemd[1]: Stopped Stop Read-Ahead Data Collection 10s After Completed Startup.
+Apr 29 11:44:31 speedy systemd[1]: Stopping PostgreSQL database server...
+Apr 29 11:44:31 speedy systemd[1]: Stopping The Apache HTTP Server...
+Apr 29 11:44:31 speedy systemd[1]: Stopping MySQL database server...
+Apr 29 11:44:31 speedy systemd[1]: Stopping Graphical Interface.
+Apr 29 11:44:34 speedy rsyslogd: [origin software="rsyslogd" swVersion="7.2.5" x-pid="821" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Apr 29 11:47:15 speedy rsyslogd: [origin software="rsyslogd" swVersion="7.2.5" x-pid="823" x-info="http://www.rsyslog.com"] start
+Apr 29 11:47:15 speedy systemd[1]: systemd 197 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ)
+Apr 29 11:47:15 speedy systemd[1]: Set hostname to <speedy.commstor.crossroads.com>.
+Apr 29 11:47:15 speedy kernel: [    0.000000] Initializing cgroup subsys cpuset
+Apr 29 11:47:15 speedy kernel: [    0.000000] Initializing cgroup subsys cpu
+Apr 29 11:47:15 speedy kernel: [    0.000000] Linux version 3.8.4-202.fc18.x86_64 (mockbuild@bkernel02) (gcc version 4.7.2 20121109 (Red Hat 4.7.2-8) (GCC) ) #1 SMP Thu Mar 21 17:02:20 UTC 2013
+Apr 29 11:47:15 speedy kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-3.8.4-202.fc18.x86_64 root=/dev/mapper/vg_speedy-lv_speedy_root ro quiet rhgb SYSFONT=LatArCyrHeb-19 LANG=en_US.UTF-8 KEYTABLE=us
+Apr 29 11:47:15 speedy kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009f7ff] usable
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x000000000009f800-0x000000000009ffff] reserved
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000000e8000-0x00000000000fffff] reserved
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dbfa173f] usable
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000dbfa1740-0x00000000dbfa379f] ACPI NVS
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000dbfa37a0-0x00000000dfffffff] reserved
+Apr 29 11:47:15 speedy systemd[1]: Mounting Arbitrary Executable File Formats File System...
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000f4000000-0x00000000f7ffffff] reserved
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fed3ffff] reserved
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x00000000fed45000-0x00000000ffffffff] reserved
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000021bffffff] usable
+Apr 29 11:47:15 speedy systemd[1]: Started udev Kernel Device Manager.
+Apr 29 11:47:15 speedy kernel: [    0.000000] NX (Execute Disable) protection: active
+Apr 29 11:47:15 speedy systemd[1]: Mounted Huge Pages File System.
+Apr 29 11:47:15 speedy kernel: [    0.000000] SMBIOS 2.5 present.
+Apr 29 11:47:15 speedy kernel: [    0.000000] No AGP bridge found
+Apr 29 11:47:15 speedy systemd[1]: Mounted Debug File System.
+Apr 29 11:47:15 speedy kernel: [    0.000000] e820: last_pfn = 0x21c000 max_arch_pfn = 0x400000000
+Apr 29 11:47:15 speedy systemd[1]: Mounted POSIX Message Queue File System.
+Apr 29 11:47:15 speedy systemd[1]: Mounted Temporary Directory.
+Apr 29 11:47:15 speedy systemd[1]: Started Remount Root and Kernel File Systems.
+Apr 29 11:47:15 speedy systemd[1]: Started Apply Kernel Variables.
+Apr 29 11:47:15 speedy systemd[1]: Started udev Coldplug all Devices.
+Apr 29 11:47:15 speedy kernel: [    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+Apr 29 11:47:15 speedy kernel: [    0.000000] total RAM covered: 15808M
+Apr 29 11:47:15 speedy kernel: [    0.000000] Found optimal setting for mtrr clean up
+Apr 29 11:47:15 speedy kernel: [    0.000000]  gran_size: 64K 	chunk_size: 1G 	num_reg: 5  	lose cover RAM: 0G
+Apr 29 11:47:15 speedy kernel: [    0.000000] e820: last_pfn = 0xdbfa1 max_arch_pfn = 0x400000000
+Apr 29 11:47:15 speedy kernel: [    0.000000] found SMP MP-table at [mem 0x000f9bf0-0x000f9bff] mapped at [ffff8800000f9bf0]
+Apr 29 11:47:15 speedy kernel: [    0.000000] init_memory_mapping: [mem 0x00000000-0xdbfa0fff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] init_memory_mapping: [mem 0x100000000-0x21bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] RAMDISK: [mem 0x34368000-0x361abfff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: RSDP 00000000000e5810 00014 (v00 COMPAQ)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: RSDT 00000000dbfc5840 00044 (v01 HPQOEM SLIC-BPC 20090825      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: FACP 00000000dbfc58e8 00074 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI BIOS Bug: Warning: Optional FADT field Pm2ControlBlock has zero address or length: 0x0000000000000050/0x0 (20121018/tbfadt-598)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI BIOS Bug: Warning: Invalid length for FADT/Pm2ControlBlock: 0, using default 8 (20121018/tbfadt-648)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: DSDT 00000000dbfc5e27 0A2ED (v01 COMPAQ DSDT_PRJ 00000001 MSFT 0100000E)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: FACS 00000000dbfc5800 00040
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: APIC 00000000dbfc595c 00084 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: ASF! 00000000dbfc59e0 00063 (v32 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: MCFG 00000000dbfc5a43 0003C (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: TCPA 00000000dbfc5a7f 00032 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: SLIC 00000000dbfc5ab1 00176 (v01 HPQOEM SLIC-BPC 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: HPET 00000000dbfc5c27 00038 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: DMAR 00000000dbfc5c5f 001C8 (v01 COMPAQ EAGLLAKE 00000001      00000000)
+Apr 29 11:47:15 speedy kernel: [    0.000000] No NUMA configuration found
+Apr 29 11:47:15 speedy kernel: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000021bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] Initmem setup node 0 [mem 0x00000000-0x21bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000]   NODE_DATA [mem 0x21bfec000-0x21bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] Zone ranges:
+Apr 29 11:47:15 speedy kernel: [    0.000000]   DMA      [mem 0x00010000-0x00ffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000]   Normal   [mem 0x100000000-0x21bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] Movable zone start for each node
+Apr 29 11:47:15 speedy kernel: [    0.000000] Early memory node ranges
+Apr 29 11:47:15 speedy kernel: [    0.000000]   node   0: [mem 0x00010000-0x0009efff]
+Apr 29 11:47:15 speedy kernel: [    0.000000]   node   0: [mem 0x00100000-0xdbfa0fff]
+Apr 29 11:47:15 speedy kernel: [    0.000000]   node   0: [mem 0x100000000-0x21bffffff]
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: PM-Timer IO Port: 0xf808
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x02] lapic_id[0x01] enabled)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x03] lapic_id[0x03] enabled)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x04] lapic_id[0x02] enabled)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+Apr 29 11:47:15 speedy kernel: [    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Apr 29 11:47:15 speedy kernel: [    0.000000] Using ACPI (MADT) for SMP configuration information
+Apr 29 11:47:15 speedy kernel: [    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+Apr 29 11:47:15 speedy kernel: [    0.000000] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 000000000009f000 - 00000000000a0000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000000a0000 - 00000000000e8000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000000e8000 - 0000000000100000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000dbfa1000 - 00000000dbfa2000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000dbfa2000 - 00000000dbfa3000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000dbfa3000 - 00000000dbfa4000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000dbfa4000 - 00000000e0000000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000e0000000 - 00000000f4000000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000f4000000 - 00000000f8000000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000f8000000 - 00000000fec00000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000fec00000 - 00000000fed40000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000fed40000 - 00000000fed45000
+Apr 29 11:47:15 speedy kernel: [    0.000000] PM: Registered nosave memory: 00000000fed45000 - 0000000100000000
+Apr 29 11:47:15 speedy kernel: [    0.000000] e820: [mem 0xe0000000-0xf3ffffff] available for PCI devices
+Apr 29 11:47:15 speedy kernel: [    0.000000] Booting paravirtualized kernel on bare hardware
+Apr 29 11:47:15 speedy kernel: [    0.000000] setup_percpu: NR_CPUS:128 nr_cpumask_bits:128 nr_cpu_ids:4 nr_node_ids:1
+Apr 29 11:47:15 speedy kernel: [    0.000000] PERCPU: Embedded 28 pages/cpu @ffff88021bc00000 s84608 r8192 d21888 u524288
+Apr 29 11:47:15 speedy kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 2031915
+Apr 29 11:47:15 speedy kernel: [    0.000000] Policy zone: Normal
+Apr 29 11:47:15 speedy kernel: [    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-3.8.4-202.fc18.x86_64 root=/dev/mapper/vg_speedy-lv_speedy_root ro quiet rhgb SYSFONT=LatArCyrHeb-19 LANG=en_US.UTF-8 KEYTABLE=us
+Apr 29 11:47:15 speedy kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.000000] __ex_table already sorted, skipping sort
+Apr 29 11:47:15 speedy kernel: [    0.000000] xsave: enabled xstate_bv 0x3, cntxt size 0x240
+Apr 29 11:47:15 speedy kernel: [    0.000000] Checking aperture...
+Apr 29 11:47:15 speedy kernel: [    0.000000] No AGP bridge found
+Apr 29 11:47:15 speedy kernel: [    0.000000] ------------[ cut here ]------------
+Apr 29 11:47:15 speedy kernel: [    0.000000] WARNING: at drivers/iommu/dmar.c:481 warn_invalid_dmar+0x86/0xa0()
+Apr 29 11:47:15 speedy kernel: [    0.000000] Hardware name: HP Compaq dc7900 Small Form Factor
+Apr 29 11:47:15 speedy kernel: [    0.000000] Your BIOS is broken; DMAR reported at address fed90000 returns all ones!
+Apr 29 11:47:15 speedy kernel: [    0.000000] BIOS vendor: Hewlett-Packard; Ver: 786G1 v01.22; Product Version:  
+Apr 29 11:47:15 speedy kernel: [    0.000000] Modules linked in:
+Apr 29 11:47:15 speedy kernel: [    0.000000] Pid: 0, comm: swapper Not tainted 3.8.4-202.fc18.x86_64 #1
+Apr 29 11:47:15 speedy kernel: [    0.000000] Call Trace:
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff8105e62f>] warn_slowpath_common+0x7f/0xc0
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff8105e6cf>] warn_slowpath_fmt_taint+0x3f/0x50
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d160c7>] ? __early_set_fixmap+0x99/0xa0
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff8151eea6>] warn_invalid_dmar+0x86/0xa0
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d40bc6>] check_zero_address+0xc8/0xf7
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff8165c879>] ? bad_to_user+0x7b3/0x7b3
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d40c0c>] detect_intel_iommu+0x17/0xb9
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d08978>] pci_iommu_alloc+0x4a/0x72
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d15e86>] mem_init+0x19/0xed
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81644f95>] ? set_nmi_gate+0x48/0x4a
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d00a52>] start_kernel+0x1e3/0x3de
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d0066e>] ? repair_env_string+0x5e/0x5e
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d00356>] x86_64_start_reservations+0x131/0x135
+Apr 29 11:47:15 speedy kernel: [    0.000000]  [<ffffffff81d0045a>] x86_64_start_kernel+0x100/0x10f
+Apr 29 11:47:15 speedy kernel: [    0.000000] ---[ end trace 6b9a204b410ac729 ]---
+Apr 29 11:47:15 speedy kernel: [    0.000000] Memory: 8012008k/8847360k available (6514k kernel code, 590656k absent, 244696k reserved, 6706k data, 1088k init)
+Apr 29 11:47:15 speedy kernel: [    0.000000] SLUB: Genslabs=15, HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Apr 29 11:47:15 speedy kernel: [    0.000000] Hierarchical RCU implementation.
+Apr 29 11:47:15 speedy kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=128 to nr_cpu_ids=4.
+Apr 29 11:47:15 speedy kernel: [    0.000000] NR_IRQS:8448 nr_irqs:712 16
+Apr 29 11:47:15 speedy kernel: [    0.000000] Console: colour dummy device 80x25
+Apr 29 11:47:15 speedy kernel: [    0.000000] console [tty0] enabled
+Apr 29 11:47:15 speedy kernel: [    0.000000] allocated 33554432 bytes of page_cgroup
+Apr 29 11:47:15 speedy kernel: [    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Apr 29 11:47:15 speedy kernel: [    0.000000] tsc: Fast TSC calibration using PIT
+Apr 29 11:47:15 speedy kernel: [    0.000000] tsc: Detected 2660.086 MHz processor
+Apr 29 11:47:15 speedy kernel: [    0.001003] Calibrating delay loop (skipped), value calculated using timer frequency.. 5320.17 BogoMIPS (lpj=2660086)
+Apr 29 11:47:15 speedy kernel: [    0.001007] pid_max: default: 32768 minimum: 301
+Apr 29 11:47:15 speedy kernel: [    0.001041] Security Framework initialized
+Apr 29 11:47:15 speedy kernel: [    0.001050] SELinux:  Initializing.
+Apr 29 11:47:15 speedy kernel: [    0.002373] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.007668] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.010152] Mount-cache hash table entries: 256
+Apr 29 11:47:15 speedy kernel: [    0.010378] Initializing cgroup subsys cpuacct
+Apr 29 11:47:15 speedy kernel: [    0.010381] Initializing cgroup subsys memory
+Apr 29 11:47:15 speedy kernel: [    0.010399] Initializing cgroup subsys devices
+Apr 29 11:47:15 speedy kernel: [    0.010401] Initializing cgroup subsys freezer
+Apr 29 11:47:15 speedy kernel: [    0.010402] Initializing cgroup subsys net_cls
+Apr 29 11:47:15 speedy kernel: [    0.010403] Initializing cgroup subsys blkio
+Apr 29 11:47:15 speedy kernel: [    0.010405] Initializing cgroup subsys perf_event
+Apr 29 11:47:15 speedy kernel: [    0.010438] CPU: Physical Processor ID: 0
+Apr 29 11:47:15 speedy kernel: [    0.010439] CPU: Processor Core ID: 0
+Apr 29 11:47:15 speedy kernel: [    0.010441] mce: CPU supports 6 MCE banks
+Apr 29 11:47:15 speedy kernel: [    0.010448] CPU0: Thermal monitoring enabled (TM2)
+Apr 29 11:47:15 speedy kernel: [    0.010452] process: using mwait in idle threads
+Apr 29 11:47:15 speedy kernel: [    0.010456] Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+Apr 29 11:47:15 speedy kernel: [    0.010456] Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32
+Apr 29 11:47:15 speedy kernel: [    0.010456] tlb_flushall_shift: -1
+Apr 29 11:47:15 speedy kernel: [    0.010569] Freeing SMP alternatives: 24k freed
+Apr 29 11:47:15 speedy kernel: [    0.011947] ACPI: Core revision 20121018
+Apr 29 11:47:15 speedy kernel: [    0.015007] ftrace: allocating 24318 entries in 95 pages
+Apr 29 11:47:15 speedy kernel: [    0.021104] dmar: Host address width 36
+Apr 29 11:47:15 speedy kernel: [    0.021108] dmar: DRHD base: 0x000000fed90000 flags: 0x0
+Apr 29 11:47:15 speedy kernel: [    0.021123] dmar: IOMMU: failed to map dmar0
+Apr 29 11:47:15 speedy kernel: [    0.021127] dmar: parse DMAR table failure.
+Apr 29 11:47:15 speedy kernel: [    0.021473] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Apr 29 11:47:15 speedy kernel: [    0.031586] smpboot: CPU0: Intel(R) Core(TM)2 Quad CPU    Q9400  @ 2.66GHz (fam: 06, model: 17, stepping: 0a)
+Apr 29 11:47:15 speedy kernel: [    0.032000] Performance Events: PEBS fmt0+, 4-deep LBR, Core2 events, Intel PMU driver.
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... version:                2
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... bit width:              40
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... generic registers:      2
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... value mask:             000000ffffffffff
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... max period:             000000007fffffff
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... fixed-purpose events:   3
+Apr 29 11:47:15 speedy kernel: [    0.032000] ... event mask:             0000000700000003
+Apr 29 11:47:15 speedy kernel: [    0.044087] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+Apr 29 11:47:15 speedy kernel: [    0.032287] smpboot: Booting Node   0, Processors  #1 #2 #3 OK
+Apr 29 11:47:15 speedy kernel: [    0.068007] Brought up 4 CPUs
+Apr 29 11:47:15 speedy kernel: [    0.068010] smpboot: Total of 4 processors activated (21280.68 BogoMIPS)
+Apr 29 11:47:15 speedy kernel: [    0.069150] devtmpfs: initialized
+Apr 29 11:47:15 speedy kernel: [    0.069159] PM: Registering ACPI NVS region [mem 0xdbfa1740-0xdbfa379f] (8288 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.069159] reboot: BIOS series board detected. Selecting HP Compaq Laptop-method for reboots.
+Apr 29 11:47:15 speedy kernel: [    0.070638] atomic64 test passed for x86-64 platform with CX8 and with SSE
+Apr 29 11:47:15 speedy kernel: [    0.070661] RTC time: 16:46:53, date: 04/29/13
+Apr 29 11:47:15 speedy kernel: [    0.070704] NET: Registered protocol family 16
+Apr 29 11:47:15 speedy kernel: [    0.070870] ACPI: bus type pci registered
+Apr 29 11:47:15 speedy kernel: [    0.070919] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xf4000000-0xf7ffffff] (base 0xf4000000)
+Apr 29 11:47:15 speedy kernel: [    0.070922] PCI: MMCONFIG at [mem 0xf4000000-0xf7ffffff] reserved in E820
+Apr 29 11:47:15 speedy kernel: [    0.075196] PCI: Using configuration type 1 for base access
+Apr 29 11:47:15 speedy kernel: [    0.076049] bio: create slab <bio-0> at 0
+Apr 29 11:47:15 speedy kernel: [    0.076078] ACPI: Added _OSI(Module Device)
+Apr 29 11:47:15 speedy kernel: [    0.076078] ACPI: Added _OSI(Processor Device)
+Apr 29 11:47:15 speedy kernel: [    0.076078] ACPI: Added _OSI(3.0 _SCP Extensions)
+Apr 29 11:47:15 speedy kernel: [    0.076078] ACPI: Added _OSI(Processor Aggregator Device)
+Apr 29 11:47:15 speedy kernel: [    0.090058] ACPI: SSDT 00000000dbfd161e 003AC (v01 COMPAQ  CPU_TM2 00000001 MSFT 0100000E)
+Apr 29 11:47:15 speedy kernel: [    0.090268] ACPI: Dynamic OEM Table Load:
+Apr 29 11:47:15 speedy kernel: [    0.090270] ACPI: SSDT           (null) 003AC (v01 COMPAQ  CPU_TM2 00000001 MSFT 0100000E)
+Apr 29 11:47:15 speedy kernel: [    0.096043] ACPI: SSDT 00000000dbfd136e 002B0 (v01 COMPAQ      CST 00000001 MSFT 0100000E)
+Apr 29 11:47:15 speedy kernel: [    0.096234] ACPI: Dynamic OEM Table Load:
+Apr 29 11:47:15 speedy kernel: [    0.096236] ACPI: SSDT           (null) 002B0 (v01 COMPAQ      CST 00000001 MSFT 0100000E)
+Apr 29 11:47:15 speedy kernel: [    0.105232] ACPI: Interpreter enabled
+Apr 29 11:47:15 speedy kernel: [    0.105236] ACPI: (supports S0 S3 S4 S5)
+Apr 29 11:47:15 speedy kernel: [    0.105249] ACPI: Using IOAPIC for interrupt routing
+Apr 29 11:47:15 speedy kernel: [    0.110945] ACPI: No dock devices found.
+Apr 29 11:47:15 speedy kernel: [    0.110949] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Apr 29 11:47:15 speedy kernel: [    0.113136] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Apr 29 11:47:15 speedy kernel: [    0.113277] ACPI Error: [CAPD] Namespace lookup failure, AE_ALREADY_EXISTS (20121018/dsfield-211)
+Apr 29 11:47:15 speedy kernel: [    0.113283] ACPI Error: Method parse/execution failed [\_SB_.PCI0._OSC] (Node ffff880210058de8), AE_ALREADY_EXISTS (20121018/psparse-537)
+Apr 29 11:47:15 speedy kernel: [    0.113288] ACPI: Marking method _OSC as Serialized because of AE_ALREADY_EXISTS error
+Apr 29 11:47:15 speedy kernel: [    0.113292] ACPI Warning: For \_SB_.PCI0._OSC: Parameter count mismatch - ASL declared 5, ACPI requires 4 (20121018/nspredef-359)
+Apr 29 11:47:15 speedy kernel: [    0.113330] ACPI Error: [CAPD] Namespace lookup failure, AE_ALREADY_EXISTS (20121018/dsfield-211)
+Apr 29 11:47:15 speedy kernel: [    0.113334] ACPI Error: Method parse/execution failed [\_SB_.PCI0._OSC] (Node ffff880210058de8), AE_ALREADY_EXISTS (20121018/psparse-537)
+Apr 29 11:47:15 speedy kernel: [    0.113340] ACPI Warning: For \_SB_.PCI0._OSC: Parameter count mismatch - ASL declared 5, ACPI requires 4 (20121018/nspredef-359)
+Apr 29 11:47:15 speedy kernel: [    0.113345] pci_root PNP0A08:00: ACPI _OSC support notification failed, disabling PCIe ASPM
+Apr 29 11:47:15 speedy kernel: [    0.113347] pci_root PNP0A08:00: Unable to request _OSC control (_OSC support mask: 0x08)
+Apr 29 11:47:15 speedy kernel: [    0.113596] pci_root PNP0A08:00: [Firmware Info]: MMCONFIG for domain 0000 [bus 00-3f] only partially covers this bridge
+Apr 29 11:47:15 speedy kernel: [    0.113624] PCI host bridge to bus 0000:00
+Apr 29 11:47:15 speedy kernel: [    0.113626] pci_bus 0000:00: root bus resource [bus 00-ff]
+Apr 29 11:47:15 speedy kernel: [    0.113628] pci_bus 0000:00: root bus resource [mem 0xf8000000-0xfebfffff]
+Apr 29 11:47:15 speedy kernel: [    0.113630] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+Apr 29 11:47:15 speedy kernel: [    0.113632] pci_bus 0000:00: root bus resource [io  0x1000-0x2fff]
+Apr 29 11:47:15 speedy kernel: [    0.113634] pci_bus 0000:00: root bus resource [io  0x3000-0x6fff]
+Apr 29 11:47:15 speedy kernel: [    0.113636] pci_bus 0000:00: root bus resource [io  0x7000-0xafff]
+Apr 29 11:47:15 speedy kernel: [    0.113638] pci_bus 0000:00: root bus resource [io  0xb000-0xffff]
+Apr 29 11:47:15 speedy kernel: [    0.113639] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+Apr 29 11:47:15 speedy kernel: [    0.113642] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xf3ffffff]
+Apr 29 11:47:15 speedy kernel: [    0.113643] pci_bus 0000:00: root bus resource [mem 0xfed40000-0xfed44fff]
+Apr 29 11:47:15 speedy kernel: [    0.113667] DMAR: Forcing write-buffer flush capability
+Apr 29 11:47:15 speedy kernel: [    0.113669] DMAR: Disabling IOMMU for graphics on this chipset
+Apr 29 11:47:15 speedy kernel: [    0.115498] pci 0000:00:1c.0: PCI bridge to [bus 20]
+Apr 29 11:47:15 speedy kernel: [    0.115536] pci 0000:00:1c.4: PCI bridge to [bus 30]
+Apr 29 11:47:15 speedy kernel: [    0.115593] pci 0000:00:1e.0: PCI bridge to [bus 07] (subtractive decode)
+Apr 29 11:47:15 speedy kernel: [    0.115812] ACPI _OSC control for PCIe not granted, disabling ASPM
+Apr 29 11:47:15 speedy kernel: [    0.124619] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 *5 6 7 10 11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124658] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 10 *11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124695] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 *10 11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124732] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 *5 6 7 10 11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124773] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 7 *10 11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124809] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 7 10 *11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124846] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 *5 6 7 10 11 14 15)
+Apr 29 11:47:15 speedy kernel: [    0.124882] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 7 10 11 14 15) *0, disabled.
+Apr 29 11:47:15 speedy kernel: [    0.124944] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Apr 29 11:47:15 speedy kernel: [    0.124944] vgaarb: loaded
+Apr 29 11:47:15 speedy kernel: [    0.124944] vgaarb: bridge control possible 0000:00:02.0
+Apr 29 11:47:15 speedy kernel: [    0.125061] SCSI subsystem initialized
+Apr 29 11:47:15 speedy kernel: [    0.125063] ACPI: bus type scsi registered
+Apr 29 11:47:15 speedy kernel: [    0.125071] ACPI: bus type usb registered
+Apr 29 11:47:15 speedy kernel: [    0.125073] usbcore: registered new interface driver usbfs
+Apr 29 11:47:15 speedy kernel: [    0.125080] usbcore: registered new interface driver hub
+Apr 29 11:47:15 speedy kernel: [    0.125086] usbcore: registered new device driver usb
+Apr 29 11:47:15 speedy kernel: [    0.125086] PCI: Using ACPI for IRQ routing
+Apr 29 11:47:15 speedy kernel: [    0.126678] NetLabel: Initializing
+Apr 29 11:47:15 speedy kernel: [    0.126680] NetLabel:  domain hash size = 128
+Apr 29 11:47:15 speedy kernel: [    0.126681] NetLabel:  protocols = UNLABELED CIPSOv4
+Apr 29 11:47:15 speedy kernel: [    0.126690] NetLabel:  unlabeled traffic allowed by default
+Apr 29 11:47:15 speedy kernel: [    0.126746] HPET: 8 timers in total, 4 timers will be used for per-cpu timer
+Apr 29 11:47:15 speedy kernel: [    0.126751] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 40, 41, 42, 43, 0, 0
+Apr 29 11:47:15 speedy kernel: [    0.126757] hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+Apr 29 11:47:15 speedy kernel: [    0.128042] Switching to clocksource hpet
+Apr 29 11:47:15 speedy kernel: [    0.134202] pnp: PnP ACPI init
+Apr 29 11:47:15 speedy kernel: [    0.134219] ACPI: bus type pnp registered
+Apr 29 11:47:15 speedy kernel: [    0.135375] system 00:0d: [io  0x04d0-0x04d1] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135426] system 00:0e: [io  0x0400-0x041f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135429] system 00:0e: [io  0x0420-0x043f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135431] system 00:0e: [io  0x0440-0x045f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135433] system 00:0e: [io  0x0460-0x047f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135435] system 00:0e: [io  0x0800-0x087f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135437] system 00:0e: [io  0x0880-0x08ff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135439] system 00:0e: [io  0xf800-0xf81f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135441] system 00:0e: [io  0xf820-0xf83f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135443] system 00:0e: [io  0xf840-0xf85f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135445] system 00:0e: [io  0xf860-0xf87f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135447] system 00:0e: [io  0xfa00-0xfa3f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135449] system 00:0e: [io  0xfc00-0xfc7f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135451] system 00:0e: [io  0xfc80-0xfcff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135456] system 00:0e: [io  0xfe00-0xfe7f] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.135458] system 00:0e: [io  0xfe80-0xfeff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140057] system 00:0f: [mem 0x00000000-0x0009ffff] could not be reserved
+Apr 29 11:47:15 speedy kernel: [    0.140061] system 00:0f: [mem 0x00100000-0xdfffffff] could not be reserved
+Apr 29 11:47:15 speedy kernel: [    0.140064] system 00:0f: [mem 0x000e4000-0x000fffff] could not be reserved
+Apr 29 11:47:15 speedy kernel: [    0.140067] system 00:0f: [mem 0xfec01000-0xfecfffff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140070] system 00:0f: [mem 0xfed00400-0xfed3ffff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140073] system 00:0f: [mem 0xfed45000-0xffffffff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140076] system 00:0f: [mem 0xf4000000-0xf7ffffff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140079] system 00:0f: [mem 0x000ce600-0x000e3fff] has been reserved
+Apr 29 11:47:15 speedy kernel: [    0.140097] pnp: PnP ACPI: found 16 devices
+Apr 29 11:47:15 speedy kernel: [    0.140098] ACPI: ACPI bus type pnp unregistered
+Apr 29 11:47:15 speedy kernel: [    0.148701] pci 0000:00:1c.0: BAR 14: assigned [mem 0xf8000000-0xf81fffff]
+Apr 29 11:47:15 speedy kernel: [    0.148703] pci 0000:00:1c.0: BAR 15: assigned [mem 0xf8200000-0xf83fffff 64bit pref]
+Apr 29 11:47:15 speedy kernel: [    0.148706] pci 0000:00:1c.4: BAR 14: assigned [mem 0xf8400000-0xf85fffff]
+Apr 29 11:47:15 speedy kernel: [    0.148708] pci 0000:00:1c.4: BAR 15: assigned [mem 0xf8600000-0xf87fffff 64bit pref]
+Apr 29 11:47:15 speedy kernel: [    0.148711] pci 0000:00:1c.0: BAR 13: assigned [io  0x2000-0x2fff]
+Apr 29 11:47:15 speedy kernel: [    0.148714] pci 0000:00:1c.4: BAR 13: assigned [io  0x3000-0x3fff]
+Apr 29 11:47:15 speedy kernel: [    0.148716] pci 0000:00:1c.0: PCI bridge to [bus 20]
+Apr 29 11:47:15 speedy kernel: [    0.148719] pci 0000:00:1c.0:   bridge window [io  0x2000-0x2fff]
+Apr 29 11:47:15 speedy kernel: [    0.148723] pci 0000:00:1c.0:   bridge window [mem 0xf8000000-0xf81fffff]
+Apr 29 11:47:15 speedy kernel: [    0.148727] pci 0000:00:1c.0:   bridge window [mem 0xf8200000-0xf83fffff 64bit pref]
+Apr 29 11:47:15 speedy kernel: [    0.148732] pci 0000:00:1c.4: PCI bridge to [bus 30]
+Apr 29 11:47:15 speedy kernel: [    0.148734] pci 0000:00:1c.4:   bridge window [io  0x3000-0x3fff]
+Apr 29 11:47:15 speedy kernel: [    0.148738] pci 0000:00:1c.4:   bridge window [mem 0xf8400000-0xf85fffff]
+Apr 29 11:47:15 speedy kernel: [    0.148741] pci 0000:00:1c.4:   bridge window [mem 0xf8600000-0xf87fffff 64bit pref]
+Apr 29 11:47:15 speedy kernel: [    0.148746] pci 0000:00:1e.0: PCI bridge to [bus 07]
+Apr 29 11:47:15 speedy kernel: [    0.148860] NET: Registered protocol family 2
+Apr 29 11:47:15 speedy kernel: [    0.149077] TCP established hash table entries: 65536 (order: 8, 1048576 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.149609] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.150026] TCP: Hash tables configured (established 65536 bind 65536)
+Apr 29 11:47:15 speedy kernel: [    0.150079] TCP: reno registered
+Apr 29 11:47:15 speedy kernel: [    0.150096] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.150162] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.150289] NET: Registered protocol family 1
+Apr 29 11:47:15 speedy kernel: [    0.150552] Unpacking initramfs...
+Apr 29 11:47:15 speedy kernel: [    0.664785] Freeing initrd memory: 30992k freed
+Apr 29 11:47:15 speedy kernel: [    0.679497] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Apr 29 11:47:15 speedy kernel: [    0.679505] software IO TLB [mem 0xd7f9b000-0xdbf9b000] (64MB) mapped at [ffff8800d7f9b000-ffff8800dbf9afff]
+Apr 29 11:47:15 speedy kernel: [    0.680509] Initialise module verification
+Apr 29 11:47:15 speedy kernel: [    0.680556] audit: initializing netlink socket (disabled)
+Apr 29 11:47:15 speedy kernel: [    0.680582] type=2000 audit(1367254013.679:1): initialized
+Apr 29 11:47:15 speedy kernel: [    0.701866] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Apr 29 11:47:15 speedy kernel: [    0.703622] VFS: Disk quotas dquot_6.5.2
+Apr 29 11:47:15 speedy kernel: [    0.703658] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Apr 29 11:47:15 speedy kernel: [    0.704081] msgmni has been set to 15709
+Apr 29 11:47:15 speedy kernel: [    0.705148] alg: No test for stdrng (krng)
+Apr 29 11:47:15 speedy kernel: [    0.705170] NET: Registered protocol family 38
+Apr 29 11:47:15 speedy kernel: [    0.705173] Key type asymmetric registered
+Apr 29 11:47:15 speedy kernel: [    0.705175] Asymmetric key parser 'x509' registered
+Apr 29 11:47:15 speedy kernel: [    0.705205] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Apr 29 11:47:15 speedy kernel: [    0.705264] io scheduler noop registered
+Apr 29 11:47:15 speedy kernel: [    0.705266] io scheduler deadline registered
+Apr 29 11:47:15 speedy kernel: [    0.705277] io scheduler cfq registered (default)
+Apr 29 11:47:15 speedy kernel: [    0.705535] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Apr 29 11:47:15 speedy kernel: [    0.705549] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Apr 29 11:47:15 speedy kernel: [    0.705550] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Apr 29 11:47:15 speedy kernel: [    0.705778] vesafb: mode is 1280x1024x32, linelength=5120, pages=0
+Apr 29 11:47:15 speedy kernel: [    0.705780] vesafb: scrolling: redraw
+Apr 29 11:47:15 speedy kernel: [    0.705782] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Apr 29 11:47:15 speedy kernel: [    0.706183] vesafb: framebuffer at 0xe0000000, mapped to 0xffffc90004f00000, using 5120k, total 5120k
+Apr 29 11:47:15 speedy kernel: [    0.706277] Console: switching to colour frame buffer device 160x64
+Apr 29 11:47:15 speedy kernel: [    0.738620] fb0: VESA VGA frame buffer device
+Apr 29 11:47:15 speedy kernel: [    0.738693] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+Apr 29 11:47:15 speedy kernel: [    0.738697] ACPI: Power Button [PBTN]
+Apr 29 11:47:15 speedy kernel: [    0.738728] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
+Apr 29 11:47:15 speedy kernel: [    0.738730] ACPI: Power Button [PWRF]
+Apr 29 11:47:15 speedy kernel: [    0.738910] processor LNXCPU:00: Invalid PBLK length [7]
+Apr 29 11:47:15 speedy kernel: [    0.739155] ACPI: Requesting acpi_cpufreq
+Apr 29 11:47:15 speedy kernel: [    0.740165] tsc: Marking TSC unstable due to TSC halts in idle
+Apr 29 11:47:15 speedy kernel: [    0.740236] processor LNXCPU:01: Invalid PBLK length [7]
+Apr 29 11:47:15 speedy kernel: [    0.740568] processor LNXCPU:02: Invalid PBLK length [7]
+Apr 29 11:47:15 speedy kernel: [    0.740830] processor LNXCPU:03: Invalid PBLK length [7]
+Apr 29 11:47:15 speedy kernel: [    0.743028] GHES: HEST is not enabled!
+Apr 29 11:47:15 speedy kernel: [    0.743114] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Apr 29 11:47:15 speedy kernel: [    0.763623] 00:07: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Apr 29 11:47:15 speedy kernel: [    0.784140] 0000:00:03.3: ttyS1 at I/O 0x1248 (irq = 17) is a 16550A
+Apr 29 11:47:15 speedy kernel: [    0.784389] Non-volatile memory driver v1.3
+Apr 29 11:47:15 speedy kernel: [    0.784391] Linux agpgart interface v0.103
+Apr 29 11:47:15 speedy kernel: [    0.784457] agpgart-intel 0000:00:00.0: Intel Q45/Q43 Chipset
+Apr 29 11:47:15 speedy kernel: [    0.784521] agpgart-intel 0000:00:00.0: detected gtt size: 2097152K total, 262144K mappable
+Apr 29 11:47:15 speedy kernel: [    0.785361] agpgart-intel 0000:00:00.0: detected 32768K stolen memory
+Apr 29 11:47:15 speedy kernel: [    0.785490] agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0xe0000000
+Apr 29 11:47:15 speedy kernel: [    0.786175] loop: module loaded
+Apr 29 11:47:15 speedy kernel: [    0.786342] ahci 0000:00:1f.2: AHCI 0001.0200 32 slots 6 ports 3 Gbps 0x17 impl SATA mode
+Apr 29 11:47:15 speedy kernel: [    0.786345] ahci 0000:00:1f.2: flags: 64bit ncq sntf pm led clo pio slum part sxs 
+Apr 29 11:47:15 speedy kernel: [    0.786869] scsi0 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.786969] scsi1 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.787055] scsi2 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.787132] scsi3 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.787204] scsi4 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.787274] scsi5 : ahci
+Apr 29 11:47:15 speedy kernel: [    0.787305] ata1: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526100 irq 46
+Apr 29 11:47:15 speedy kernel: [    0.787308] ata2: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526180 irq 46
+Apr 29 11:47:15 speedy kernel: [    0.787310] ata3: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526200 irq 46
+Apr 29 11:47:15 speedy kernel: [    0.787311] ata4: DUMMY
+Apr 29 11:47:15 speedy kernel: [    0.787313] ata5: SATA max UDMA/133 abar m2048@0xf0526000 port 0xf0526300 irq 46
+Apr 29 11:47:15 speedy kernel: [    0.787314] ata6: DUMMY
+Apr 29 11:47:15 speedy kernel: [    0.787393] libphy: Fixed MDIO Bus: probed
+Apr 29 11:47:15 speedy kernel: [    0.787446] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Apr 29 11:47:15 speedy kernel: [    0.787448] ehci-pci: EHCI PCI platform driver
+Apr 29 11:47:15 speedy kernel: [    0.787481] ehci-pci 0000:00:1a.7: EHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.787525] ehci-pci 0000:00:1a.7: new USB bus registered, assigned bus number 1
+Apr 29 11:47:15 speedy kernel: [    0.787540] ehci-pci 0000:00:1a.7: debug port 1
+Apr 29 11:47:15 speedy kernel: [    0.791459] ehci-pci 0000:00:1a.7: irq 22, io mem 0xf0526800
+Apr 29 11:47:15 speedy kernel: [    0.797019] ehci-pci 0000:00:1a.7: USB 2.0 started, EHCI 1.00
+Apr 29 11:47:15 speedy kernel: [    0.797041] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Apr 29 11:47:15 speedy kernel: [    0.797044] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.797047] usb usb1: Product: EHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.797049] usb usb1: Manufacturer: Linux 3.8.4-202.fc18.x86_64 ehci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.797052] usb usb1: SerialNumber: 0000:00:1a.7
+Apr 29 11:47:15 speedy kernel: [    0.797171] hub 1-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.797176] hub 1-0:1.0: 6 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.797287] ehci-pci 0000:00:1d.7: EHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.797325] ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 2
+Apr 29 11:47:15 speedy kernel: [    0.797335] ehci-pci 0000:00:1d.7: debug port 1
+Apr 29 11:47:15 speedy kernel: [    0.801254] ehci-pci 0000:00:1d.7: irq 20, io mem 0xf0526c00
+Apr 29 11:47:15 speedy kernel: [    0.807018] ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+Apr 29 11:47:15 speedy kernel: [    0.807035] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+Apr 29 11:47:15 speedy kernel: [    0.807038] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.807041] usb usb2: Product: EHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807043] usb usb2: Manufacturer: Linux 3.8.4-202.fc18.x86_64 ehci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.807046] usb usb2: SerialNumber: 0000:00:1d.7
+Apr 29 11:47:15 speedy kernel: [    0.807141] hub 2-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.807145] hub 2-0:1.0: 6 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.807244] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Apr 29 11:47:15 speedy kernel: [    0.807253] uhci_hcd: USB Universal Host Controller Interface driver
+Apr 29 11:47:15 speedy kernel: [    0.807273] uhci_hcd 0000:00:1a.0: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807307] uhci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 3
+Apr 29 11:47:15 speedy kernel: [    0.807327] uhci_hcd 0000:00:1a.0: irq 20, io base 0x00001120
+Apr 29 11:47:15 speedy kernel: [    0.807352] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.807354] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.807356] usb usb3: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807358] usb usb3: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.807360] usb usb3: SerialNumber: 0000:00:1a.0
+Apr 29 11:47:15 speedy kernel: [    0.807429] hub 3-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.807433] hub 3-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.807495] uhci_hcd 0000:00:1a.1: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807528] uhci_hcd 0000:00:1a.1: new USB bus registered, assigned bus number 4
+Apr 29 11:47:15 speedy kernel: [    0.807555] uhci_hcd 0000:00:1a.1: irq 21, io base 0x00001140
+Apr 29 11:47:15 speedy kernel: [    0.807579] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.807581] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.807583] usb usb4: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807585] usb usb4: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.807587] usb usb4: SerialNumber: 0000:00:1a.1
+Apr 29 11:47:15 speedy kernel: [    0.807653] hub 4-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.807657] hub 4-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.807718] uhci_hcd 0000:00:1a.2: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807753] uhci_hcd 0000:00:1a.2: new USB bus registered, assigned bus number 5
+Apr 29 11:47:15 speedy kernel: [    0.807773] uhci_hcd 0000:00:1a.2: irq 22, io base 0x00001160
+Apr 29 11:47:15 speedy kernel: [    0.807797] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.807799] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.807801] usb usb5: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807803] usb usb5: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.807805] usb usb5: SerialNumber: 0000:00:1a.2
+Apr 29 11:47:15 speedy kernel: [    0.807871] hub 5-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.807875] hub 5-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.807935] uhci_hcd 0000:00:1d.0: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.807967] uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 6
+Apr 29 11:47:15 speedy kernel: [    0.807987] uhci_hcd 0000:00:1d.0: irq 20, io base 0x00001180
+Apr 29 11:47:15 speedy kernel: [    0.808028] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.808030] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.808032] usb usb6: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.808034] usb usb6: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.808036] usb usb6: SerialNumber: 0000:00:1d.0
+Apr 29 11:47:15 speedy kernel: [    0.808105] hub 6-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.808108] hub 6-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.808169] uhci_hcd 0000:00:1d.1: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.808205] uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 7
+Apr 29 11:47:15 speedy kernel: [    0.808224] uhci_hcd 0000:00:1d.1: irq 21, io base 0x000011a0
+Apr 29 11:47:15 speedy kernel: [    0.808248] usb usb7: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.808250] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.808252] usb usb7: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.808254] usb usb7: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.808255] usb usb7: SerialNumber: 0000:00:1d.1
+Apr 29 11:47:15 speedy kernel: [    0.808320] hub 7-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.808323] hub 7-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.808386] uhci_hcd 0000:00:1d.2: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.808420] uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 8
+Apr 29 11:47:15 speedy kernel: [    0.808439] uhci_hcd 0000:00:1d.2: irq 22, io base 0x000011c0
+Apr 29 11:47:15 speedy kernel: [    0.808464] usb usb8: New USB device found, idVendor=1d6b, idProduct=0001
+Apr 29 11:47:15 speedy kernel: [    0.808466] usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 29 11:47:15 speedy kernel: [    0.808468] usb usb8: Product: UHCI Host Controller
+Apr 29 11:47:15 speedy kernel: [    0.808470] usb usb8: Manufacturer: Linux 3.8.4-202.fc18.x86_64 uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    0.808471] usb usb8: SerialNumber: 0000:00:1d.2
+Apr 29 11:47:15 speedy kernel: [    0.808537] hub 8-0:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    0.808540] hub 8-0:1.0: 2 ports detected
+Apr 29 11:47:15 speedy kernel: [    0.808631] usbcore: registered new interface driver usbserial
+Apr 29 11:47:15 speedy kernel: [    0.808640] usbcore: registered new interface driver usbserial_generic
+Apr 29 11:47:15 speedy kernel: [    0.808646] usbserial: USB Serial support registered for generic
+Apr 29 11:47:15 speedy kernel: [    0.808680] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f0e:PS2M] at 0x60,0x64 irq 1,12
+Apr 29 11:47:15 speedy kernel: [    0.811248] serio: i8042 KBD port at 0x60,0x64 irq 1
+Apr 29 11:47:15 speedy kernel: [    0.811258] serio: i8042 AUX port at 0x60,0x64 irq 12
+Apr 29 11:47:15 speedy kernel: [    0.811333] mousedev: PS/2 mouse device common for all mice
+Apr 29 11:47:15 speedy kernel: [    0.811500] rtc_cmos 00:02: RTC can wake from S4
+Apr 29 11:47:15 speedy kernel: [    0.811620] rtc_cmos 00:02: rtc core: registered rtc_cmos as rtc0
+Apr 29 11:47:15 speedy kernel: [    0.811642] rtc0: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+Apr 29 11:47:15 speedy kernel: [    0.811724] device-mapper: uevent: version 1.0.3
+Apr 29 11:47:15 speedy kernel: [    0.811781] device-mapper: ioctl: 4.23.1-ioctl (2012-12-18) initialised: dm-devel@redhat.com
+Apr 29 11:47:15 speedy kernel: [    0.811857] cpuidle: using governor ladder
+Apr 29 11:47:15 speedy kernel: [    0.811925] cpuidle: using governor menu
+Apr 29 11:47:15 speedy kernel: [    0.812223] EFI Variables Facility v0.08 2004-May-17
+Apr 29 11:47:15 speedy kernel: [    0.812311] usbcore: registered new interface driver usbhid
+Apr 29 11:47:15 speedy kernel: [    0.812313] usbhid: USB HID core driver
+Apr 29 11:47:15 speedy kernel: [    0.812341] drop_monitor: Initializing network drop monitor service
+Apr 29 11:47:15 speedy kernel: [    0.812411] ip_tables: (C) 2000-2006 Netfilter Core Team
+Apr 29 11:47:15 speedy kernel: [    0.812464] TCP: cubic registered
+Apr 29 11:47:15 speedy kernel: [    0.812466] Initializing XFRM netlink socket
+Apr 29 11:47:15 speedy kernel: [    0.812560] NET: Registered protocol family 10
+Apr 29 11:47:15 speedy kernel: [    0.812719] mip6: Mobile IPv6
+Apr 29 11:47:15 speedy kernel: [    0.812722] NET: Registered protocol family 17
+Apr 29 11:47:15 speedy kernel: [    0.812985] Loading module verification certificates
+Apr 29 11:47:15 speedy kernel: [    0.813937] MODSIGN: Loaded cert 'Fedora kernel signing key: 788cecf11db6079306256d289baf652be28bc407'
+Apr 29 11:47:15 speedy kernel: [    0.813947] registered taskstats version 1
+Apr 29 11:47:15 speedy kernel: [    0.814800]   Magic number: 9:101:794
+Apr 29 11:47:15 speedy kernel: [    0.814913] rtc_cmos 00:02: setting system clock to 2013-04-29 16:46:54 UTC (1367254014)
+Apr 29 11:47:15 speedy kernel: [    1.092036] ata5: SATA link down (SStatus 0 SControl 300)
+Apr 29 11:47:15 speedy kernel: [    1.092059] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Apr 29 11:47:15 speedy kernel: [    1.092081] ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Apr 29 11:47:15 speedy kernel: [    1.092102] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+Apr 29 11:47:15 speedy kernel: [    1.093064] ata3.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093068] ata3.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093217] ata1.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093221] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093298] ata3.00: ACPI cmd b1/c1:00:00:00:00:a0 (DEVICE CONFIGURATION OVERLAY) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093301] ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093303] ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093333] ata1.00: ACPI cmd b1/c1:00:00:00:00:a0 (DEVICE CONFIGURATION OVERLAY) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093336] ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.093339] ata1.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.095848] ata2.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.095852] ata2.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.095855] ata2.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.095858] ata2.00: ATAPI: hp      DVD-RAM GH40L, RB0E, max UDMA/100
+Apr 29 11:47:15 speedy kernel: [    1.100312] ata2.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.100316] ata2.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.100319] ata2.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.100323] ata2.00: configured for UDMA/100
+Apr 29 11:47:15 speedy kernel: [    1.135067] ata1.00: ATA-7: ST3500630NS, 3.AEG, max UDMA/133
+Apr 29 11:47:15 speedy kernel: [    1.135070] ata1.00: 976773168 sectors, multi 16: LBA48 NCQ (depth 31/32)
+Apr 29 11:47:15 speedy kernel: [    1.136783] ata3.00: ATA-7: ST3500630NS, 3.AEG, max UDMA/133
+Apr 29 11:47:15 speedy kernel: [    1.136785] ata3.00: 976773168 sectors, multi 16: LBA48 NCQ (depth 31/32)
+Apr 29 11:47:15 speedy kernel: [    1.160716] ata1.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.160719] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.160825] ata1.00: ACPI cmd b1/c1:00:00:00:00:a0 (DEVICE CONFIGURATION OVERLAY) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.160827] ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.160830] ata1.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.162418] ata3.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.162422] ata3.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.162527] ata3.00: ACPI cmd b1/c1:00:00:00:00:a0 (DEVICE CONFIGURATION OVERLAY) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.162530] ata3.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.162533] ata3.00: ACPI cmd ef/10:03:00:00:00:a0 (SET FEATURES) filtered out
+Apr 29 11:47:15 speedy kernel: [    1.193371] ata1.00: configured for UDMA/133
+Apr 29 11:47:15 speedy kernel: [    1.193506] scsi 0:0:0:0: Direct-Access     ATA      ST3500630NS      3.AE PQ: 0 ANSI: 5
+Apr 29 11:47:15 speedy kernel: [    1.193704] sd 0:0:0:0: [sda] 976773168 512-byte logical blocks: (500 GB/465 GiB)
+Apr 29 11:47:15 speedy kernel: [    1.193724] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Apr 29 11:47:15 speedy kernel: [    1.193756] sd 0:0:0:0: [sda] Write Protect is off
+Apr 29 11:47:15 speedy kernel: [    1.193781] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Apr 29 11:47:15 speedy kernel: [    1.195086] ata3.00: configured for UDMA/133
+Apr 29 11:47:15 speedy kernel: [    1.197210] scsi 1:0:0:0: CD-ROM            hp       DVD-RAM GH40L    RB0E PQ: 0 ANSI: 5
+Apr 29 11:47:15 speedy kernel: [    1.205653] sr0: scsi3-mmc drive: 40x/40x writer dvd-ram cd/rw xa/form2 cdda tray
+Apr 29 11:47:15 speedy kernel: [    1.205656] cdrom: Uniform CD-ROM driver Revision: 3.20
+Apr 29 11:47:15 speedy kernel: [    1.205836] sr 1:0:0:0: Attached scsi generic sg1 type 5
+Apr 29 11:47:15 speedy kernel: [    1.206040] scsi 2:0:0:0: Direct-Access     ATA      ST3500630NS      3.AE PQ: 0 ANSI: 5
+Apr 29 11:47:15 speedy kernel: [    1.206170] sd 2:0:0:0: [sdb] 976773168 512-byte logical blocks: (500 GB/465 GiB)
+Apr 29 11:47:15 speedy kernel: [    1.206189] sd 2:0:0:0: Attached scsi generic sg2 type 0
+Apr 29 11:47:15 speedy kernel: [    1.206222] sd 2:0:0:0: [sdb] Write Protect is off
+Apr 29 11:47:15 speedy kernel: [    1.206248] sd 2:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Apr 29 11:47:15 speedy kernel: [    1.240374]  sda: sda1 sda2 sda3
+Apr 29 11:47:15 speedy kernel: [    1.240729] sd 0:0:0:0: [sda] Attached SCSI disk
+Apr 29 11:47:15 speedy kernel: [    1.245050]  sdb: sdb1 sdb2 sdb3
+Apr 29 11:47:15 speedy kernel: [    1.245408] sd 2:0:0:0: [sdb] Attached SCSI disk
+Apr 29 11:47:15 speedy kernel: [    1.247064] Freeing unused kernel memory: 1088k freed
+Apr 29 11:47:15 speedy kernel: [    1.247309] Write protecting the kernel read-only data: 12288k
+Apr 29 11:47:15 speedy kernel: [    1.252589] Freeing unused kernel memory: 1668k freed
+Apr 29 11:47:15 speedy kernel: [    1.257024] Freeing unused kernel memory: 1348k freed
+Apr 29 11:47:15 speedy kernel: [    1.511052] usb 5-1: new full-speed USB device number 2 using uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    1.536447] RPC: Registered named UNIX socket transport module.
+Apr 29 11:47:15 speedy kernel: [    1.536450] RPC: Registered udp transport module.
+Apr 29 11:47:15 speedy kernel: [    1.536452] RPC: Registered tcp transport module.
+Apr 29 11:47:15 speedy kernel: [    1.536453] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Apr 29 11:47:15 speedy kernel: [    1.684055] usb 5-1: New USB device found, idVendor=046d, idProduct=c52f
+Apr 29 11:47:15 speedy kernel: [    1.684061] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Apr 29 11:47:15 speedy kernel: [    1.684064] usb 5-1: Product: USB Receiver
+Apr 29 11:47:15 speedy kernel: [    1.684067] usb 5-1: Manufacturer: Logitech
+Apr 29 11:47:15 speedy kernel: [    1.692393] input: Logitech USB Receiver as /devices/pci0000:00/0000:00:1a.2/usb5/5-1/5-1:1.0/input/input2
+Apr 29 11:47:15 speedy kernel: [    1.692546] hid-generic 0003:046D:C52F.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:00:1a.2-1/input0
+Apr 29 11:47:15 speedy kernel: [    1.697129] input: Logitech USB Receiver as /devices/pci0000:00/0000:00:1a.2/usb5/5-1/5-1:1.1/input/input3
+Apr 29 11:47:15 speedy kernel: [    1.697285] hid-generic 0003:046D:C52F.0002: input,hiddev0,hidraw1: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:00:1a.2-1/input1
+Apr 29 11:47:15 speedy kernel: [    1.714586] wmi: Mapper loaded
+Apr 29 11:47:15 speedy kernel: [    1.717239] scsi6 : ata_generic
+Apr 29 11:47:15 speedy kernel: [    1.717305] scsi7 : ata_generic
+Apr 29 11:47:15 speedy kernel: [    1.717338] ata7: PATA max UDMA/100 cmd 0x1238 ctl 0x1260 bmdma 0x1220 irq 18
+Apr 29 11:47:15 speedy kernel: [    1.717340] ata8: PATA max UDMA/100 cmd 0x1240 ctl 0x1264 bmdma 0x1228 irq 18
+Apr 29 11:47:15 speedy kernel: [    1.723656] [drm] Initialized drm 1.1.0 20060810
+Apr 29 11:47:15 speedy kernel: [    1.724566] e1000e: Intel(R) PRO/1000 Network Driver - 2.1.4-k
+Apr 29 11:47:15 speedy kernel: [    1.724571] e1000e: Copyright(c) 1999 - 2012 Intel Corporation.
+Apr 29 11:47:15 speedy kernel: [    1.724712] e1000e 0000:00:19.0: Interrupt Throttling Rate (ints/sec) set to dynamic conservative mode
+Apr 29 11:47:15 speedy kernel: [    1.850034] usb 8-2: new full-speed USB device number 2 using uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    1.912084] e1000e 0000:00:19.0 eth0: (PCI Express:2.5GT/s:Width x1) 18:a9:05:27:94:80
+Apr 29 11:47:15 speedy kernel: [    1.912088] e1000e 0000:00:19.0 eth0: Intel(R) PRO/1000 Network Connection
+Apr 29 11:47:15 speedy kernel: [    1.912121] e1000e 0000:00:19.0 eth0: MAC: 8, PHY: 8, PBA No: FFFFFF-0FF
+Apr 29 11:47:15 speedy kernel: [    1.912466] fb: conflicting fb hw usage inteldrmfb vs VESA VGA - removing generic driver
+Apr 29 11:47:15 speedy kernel: [    1.912481] Console: switching to colour dummy device 80x25
+Apr 29 11:47:15 speedy kernel: [    1.936997] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+Apr 29 11:47:15 speedy kernel: [    1.936998] [drm] Driver supports precise vblank timestamp query.
+Apr 29 11:47:15 speedy kernel: [    1.937060] vgaarb: device changed decodes: PCI:0000:00:02.0,olddecodes=io+mem,decodes=io+mem:owns=io+mem
+Apr 29 11:47:15 speedy kernel: [    1.976047] md: bind<sdb1>
+Apr 29 11:47:15 speedy kernel: [    2.004281] md: bind<sda3>
+Apr 29 11:47:15 speedy kernel: [    2.011850] md: bind<sda1>
+Apr 29 11:47:15 speedy kernel: [    2.023844] md: raid1 personality registered for level 1
+Apr 29 11:47:15 speedy kernel: [    2.024128] md/raid1:md0: active with 2 out of 2 mirrors
+Apr 29 11:47:15 speedy kernel: [    2.024163] md0: detected capacity change from 0 to 536858624
+Apr 29 11:47:15 speedy kernel: [    2.025556]  md0: unknown partition table
+Apr 29 11:47:15 speedy kernel: [    2.025860] fbcon: inteldrmfb (fb0) is primary device
+Apr 29 11:47:15 speedy kernel: [    2.057066] md: bind<sdb3>
+Apr 29 11:47:15 speedy kernel: [    2.071075] usb 8-2: New USB device found, idVendor=05f3, idProduct=0081
+Apr 29 11:47:15 speedy kernel: [    2.071078] usb 8-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Apr 29 11:47:15 speedy kernel: [    2.071090] usb 8-2: Product: Kinesis Keyboard Hub
+Apr 29 11:47:15 speedy kernel: [    2.071092] usb 8-2: Manufacturer: PI Engineering
+Apr 29 11:47:15 speedy kernel: [    2.074097] hub 8-2:1.0: USB hub found
+Apr 29 11:47:15 speedy kernel: [    2.076067] hub 8-2:1.0: 4 ports detected
+Apr 29 11:47:15 speedy kernel: [    2.079082] Console: switching to colour frame buffer device 240x56
+Apr 29 11:47:15 speedy kernel: [    2.084783] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+Apr 29 11:47:15 speedy kernel: [    2.084785] i915 0000:00:02.0: registered panic notifier
+Apr 29 11:47:15 speedy kernel: [    2.084847] ACPI Exception: AE_NOT_FOUND, Evaluating _DOD (20121018/video-1163)
+Apr 29 11:47:15 speedy kernel: [    2.084852] ACPI: Video Device [GFX0] (multi-head: no  rom: yes  post: no)
+Apr 29 11:47:15 speedy kernel: [    2.084894] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input4
+Apr 29 11:47:15 speedy kernel: [    2.084949] [drm] Initialized i915 1.6.0 20080730 for 0000:00:02.0 on minor 0
+Apr 29 11:47:15 speedy kernel: [    2.108810] md/raid1:md1: active with 2 out of 2 mirrors
+Apr 29 11:47:15 speedy kernel: [    2.115338] created bitmap (4 pages) for device md1
+Apr 29 11:47:15 speedy kernel: [    2.115568] md1: bitmap initialized from disk: read 1 pages, set 0 of 7375 bits
+Apr 29 11:47:15 speedy kernel: [    2.124357] md1: detected capacity change from 0 to 494877929472
+Apr 29 11:47:15 speedy kernel: [    2.126283]  md1: unknown partition table
+Apr 29 11:47:15 speedy kernel: [    2.353080] usb 8-2.2: new full-speed USB device number 3 using uhci_hcd
+Apr 29 11:47:15 speedy kernel: [    2.368629] bio: create slab <bio-1> at 1
+Apr 29 11:47:15 speedy kernel: [    2.464080] usb 8-2.2: New USB device found, idVendor=05f3, idProduct=0007
+Apr 29 11:47:15 speedy kernel: [    2.464085] usb 8-2.2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Apr 29 11:47:15 speedy kernel: [    2.471354] input: HID 05f3:0007 as /devices/pci0000:00/0000:00:1d.2/usb8/8-2/8-2.2/8-2.2:1.0/input/input5
+Apr 29 11:47:15 speedy kernel: [    2.471423] hid-generic 0003:05F3:0007.0003: input,hidraw2: USB HID v1.00 Keyboard [HID 05f3:0007] on usb-0000:00:1d.2-2.2/input0
+Apr 29 11:47:15 speedy kernel: [    2.483152] input: HID 05f3:0007 as /devices/pci0000:00/0000:00:1d.2/usb8/8-2/8-2.2/8-2.2:1.1/input/input6
+Apr 29 11:47:15 speedy kernel: [    2.483265] hid-generic 0003:05F3:0007.0004: input,hidraw3: USB HID v1.00 Device [HID 05f3:0007] on usb-0000:00:1d.2-2.2/input1
+Apr 29 11:47:15 speedy kernel: [    2.496886] EXT4-fs (dm-0): mounting ext3 file system using the ext4 subsystem
+Apr 29 11:47:15 speedy kernel: [    2.497729] EXT4-fs (dm-0): INFO: recovery required on readonly filesystem
+Apr 29 11:47:15 speedy kernel: [    2.497732] EXT4-fs (dm-0): write access will be enabled during recovery
+Apr 29 11:47:15 speedy kernel: [    5.578315] EXT4-fs (dm-0): recovery complete
+Apr 29 11:47:15 speedy kernel: [    5.586372] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null)
+Apr 29 11:47:15 speedy kernel: [    6.040533] EXT4-fs (dm-0): mounting ext3 file system using the ext4 subsystem
+Apr 29 11:47:15 speedy kernel: [    6.078021] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null)
+Apr 29 11:47:15 speedy kernel: [    7.511515] SELinux:  Disabled at runtime.
+Apr 29 11:47:15 speedy kernel: [    7.541022] type=1404 audit(1367254021.225:2): selinux=0 auid=4294967295 ses=4294967295
+Apr 29 11:47:15 speedy kernel: [    9.699108] EXT4-fs (dm-0): re-mounted. Opts: (null)
+Apr 29 11:47:15 speedy kernel: [   10.739312] tun: Universal TUN/TAP device driver, 1.6
+Apr 29 11:47:15 speedy kernel: [   10.739316] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+Apr 29 11:47:15 speedy kernel: [   11.420703] microcode: CPU0 sig=0x1067a, pf=0x10, revision=0xa07
+Apr 29 11:47:15 speedy kernel: [   11.547731] parport_pc 00:06: reported by Plug and Play ACPI
+Apr 29 11:47:15 speedy kernel: [   11.547842] parport0: PC-style at 0x378 (0x778), irq 7 [PCSPP,TRISTATE,EPP]
+Apr 29 11:47:15 speedy kernel: [   11.579820] ppdev: user-space parallel port driver
+Apr 29 11:47:15 speedy kernel: [   11.673315] input: HP WMI hotkeys as /devices/virtual/input/input7
+Apr 29 11:47:15 speedy kernel: [   11.720678] microcode: CPU0 updated to revision 0xa0b, date = 2010-09-28
+Apr 29 11:47:15 speedy kernel: [   11.726258] microcode: CPU1 sig=0x1067a, pf=0x10, revision=0xa07
+Apr 29 11:47:15 speedy kernel: [   11.727301] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+Apr 29 11:47:15 speedy kernel: [   11.731237] microcode: CPU2 sig=0x1067a, pf=0x10, revision=0xa07
+Apr 29 11:47:15 speedy kernel: [   11.732002] microcode: CPU2 updated to revision 0xa0b, date = 2010-09-28
+Apr 29 11:47:15 speedy kernel: [   11.736298] microcode: CPU3 sig=0x1067a, pf=0x10, revision=0xa07
+Apr 29 11:47:15 speedy kernel: [   11.737223] microcode: CPU3 updated to revision 0xa0b, date = 2010-09-28
+Apr 29 11:47:15 speedy kernel: [   11.741429] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+Apr 29 11:47:15 speedy kernel: [   12.037321] tpm_inf_pnp 00:0a: Found TPM with ID IFX0102
+Apr 29 11:47:15 speedy kernel: [   12.037360] tpm_inf_pnp 00:0a: TPM found: config base 0x4e, data base 0xcb0, chip version 0x000b, vendor id 0x15d1 (Infineon), product id 0x000b (SLB 9635 TT 1.2)
+Apr 29 11:47:15 speedy kernel: [   12.060254] iTCO_vendor_support: vendor-support=0
+Apr 29 11:47:15 speedy kernel: [   12.061897] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.10
+Apr 29 11:47:15 speedy kernel: [   12.061927] iTCO_wdt: Found a ICH10DO TCO device (Version=2, TCOBASE=0xf860)
+Apr 29 11:47:15 speedy kernel: [   12.062020] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+Apr 29 11:47:15 speedy kernel: [   16.138921] EXT4-fs (md0): mounting ext3 file system using the ext4 subsystem
+Apr 29 11:47:15 speedy kernel: [   16.282304] EXT4-fs (md0): mounted filesystem with ordered data mode. Opts: (null)
+Apr 29 11:47:15 speedy kernel: [   16.862282] EXT4-fs (dm-1): mounting ext3 file system using the ext4 subsystem
+Apr 29 11:47:15 speedy kernel: [   17.131343] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+Apr 29 11:47:15 speedy kernel: [   17.148933] Adding 4194300k swap on /dev/sda2.  Priority:-1 extents:1 across:4194300k 
+Apr 29 11:47:15 speedy kernel: [   17.181662] Adding 4194300k swap on /dev/sdb2.  Priority:-2 extents:1 across:4194300k 
+Apr 29 11:47:15 speedy kernel: [   20.842218] Loading iSCSI transport class v2.0-870.
+Apr 29 11:47:15 speedy systemd[1]: Started Kernel Samepage Merging (KSM) Tuning Daemon.
+Apr 29 11:47:15 speedy chronyd[867]: chronyd version 1.27-git1ca844 starting
+Apr 29 11:47:15 speedy chronyd[867]: Linux kernel major=3 minor=8 patch=4
+Apr 29 11:47:15 speedy chronyd[867]: hz=100 shift_hz=7 freq_scale=1.00000000 nominal_tick=10000 slew_delta_tick=833 max_tick_bias=1000 shift_pll=2
+Apr 29 11:47:15 speedy kernel: [   22.121604] iscsi: registered transport (tcp)
+Apr 29 11:47:15 speedy systemd[1]: Started Resets System Activity Logs.
+Apr 29 11:47:15 speedy chronyd[867]: Frequency -7.649 +/- 0.204 ppm read from /var/lib/chrony/drift
+Apr 29 11:47:15 speedy abrtd: Directory 'oops-2013-04-29-11:47:15-802-1' creation detected
+Apr 29 11:47:15 speedy systemd[1]: Started Harvest vmcores for ABRT.
+Apr 29 11:47:16 speedy avahi-daemon[821]: Found user 'avahi' (UID 70) and group 'avahi' (GID 70).
+Apr 29 11:47:16 speedy avahi-daemon[821]: Successfully dropped root privileges.
+Apr 29 11:47:16 speedy avahi-daemon[821]: avahi-daemon 0.6.31 starting up.
+Apr 29 11:47:16 speedy systemd[1]: Started NTP client/server.
+Apr 29 11:47:16 speedy smartd[812]: smartd 6.0 2012-10-10 r3643 [x86_64-linux-3.8.4-202.fc18.x86_64] (local build)
+Apr 29 11:47:16 speedy smartd[812]: Copyright (C) 2002-12, Bruce Allen, Christian Franke, www.smartmontools.org
+Apr 29 11:47:16 speedy smartd[812]: Opened configuration file /etc/smartd.conf
+Apr 29 11:47:16 speedy acpid: starting up with netlink and the input layer
+Apr 29 11:47:16 speedy systemd[1]: Started ACPI Event Daemon.
+Apr 29 11:47:16 speedy abrt-dump-oops: Reported 1 kernel oopses to Abrt
+Apr 29 11:47:16 speedy smartd[812]: Configuration file /etc/smartd.conf was parsed, found DEVICESCAN, scanning devices
+Apr 29 11:47:16 speedy smartd[812]: Device: /dev/sda, type changed from 'scsi' to 'sat'
+Apr 29 11:47:16 speedy smartd[812]: Device: /dev/sda [SAT], opened
+Apr 29 11:47:16 speedy smartd[812]: Device: /dev/sda [SAT], ST3500630NS, S/N:5QG1QQY8, FW:3.AEG, 500 GB
+Apr 29 11:47:16 speedy smartd[812]: Device: /dev/sda [SAT], found in smartd database: Seagate Barracuda ES
+Apr 29 11:47:16 speedy acpid: skipping incomplete file /etc/acpi/events/videoconf
+Apr 29 11:47:16 speedy acpid: 1 rule loaded
+Apr 29 11:47:16 speedy acpid: waiting for events: event logging is off
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sda [SAT], is SMART capable. Adding to "monitor" list.
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sdb, type changed from 'scsi' to 'sat'
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sdb [SAT], opened
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sdb [SAT], ST3500630NS, S/N:5QG1M2K0, FW:3.AEG, 500 GB
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sdb [SAT], found in smartd database: Seagate Barracuda ES
+Apr 29 11:47:17 speedy smartd[812]: Device: /dev/sdb [SAT], is SMART capable. Adding to "monitor" list.
+Apr 29 11:47:17 speedy smartd[812]: Monitoring 2 ATA and 0 SCSI devices
+Apr 29 11:47:17 speedy kernel: [   23.738674] iscsi: registered transport (iser)
+Apr 29 11:47:17 speedy kernel: [   24.016973] libcxgbi:libcxgbi_init_module: tag itt 0x1fff, 13 bits, age 0xf, 4 bits.
+Apr 29 11:47:17 speedy kernel: [   24.016977] libcxgbi:ddp_setup_host_page_size: system PAGE 4096, ddp idx 0.
+Apr 29 11:47:18 speedy kernel: [   24.627038] Chelsio T3 iSCSI Driver cxgb3i v2.0.0 (Jun. 2010)
+Apr 29 11:47:18 speedy kernel: [   24.627084] iscsi: registered transport (cxgb3i)
+Apr 29 11:47:18 speedy kernel: [   24.686505] Chelsio T4 iSCSI Driver cxgb4i v0.9.1 (Aug. 2010)
+Apr 29 11:47:18 speedy kernel: [   24.686536] iscsi: registered transport (cxgb4i)
+Apr 29 11:47:18 speedy kernel: [   24.766721] cnic: Broadcom NetXtreme II CNIC Driver cnic v2.5.16 (Dec 05, 2012)
+Apr 29 11:47:18 speedy kernel: [   24.810656] Broadcom NetXtreme II iSCSI Driver bnx2i v2.7.2.2 (Apr 25, 2012)
+Apr 29 11:47:18 speedy kernel: [   24.810683] iscsi: registered transport (bnx2i)
+Apr 29 11:47:18 speedy kernel: [   24.881395] iscsi: registered transport (be2iscsi)
+Apr 29 11:47:18 speedy kernel: [   24.881399] In beiscsi_module_init, tt=ffffffffa04ce000
+Apr 29 11:47:18 speedy iscsid: iSCSI logger with pid=917 started!
+Apr 29 11:47:18 speedy iscsid[780]: Starting iscsid: [  OK  ]#015[  OK  ]
+Apr 29 11:47:18 speedy systemd[1]: Started LSB: Starts and stops login iSCSI daemon..
+Apr 29 11:47:19 speedy qpidd[816]: 2013-04-29 11:47:19 [Network] notice Listening on TCP/TCP6 port 5672
+Apr 29 11:47:19 speedy qpidd[816]: 2013-04-29 11:47:19 [Broker] notice Broker running
+Apr 29 11:47:19 speedy systemd[1]: Started Avahi mDNS/DNS-SD Stack.
+Apr 29 11:47:19 speedy systemd-logind[820]: New seat seat0.
+Apr 29 11:47:19 speedy avahi-daemon[821]: Successfully called chroot().
+Apr 29 11:47:19 speedy avahi-daemon[821]: Successfully dropped remaining capabilities.
+Apr 29 11:47:19 speedy systemd[1]: Started Login Service.
+Apr 29 11:47:19 speedy avahi-daemon[821]: Loading service file /services/udisks.service.
+Apr 29 11:47:19 speedy systemd-logind[820]: Watching system buttons on /dev/input/event1 (Power Button)
+Apr 29 11:47:19 speedy systemd-logind[820]: Watching system buttons on /dev/input/event4 (Video Bus)
+Apr 29 11:47:19 speedy systemd-logind[820]: Watching system buttons on /dev/input/event0 (Power Button)
+Apr 29 11:47:19 speedy avahi-daemon[821]: Network interface enumeration completed.
+Apr 29 11:47:19 speedy avahi-daemon[821]: Registering HINFO record with values 'X86_64'/'LINUX'.
+Apr 29 11:47:19 speedy avahi-daemon[821]: Server startup complete. Host name is speedy.local. Local service cookie is 4015193064.
+Apr 29 11:47:19 speedy avahi-daemon[821]: Service "speedy" (/services/udisks.service) successfully established.
+Apr 29 11:47:19 speedy iscsid: transport class version 2.0-870. iscsid version 2.0-872.18.f17
+Apr 29 11:47:19 speedy iscsid: iSCSI daemon with pid=918 started!
+Apr 29 11:47:21 speedy systemd[1]: Started GNOME Display Manager.
+Apr 29 11:47:22 speedy dbus-daemon[824]: dbus[824]: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.3" (uid=0 pid=826 comm="/usr/sbin/gdm-binary ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.4" (uid=0 pid=949 comm="/usr/libexec/gdm-simple-slave --display-id /org/gn")
+Apr 29 11:47:22 speedy dbus[824]: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.3" (uid=0 pid=826 comm="/usr/sbin/gdm-binary ") interface="org.freedesktop.DBus.Properties" member="GetAll" error name="(unset)" requested_reply="0" destination=":1.4" (uid=0 pid=949 comm="/usr/libexec/gdm-simple-slave --display-id /org/gn")
+Apr 29 11:47:22 speedy abrtd: Core backtrace is generated and saved, 767 bytes
+Apr 29 11:47:22 speedy abrtd: Looking for kernel package
+Apr 29 11:47:22 speedy systemd[1]: Started firewalld - dynamic firewall daemon.
+Apr 29 11:47:22 speedy systemd[1]: Starting Network Manager...
+Apr 29 11:47:23 speedy kernel: [   29.713797] ip6_tables: (C) 2000-2006 Netfilter Core Team
+Apr 29 11:47:23 speedy NetworkManager[964]: <info> NetworkManager (version 0.9.8.0-1.fc18) is starting...
+Apr 29 11:47:23 speedy NetworkManager[964]: <info> Read config file /etc/NetworkManager/NetworkManager.conf
+Apr 29 11:47:23 speedy NetworkManager[964]: <info> WEXT support is enabled
+Apr 29 11:47:24 speedy NetworkManager[964]: <info> VPN: loaded org.freedesktop.NetworkManager.pptp
+Apr 29 11:47:24 speedy NetworkManager[964]: <info> VPN: loaded org.freedesktop.NetworkManager.openvpn
+Apr 29 11:47:24 speedy NetworkManager[964]: <info> VPN: loaded org.freedesktop.NetworkManager.vpnc
+Apr 29 11:47:24 speedy NetworkManager[964]: <info> VPN: loaded org.freedesktop.NetworkManager.openconnect
+Apr 29 11:47:24 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'
+Apr 29 11:47:24 speedy dbus[824]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service'
+Apr 29 11:47:24 speedy systemd[1]: Starting Authorization Manager...
+Apr 29 11:47:25 speedy kernel: [   31.406176] Ebtables v2.0 registered
+Apr 29 11:47:25 speedy polkitd[976]: Started polkitd version 0.107
+Apr 29 11:47:25 speedy kernel: [   31.858877] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+Apr 29 11:47:25 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Apr 29 11:47:25 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Apr 29 11:47:25 speedy systemd[1]: Started Authorization Manager.
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh: Acquired D-Bus service com.redhat.ifcfgrh1
+Apr 29 11:47:25 speedy NetworkManager[964]: <info> Loaded plugin ifcfg-rh: (c) 2007 - 2010 Red Hat, Inc.  To report bugs please use the NetworkManager mailing list.
+Apr 29 11:47:25 speedy NetworkManager[964]: <info> Loaded plugin keyfile: (c) 2007 - 2010 Red Hat, Inc.  To report bugs please use the NetworkManager mailing list.
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh: parsing /etc/sysconfig/network-scripts/ifcfg-em1 ...
+Apr 29 11:47:25 speedy NetworkManager[964]: <warn> failed to allocate link cache: (-10) Operation not supported
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh:     warning: NM_CONTROLLED was false but HWADDR or SUBCHANNELS was missing; device will be managed
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh:     warning: missing PREFIX, assuming 192.168.100.8/24
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh:     read connection 'System em1'
+Apr 29 11:47:25 speedy NetworkManager[964]:    ifcfg-rh: parsing /etc/sysconfig/network-scripts/ifcfg-lo ...
+Apr 29 11:47:26 speedy dbus-daemon[824]: dbus[824]: [system] Activating service name='org.freedesktop.ModemManager' (using servicehelper)
+Apr 29 11:47:26 speedy dbus[824]: [system] Activating service name='org.freedesktop.ModemManager' (using servicehelper)
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> monitoring kernel firmware directory '/lib/firmware'.
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> WiFi hardware radio set enabled
+Apr 29 11:47:26 speedy dbus[824]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+Apr 29 11:47:26 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+Apr 29 11:47:26 speedy systemd[1]: Starting Bluetooth service...
+Apr 29 11:47:26 speedy bluetoothd[1076]: bluetoothd[1076]: Bluetooth daemon 4.101
+Apr 29 11:47:26 speedy bluetoothd[1076]: Bluetooth daemon 4.101
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> WiFi enabled by radio killswitch; enabled by state file
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> WWAN enabled by radio killswitch; enabled by state file
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> WiMAX enabled by radio killswitch; enabled by state file
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> Networking is enabled by state file
+Apr 29 11:47:26 speedy NetworkManager[964]: <warn> failed to allocate link cache: (-10) Operation not supported
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): carrier is OFF
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): new Ethernet device (driver: 'e1000e' ifindex: 2)
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): exported as /org/freedesktop/NetworkManager/Devices/0
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): device state change: unmanaged -> unavailable (reason 'managed') [10 20 2]
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): bringing up device.
+Apr 29 11:47:26 speedy systemd[1]: Started Network Manager.
+Apr 29 11:47:26 speedy systemd[1]: Starting Network.
+Apr 29 11:47:26 speedy systemd[1]: Reached target Network.
+Apr 29 11:47:26 speedy systemd[1]: Starting LSB: Starts and stops login and scanning of iSCSI devices....
+Apr 29 11:47:26 speedy systemd[1]: Starting OpenVPN Robust And Highly Flexible Tunneling Application On uranium...
+Apr 29 11:47:26 speedy systemd[1]: Starting OpenVPN Robust And Highly Flexible Tunneling Application On multi/user...
+Apr 29 11:47:26 speedy systemd[1]: Starting OpenSSH server daemon...
+Apr 29 11:47:26 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.bluez'
+Apr 29 11:47:26 speedy dbus[824]: [system] Successfully activated service 'org.bluez'
+Apr 29 11:47:26 speedy bluetoothd[1076]: Starting SDP server
+Apr 29 11:47:26 speedy bluetoothd[1076]: bluetoothd[1076]: Starting SDP server
+Apr 29 11:47:26 speedy systemd[1]: Starting Sendmail Mail Transport Agent...
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  ModemManager (version 0.6.0.0-3.fc18) starting...
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  ModemManager (version 0.6.0.0-3.fc18) starting...
+Apr 29 11:47:26 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.ModemManager'
+Apr 29 11:47:26 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.ModemManager'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'AnyData'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'AnyData'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Sierra'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Option'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Wavecom'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Nokia'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Ericsson MBM'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'X22X'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Novatel'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Option High-Speed'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Samsung'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'ZTE'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Linktop'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Gobi'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'SimTech'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Longcheer'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Huawei'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'MotoC'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Cinterion'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Iridium'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Loaded plugin 'Generic'
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  Successfully loaded 20 plugins
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Sierra'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Option'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Wavecom'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Nokia'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Ericsson MBM'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'X22X'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Novatel'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Option High-Speed'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Samsung'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'ZTE'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Linktop'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Gobi'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'SimTech'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Longcheer'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Huawei'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'MotoC'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Cinterion'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Iridium'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Loaded plugin 'Generic'
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  Successfully loaded 20 plugins
+Apr 29 11:47:26 speedy modem-manager[1075]: <info>  (ttyS1) opening serial port...
+Apr 29 11:47:26 speedy dbus-daemon[824]: modem-manager[1075]: <info>  (ttyS1) opening serial port...
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): preparing device.
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> (em1): deactivating device (reason 'managed') [2]
+Apr 29 11:47:26 speedy kernel: [   32.553185] IPv6: ADDRCONF(NETDEV_UP): em1: link is not ready
+Apr 29 11:47:26 speedy NetworkManager[964]: <warn> /sys/devices/virtual/net/lo: couldn't determine device driver; ignoring...
+Apr 29 11:47:26 speedy NetworkManager[964]: <warn> /sys/devices/virtual/net/lo: couldn't determine device driver; ignoring...
+Apr 29 11:47:26 speedy NetworkManager[964]: <info> modem-manager is now available
+Apr 29 11:47:26 speedy systemd[1]: Starting Xinetd A Powerful Replacement For Inetd...
+Apr 29 11:47:26 speedy systemd[1]: Starting Virtualization daemon...
+Apr 29 11:47:26 speedy systemd[1]: Started Virtualization daemon.
+Apr 29 11:47:26 speedy systemd[1]: Starting OpenVPN Robust And Highly Flexible Tunneling Application On speedy...
+Apr 29 11:47:26 speedy systemd[1]: Starting RPC bind service...
+Apr 29 11:47:26 speedy systemd[1]: Started Bluetooth service.
+Apr 29 11:47:26 speedy systemd[1]: iscsi.service: control process exited, code=exited status=3
+Apr 29 11:47:26 speedy systemd[1]: Failed to start LSB: Starts and stops login and scanning of iSCSI devices..
+Apr 29 11:47:26 speedy systemd[1]: Unit iscsi.service entered failed state
+Apr 29 11:47:26 speedy systemd[1]: Started OpenSSH server daemon.
+Apr 29 11:47:26 speedy systemd[1]: Starting SYSV: This service starts and stops VMware services...
+Apr 29 11:47:26 speedy systemd[1]: Started Xinetd A Powerful Replacement For Inetd.
+Apr 29 11:47:26 speedy kernel: [   33.227471] Bluetooth: Core ver 2.16
+Apr 29 11:47:26 speedy kernel: [   33.227493] NET: Registered protocol family 31
+Apr 29 11:47:26 speedy kernel: [   33.227494] Bluetooth: HCI device and connection manager initialized
+Apr 29 11:47:26 speedy kernel: [   33.227505] Bluetooth: HCI socket layer initialized
+Apr 29 11:47:26 speedy kernel: [   33.227507] Bluetooth: L2CAP socket layer initialized
+Apr 29 11:47:26 speedy kernel: [   33.227512] Bluetooth: SCO socket layer initialized
+Apr 29 11:47:27 speedy kernel: [   33.466885] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Apr 29 11:47:27 speedy kernel: [   33.466889] Bluetooth: BNEP filters: protocol multicast
+Apr 29 11:47:27 speedy kernel: [   33.466900] Bluetooth: BNEP socket layer initialized
+Apr 29 11:47:27 speedy bluetoothd[1076]: bluetoothd[1076]: Parsing /etc/bluetooth/input.conf failed: No such file or directory
+Apr 29 11:47:27 speedy bluetoothd[1076]: Parsing /etc/bluetooth/input.conf failed: No such file or directory
+Apr 29 11:47:27 speedy bluetoothd[1076]: bluetoothd[1076]: Bluetooth Management interface initialized
+Apr 29 11:47:27 speedy bluetoothd[1076]: Bluetooth Management interface initialized
+Apr 29 11:47:27 speedy openvpn[1078]: Options error: In [CMD-LINE]:1: Error opening configuration file: uranium.conf
+Apr 29 11:47:27 speedy openvpn[1078]: Use --help for more information.
+Apr 29 11:47:27 speedy systemd[1]: openvpn@uranium.service: control process exited, code=exited status=1
+Apr 29 11:47:27 speedy systemd[1]: Failed to start OpenVPN Robust And Highly Flexible Tunneling Application On uranium.
+Apr 29 11:47:27 speedy systemd[1]: Unit openvpn@uranium.service entered failed state
+Apr 29 11:47:27 speedy openvpn[1080]: Options error: In [CMD-LINE]:1: Error opening configuration file: multi-user.conf
+Apr 29 11:47:27 speedy openvpn[1080]: Use --help for more information.
+Apr 29 11:47:27 speedy systemd[1]: openvpn@multi-user.service: control process exited, code=exited status=1
+Apr 29 11:47:27 speedy systemd[1]: Failed to start OpenVPN Robust And Highly Flexible Tunneling Application On multi/user.
+Apr 29 11:47:27 speedy systemd[1]: Unit openvpn@multi-user.service entered failed state
+Apr 29 11:47:27 speedy openvpn[1103]: OpenVPN 2.2.2 x86_64-redhat-linux-gnu [SSL] [LZO2] [EPOLL] [PKCS11] [eurephia] built on Sep 26 2012
+Apr 29 11:47:27 speedy openvpn[1103]: NOTE: OpenVPN 2.1 requires '--script-security 2' or higher to call user-defined scripts or executables
+Apr 29 11:47:28 speedy openvpn[1103]: Static Encrypt: Cipher 'BF-CBC' initialized with 128 bit key
+Apr 29 11:47:28 speedy openvpn[1103]: Static Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Apr 29 11:47:28 speedy openvpn[1103]: Static Decrypt: Cipher 'BF-CBC' initialized with 128 bit key
+Apr 29 11:47:28 speedy openvpn[1103]: Static Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Apr 29 11:47:28 speedy openvpn[1103]: TUN/TAP device tun0 opened
+Apr 29 11:47:28 speedy openvpn[1103]: /sbin/ip link set dev tun0 up mtu 1500
+Apr 29 11:47:28 speedy NetworkManager[964]: <warn> /sys/devices/virtual/net/tun0: couldn't determine device driver; ignoring...
+Apr 29 11:47:28 speedy openvpn[1103]: /sbin/ip addr add dev tun0 local 10.9.8.46 peer 10.9.8.45
+Apr 29 11:47:28 speedy openvpn[1103]: Data Channel MTU parms [ L:1544 D:1450 EF:44 EB:4 ET:0 EL:0 ]
+Apr 29 11:47:28 speedy openvpn[1103]: Local Options hash (VER=V4): '120619b6'
+Apr 29 11:47:28 speedy openvpn[1103]: Expected Remote Options hash (VER=V4): '309145a8'
+Apr 29 11:47:28 speedy openvpn[1127]: UDPv4 link local (bound): [undef]:1194
+Apr 29 11:47:28 speedy openvpn[1127]: UDPv4 link remote: 72.249.1.66:5044
+Apr 29 11:47:28 speedy openvpn[1127]: write UDPv4 []: Network is unreachable (code=101)
+Apr 29 11:47:28 speedy systemd[1]: Started OpenVPN Robust And Highly Flexible Tunneling Application On speedy.
+Apr 29 11:47:28 speedy vmware[1109]: Starting VMware services:
+Apr 29 11:47:28 speedy vmware[1109]: Virtual machine monitor[FAILED]
+Apr 29 11:47:28 speedy vmware[1109]: Virtual machine communication interface[FAILED]
+Apr 29 11:47:28 speedy vmware[1109]: VM communication interface socket family[FAILED]
+Apr 29 11:47:28 speedy kernel: [   34.780147] fuse init (API version 7.20)
+Apr 29 11:47:28 speedy systemd[1]: Mounting FUSE Control File System...
+Apr 29 11:47:28 speedy systemd[1]: Mounted FUSE Control File System.
+Apr 29 11:47:28 speedy systemd[1]: Started RPC bind service.
+Apr 29 11:47:28 speedy systemd[1]: Starting NFS file locking service....
+Apr 29 11:47:28 speedy xinetd[1113]: xinetd Version 2.3.15 started with libwrap loadavg labeled-networking options compiled in.
+Apr 29 11:47:28 speedy xinetd[1113]: Started working: 0 available services
+Apr 29 11:47:28 speedy systemd[1]: Started Sendmail Mail Transport Agent.
+Apr 29 11:47:28 speedy systemd[1]: Starting Sendmail Mail Transport Client...
+Apr 29 11:47:29 speedy abrtd: Kernel package kernel-3.8.4-202.fc18.x86_64 found
+Apr 29 11:47:29 speedy rpc.statd[1226]: Version 1.2.7 starting
+Apr 29 11:47:29 speedy sm-notify[1227]: Version 1.2.7 starting
+Apr 29 11:47:29 speedy kernel: [   35.535865] e1000e: em1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: Rx/Tx
+Apr 29 11:47:29 speedy kernel: [   35.535896] IPv6: ADDRCONF(NETDEV_CHANGE): em1: link becomes ready
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> (em1): carrier now ON (device state 20)
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> (em1): device state change: unavailable -> disconnected (reason 'carrier-changed') [20 30 40]
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Auto-activating connection 'System em1'.
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) starting connection 'System em1'
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> (em1): device state change: disconnected -> prepare (reason 'none') [30 40 0]
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 1 of 5 (Device Prepare) scheduled...
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 1 of 5 (Device Prepare) started...
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 2 of 5 (Device Configure) scheduled...
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 1 of 5 (Device Prepare) complete.
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 2 of 5 (Device Configure) starting...
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> (em1): device state change: prepare -> config (reason 'none') [40 50 0]
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 2 of 5 (Device Configure) successful.
+Apr 29 11:47:29 speedy NetworkManager[964]: <info> Activation (em1) Stage 2 of 5 (Device Configure) complete.
+Apr 29 11:47:29 speedy systemd[1]: Started NFS file locking service..
+Apr 29 11:47:29 speedy systemd[1]: Started Sendmail Mail Transport Client.
+Apr 29 11:47:29 speedy abrtd: Duplicate: core backtrace
+Apr 29 11:47:29 speedy abrtd: DUP_OF_DIR: /var/tmp/abrt/oops-2012-09-17-14:25:11-701-1
+Apr 29 11:47:29 speedy abrtd: Deleting problem directory oops-2013-04-29-11:47:15-802-1 (dup of oops-2012-09-17-14:25:11-701-1)
+Apr 29 11:47:29 speedy vmware[1109]: Blocking file system[  OK  ]
+Apr 29 11:47:29 speedy vmware[1109]: Virtual ethernet[FAILED]
+Apr 29 11:47:29 speedy vmware[1109]: VMware Authentication Daemon[  OK  ]
+Apr 29 11:47:29 speedy systemd[1]: vmware.service: control process exited, code=exited status=1
+Apr 29 11:47:29 speedy systemd[1]: Failed to start SYSV: This service starts and stops VMware services.
+Apr 29 11:47:29 speedy systemd[1]: Unit vmware.service entered failed state
+Apr 29 11:47:29 speedy systemd[1]: Starting LSB: Start the iprupdate utility...
+Apr 29 11:47:29 speedy systemd[1]: Starting LSB: Start the ipr init daemon...
+Apr 29 11:47:29 speedy gdm-simple-slave[949]: WARNING: Failed to give slave programs access to the display. Trying to proceed.
+Apr 29 11:47:29 speedy iprinit[1354]: Starting iprinit: [  OK  ]
+Apr 29 11:47:30 speedy systemd[1]: Started LSB: Start the ipr init daemon.
+Apr 29 11:47:30 speedy systemd[1]: Starting LSB: Start the ipr dump daemon...
+Apr 29 11:47:30 speedy iprupdate[1343]: Starting iprupdate: [  OK  ]
+Apr 29 11:47:30 speedy systemd[1]: Started LSB: Start the iprupdate utility.
+Apr 29 11:47:30 speedy iprdump[1409]: Starting iprdump: [  OK  ]
+Apr 29 11:47:30 speedy systemd[1]: Started LSB: Start the ipr dump daemon.
+Apr 29 11:47:30 speedy systemd[1]: Starting SYSV: This services starts and stops the USB Arbitrator....
+Apr 29 11:47:30 speedy systemd[1]: Started Wait for Plymouth Boot Screen to Quit.
+Apr 29 11:47:30 speedy vmware-USBArbitrator[1460]: [  OK  ]
+Apr 29 11:47:30 speedy systemd[1]: Started SYSV: This services starts and stops the USB Arbitrator..
+Apr 29 11:47:30 speedy systemd[1]: Starting SYSV: This services starts and stops the Workstation as a Server daemon....
+Apr 29 11:47:31 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.freedesktop.Accounts' unit='accounts-daemon.service'
+Apr 29 11:47:31 speedy dbus[824]: [system] Activating via systemd: service name='org.freedesktop.Accounts' unit='accounts-daemon.service'
+Apr 29 11:47:31 speedy systemd[1]: Starting Accounts Service...
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> Activation (em1) Stage 3 of 5 (IP Configure Start) scheduled.
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> Activation (em1) Stage 3 of 5 (IP Configure Start) started...
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> (em1): device state change: config -> ip-config (reason 'none') [50 70 0]
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> Activation (em1) Stage 5 of 5 (IPv4 Configure Commit) scheduled...
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> Activation (em1) Stage 3 of 5 (IP Configure Start) complete.
+Apr 29 11:47:31 speedy NetworkManager[964]: <info> Activation (em1) Stage 5 of 5 (IPv4 Commit) started...
+Apr 29 11:47:31 speedy avahi-daemon[821]: Joining mDNS multicast group on interface em1.IPv4 with address 192.168.100.8.
+Apr 29 11:47:31 speedy avahi-daemon[821]: New relevant interface em1.IPv4 for mDNS.
+Apr 29 11:47:31 speedy avahi-daemon[821]: Registering new address record for 192.168.100.8 on em1.IPv4.
+Apr 29 11:47:31 speedy accounts-daemon[1542]: started daemon version 0.6.25
+Apr 29 11:47:31 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.Accounts'
+Apr 29 11:47:31 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.Accounts'
+Apr 29 11:47:31 speedy systemd[1]: Started Accounts Service.
+Apr 29 11:47:31 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.freedesktop.ConsoleKit' unit='console-kit-daemon.service'
+Apr 29 11:47:31 speedy dbus[824]: [system] Activating via systemd: service name='org.freedesktop.ConsoleKit' unit='console-kit-daemon.service'
+Apr 29 11:47:31 speedy systemd[1]: Starting Console Manager...
+Apr 29 11:47:32 speedy NetworkManager[964]: <info> (em1): device state change: ip-config -> secondaries (reason 'none') [70 90 0]
+Apr 29 11:47:32 speedy NetworkManager[964]: <info> Activation (em1) Stage 5 of 5 (IPv4 Commit) complete.
+Apr 29 11:47:32 speedy NetworkManager[964]: <info> (em1): device state change: secondaries -> activated (reason 'none') [90 100 0]
+Apr 29 11:47:32 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Apr 29 11:47:32 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Apr 29 11:47:32 speedy systemd[1]: Started Console Manager.
+Apr 29 11:47:33 speedy NetworkManager[964]: <info> Policy set 'System em1' (em1) as default for IPv4 routing and DNS.
+Apr 29 11:47:33 speedy NetworkManager[964]: <info> Activation (em1) successful, device activated.
+Apr 29 11:47:33 speedy dbus-daemon[824]: dbus[824]: [system] Activating service name='org.freedesktop.nm_dispatcher' (using servicehelper)
+Apr 29 11:47:33 speedy dbus[824]: [system] Activating service name='org.freedesktop.nm_dispatcher' (using servicehelper)
+Apr 29 11:47:33 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Apr 29 11:47:33 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Apr 29 11:47:33 speedy systemd-logind[820]: New session 1 of user gdm.
+Apr 29 11:47:33 speedy systemd[1]: Stopping Sendmail Mail Transport Client...
+Apr 29 11:47:33 speedy systemd-logind[820]: Linked /tmp/.X11-unix/X0 to /run/user/42/X11-display.
+Apr 29 11:47:33 speedy systemd[1]: Stopping Sendmail Mail Transport Agent...
+Apr 29 11:47:33 speedy systemd[1]: Starting Sendmail Mail Transport Agent...
+Apr 29 11:47:36 speedy nm-dispatcher.action: Script '/etc/NetworkManager/dispatcher.d/10-sendmail' took too long; killing it.
+Apr 29 11:47:37 speedy vmware-workstation-server[1471]: Starting Workstation Server:#033[71Gfailed
+Apr 29 11:47:37 speedy systemd[1]: vmware-workstation-server.service: control process exited, code=exited status=1
+Apr 29 11:47:37 speedy systemd[1]: Failed to start SYSV: This services starts and stops the Workstation as a Server daemon..
+Apr 29 11:47:37 speedy systemd[1]: Unit vmware-workstation-server.service entered failed state
+Apr 29 11:47:37 speedy kernel: [   43.796260] Bridge firewalling registered
+Apr 29 11:47:37 speedy NetworkManager[964]: <warn> failed to allocate link cache: (-10) Operation not supported
+Apr 29 11:47:37 speedy NetworkManager[964]: <info> (virbr0): ignoring bridge not created by NetworkManager
+Apr 29 11:47:38 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.freedesktop.UPower' unit='upower.service'
+Apr 29 11:47:38 speedy dbus[824]: [system] Activating via systemd: service name='org.freedesktop.UPower' unit='upower.service'
+Apr 29 11:47:38 speedy systemd[1]: Starting Daemon for power management...
+Apr 29 11:47:38 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.UPower'
+Apr 29 11:47:38 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.UPower'
+Apr 29 11:47:38 speedy systemd[1]: Started Daemon for power management.
+Apr 29 11:47:38 speedy dbus-daemon[824]: modem-manager[1075]: <info>  (ttyS1) closing serial port...
+Apr 29 11:47:38 speedy dbus-daemon[824]: modem-manager[1075]: <info>  (ttyS1) serial port closed
+Apr 29 11:47:38 speedy dbus-daemon[824]: modem-manager[1075]: <info>  (ttyS1) opening serial port...
+Apr 29 11:47:38 speedy modem-manager[1075]: <info>  (ttyS1) closing serial port...
+Apr 29 11:47:38 speedy modem-manager[1075]: <info>  (ttyS1) serial port closed
+Apr 29 11:47:38 speedy modem-manager[1075]: <info>  (ttyS1) opening serial port...
+Apr 29 11:47:39 speedy avahi-daemon[821]: Joining mDNS multicast group on interface virbr0.IPv4 with address 192.168.122.1.
+Apr 29 11:47:39 speedy kernel: [   45.515960] IPv6: ADDRCONF(NETDEV_UP): virbr0: link is not ready
+Apr 29 11:47:39 speedy avahi-daemon[821]: New relevant interface virbr0.IPv4 for mDNS.
+Apr 29 11:47:39 speedy avahi-daemon[821]: Registering new address record for 192.168.122.1 on virbr0.IPv4.
+Apr 29 11:47:39 speedy dbus-daemon[824]: dbus[824]: [system] Activating via systemd: service name='org.freedesktop.RealtimeKit1' unit='rtkit-daemon.service'
+Apr 29 11:47:39 speedy dbus[824]: [system] Activating via systemd: service name='org.freedesktop.RealtimeKit1' unit='rtkit-daemon.service'
+Apr 29 11:47:39 speedy systemd[1]: Starting RealtimeKit Scheduling Policy Service...
+Apr 29 11:47:39 speedy dnsmasq[1797]: started, version 2.65 cachesize 150
+Apr 29 11:47:39 speedy dnsmasq[1797]: compile time options: IPv6 GNU-getopt DBus no-i18n no-IDN DHCP DHCPv6 no-Lua TFTP no-conntrack
+Apr 29 11:47:39 speedy dnsmasq-dhcp[1797]: DHCP, IP range 192.168.122.2 -- 192.168.122.254, lease time 1h
+Apr 29 11:47:39 speedy dnsmasq[1797]: using local addresses only for unqualified names
+Apr 29 11:47:39 speedy dnsmasq[1797]: reading /etc/resolv.conf
+Apr 29 11:47:39 speedy dnsmasq[1797]: using nameserver 192.168.120.146#53
+Apr 29 11:47:39 speedy dnsmasq[1797]: using local addresses only for unqualified names
+Apr 29 11:47:39 speedy dnsmasq[1797]: read /etc/hosts - 3 addresses
+Apr 29 11:47:39 speedy dnsmasq[1797]: read /var/lib/libvirt/dnsmasq/default.addnhosts - 0 addresses
+Apr 29 11:47:39 speedy dnsmasq-dhcp[1797]: read /var/lib/libvirt/dnsmasq/default.hostsfile
+Apr 29 11:47:39 speedy dbus-daemon[824]: dbus[824]: [system] Successfully activated service 'org.freedesktop.RealtimeKit1'
+Apr 29 11:47:39 speedy dbus[824]: [system] Successfully activated service 'org.freedesktop.RealtimeKit1'
+Apr 29 11:47:39 speedy rtkit-daemon[1794]: Successfully made thread 1793 of process 1793 (/usr/bin/pulseaudio) owned by '42' high priority at nice level -11.
+Apr 29 11:47:39 speedy systemd[1]: Started RealtimeKit Scheduling Policy Service.
+Apr 29 11:47:39 speedy nm-dispatcher.action: Script '/etc/NetworkManager/dispatcher.d/20-chrony' took too long; killing it.
+Apr 29 11:47:39 speedy NetworkManager[964]: <warn> Dispatcher script timed out: Script '/etc/NetworkManager/dispatcher.d/10-sendmail' timed out.
+Apr 29 11:47:39 speedy NetworkManager[964]: <warn> Dispatcher script timed out: Script '/etc/NetworkManager/dispatcher.d/20-chrony' timed out.

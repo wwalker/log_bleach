@@ -1,0 +1,27 @@
+May 26 03:13:18 speedy openvpn[1194]: Peer Connection Initiated with 72.249.1.66:5044
+May 26 03:13:19 speedy openvpn[1194]: Initialization Sequence Completed
+May 26 03:20:49 speedy openvpn[1194]: Inactivity timeout (--ping-restart), restarting
+May 26 03:20:49 speedy openvpn[1194]: TCP/UDP: Closing socket
+May 26 03:20:49 speedy openvpn[1194]: Closing TUN/TAP interface
+May 26 03:20:49 speedy openvpn[1194]: /sbin/ip addr del dev tun0 local 10.9.8.46 peer 10.9.8.45
+May 26 03:20:49 speedy avahi-daemon[833]: Withdrawing workstation service for tun0.
+May 26 03:20:49 speedy openvpn[1194]: SIGUSR1[soft,ping-restart] received, process restarting
+Jun  2 16:20:53 uranium openvpn[1398]: /sbin/ip route del 10.9.8.0/24
+Jun  2 16:20:53 uranium openvpn[1398]: Restart pause, 2 second(s)
+Jun  2 16:20:55 uranium openvpn[1398]: Static Encrypt: Cipher 'BF-CBC' initialized with 128 bit key
+Jun  2 16:20:55 uranium openvpn[1398]: Static Encrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Jun  2 16:20:55 uranium openvpn[1398]: Static Decrypt: Cipher 'BF-CBC' initialized with 128 bit key
+Jun  2 16:20:55 uranium openvpn[1398]: Static Decrypt: Using 160 bit message hash 'SHA1' for HMAC authentication
+Jun  2 16:20:55 uranium openvpn[1398]: Socket Buffers: R=[212992->131072] S=[212992->131072]
+Jun  2 16:20:55 uranium openvpn[1398]: ROUTE default_gateway=172.16.15.1
+Jun  2 16:20:55 uranium openvpn[1398]: TUN/TAP device tun0 opened
+Jun  2 16:20:55 uranium openvpn[1398]: TUN/TAP TX queue length set to 100
+Jun  2 16:20:55 uranium openvpn[1398]: /sbin/ip link set dev tun0 up mtu 1500
+Jun  2 16:20:55 uranium openvpn[1398]: /sbin/ip addr add dev tun0 local 10.9.8.78 peer 10.9.8.77
+Jun  2 16:20:55 uranium openvpn[1398]: /sbin/ip route add 10.9.8.0/24 via 10.9.8.77
+Jun  2 16:20:55 uranium openvpn[1398]: Data Channel MTU parms [ L:1544 D:1450 EF:44 EB:4 ET:0 EL:0 ]
+Jun  2 16:20:55 uranium openvpn[1398]: Local Options hash (VER=V4): '256676c8'
+Jun  2 16:20:55 uranium openvpn[1398]: Expected Remote Options hash (VER=V4): '583a778f'
+Jun  2 16:20:55 uranium openvpn[1398]: UDPv4 link local (bound): [undef]:1194
+Jun  2 16:20:55 uranium openvpn[1398]: UDPv4 link remote: 72.249.1.66:5076
+

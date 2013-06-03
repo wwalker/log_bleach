@@ -1,0 +1,11 @@
+Jun  3 07:45:53 uranium kernel: [912926.754808] usb 2-8: USB disconnect, device number 13
+Jun  3 07:45:53 uranium kernel: [912926.754815] usb 2-8.2: USB disconnect, device number 14
+Jun  3 07:46:16 uranium kernel: [912948.957025] usb 2-8: new full-speed USB device number 15 using ohci_hcd
+Jun  3 07:46:16 uranium kernel: [912949.146923] usb 2-8: New USB device found, idVendor=05f3, idProduct=0081
+Jun  3 07:46:16 uranium kernel: [912949.146930] usb 2-8: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Jun  3 07:46:16 uranium kernel: [912949.146934] usb 2-8: Product: Kinesis Keyboard Hub
+Jun  3 07:46:16 uranium kernel: [912949.146938] usb 2-8: Manufacturer: PI Engineering
+Jun  3 07:46:16 uranium kernel: [912949.149997] hub 2-8:1.0: USB hub found
+Jun  3 07:46:16 uranium kernel: [912949.152919] hub 2-8:1.0: 4 ports detected
+Jun  3 07:46:16 uranium kernel: [912949.562236] input: HID 05f3:0007 as /devices/pci0000:00/0000:00:0b.0/usb2/2-8/2-8.2/2-8.2:1.0/input/input25
+Jun  3 07:46:16 uranium kernel: [912949.562409] hid-generic 0003:05F3:0007.000F: input,hidraw2: USB HID v1.00 Keyboard [HID 05f3:0007] on usb-0000:00:0b.0-8.2/input0
