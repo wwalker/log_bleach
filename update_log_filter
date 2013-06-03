@@ -35,7 +35,10 @@ perlre = File.open(BASE_DIR + 'perlre/' + basename + '.perlre', 'w')
 
 source.lines.each do |line|
   line.chomp!
-  next if line.length < 4
+  # Windows is evil
+  line.gsub!(//,'')
+
+  next if line.match(/^\s+$/)
   # Find datestamp if any and replace it
   line.gsub!(/#{RN_LOG_PREFIX}/              , '<%=RN_LOG_PREFIX%>')
   line.gsub!(/#{ISODATE_WITH_TZ_TLA}/        , '<%=ISODATE_WITH_TZ_TLA%>')
