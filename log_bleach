@@ -40,6 +40,7 @@ my $debug = 0;
             "show-source|show_source|ss",
             "show-parsed|show_parsed",
             "show-regex|sr",
+            "vim",
             "opts-dump"
         );
 
@@ -412,7 +413,12 @@ my $debug = 0;
 
         print Dumper \@regexes if $debug;
 
-        open INPUT_FILE, $self->{'input_file_name'};
+        if ($self->{'input_file_name'} eq '-') {
+            *INPUT_FILE = *STDIN;
+        }
+        else {
+            open INPUT_FILE, $self->{'input_file_name'};
+        }
         while (<INPUT_FILE>) {
             print if $debug;
             my $matched = 0;
