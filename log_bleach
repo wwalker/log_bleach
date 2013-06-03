@@ -309,6 +309,8 @@ my $debug = 0;
         foreach my $key ( keys(%$file_config) ) {
             foreach my $pattern ( @{ $file_config->{$key}->{'patterns'} } ) {
                 $file_type = $key if $input_file_name =~ $pattern;
+                $pattern .= "\.(?:xz|XZ|gz|GZ|bz2|BZ2)";
+                $file_type = $key if $input_file_name =~ $pattern;
             }
         }
 
@@ -418,7 +420,18 @@ my $debug = 0;
             *INPUT_FILE = *STDIN;
         }
         else {
-            open INPUT_FILE, $self->{'input_file_name'};
+            if ($self->{'input_file_name'} =~ /\.(gz|GZ)$/) {
+                open INPUT_FILE, "gunzip < $self->{'input_file_name'}|";
+            }
+            elsif ($self->{'input_file_name'} =~ /\.(xz|XZ)$/) {
+                open INPUT_FILE, "unxz < $self->{'input_file_name'}|";
+            }
+            elsif ($self->{'input_file_name'} =~ /\.(bz2|BZ2)$/) {
+                open INPUT_FILE, "bunzip2 < $self->{'input_file_name'}|";
+            }
+            else {
+                open INPUT_FILE, $self->{'input_file_name'};
+            }
         }
         while (<INPUT_FILE>) {
             print if $debug;
