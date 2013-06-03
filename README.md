@@ -1,21 +1,18 @@
 LogBleach
 
-  Makes the cruft in your logs disappear.
+Makes the cruft in your logs disappear.
 
-  log_bleach /var/log/my_custom_log
+    log_bleach /var/log/my_custom_log
 
-  will output to stdout the _relevant_ log file lines
+This will output to stdout the _relevant_ log file lines
 
-  Install it:
-* Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version)
-* Have perl 5.x available, install perl's YAML library (yum install perl-YAML)
+Install it:
+Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version.
+Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 
     git clone https://github.com/wwalker/log_bleach.git
-
     cd log_bleach
-
     ln -s `pwd`/log_bleach ~/bin/
-
     ln -s `pwd`/update_log_filter ~/bin/
 
   Get the usage info:
@@ -25,27 +22,20 @@ LogBleach
   Create your initial .log_bleach directory structure:
 
     log_bleach --init
-
     log_bleach --show-types
 
   Create a new log file type:
 
     log_bleach --add-type=secure
-
     log_bleach --show-types
 
   Add RegEx(!) patterns for filename to type mapping (NOT file globs!)
 
     log_bleach --add-pattern='secure' --type=secure
-
     log_bleach --add-pattern='secure-.*' --type=secure
-
     log_bleach --add-pattern='secure\..*' --type=secure
-
     log_bleach --show-patterns --type=secure
-
     log_bleach --add-filter=secure_log_irrelevant --type=secure
-
     log_bleach --show-filters --type=secure
 
   Now let's see what is important in the secure log:
@@ -53,69 +43,46 @@ LogBleach
   Review 20 lines and decide what is irrelevant
 
     log_bleach /var/log/secure | head
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session closed for user postgres
-
     Jun  2 03:44:10 ut sshd[30975]: Connection closed by 71.19.156.39
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): check pass; user unknown
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=•
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_succeed_if(smtp:auth): error retrieving information about user academia
 
 
   Make them disappear:
 
     log_bleach --add-content --filter=secure_log_irrelevant --type=secure
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session opened for user PATTERN_WORD by (uid=0)
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session closed for user PATTERN_WORD
-
     Jun  2 03:44:10 ut sshd[30975]: Connection closed by 71.19.156.39
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): check pass; user unknown
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=•
-
     Jun  2 03:44:12 ut saslauthd[8507]: pam_succeed_if(smtp:auth): error retrieving information about user PATTERN_WORD
 
 
   You see that some of the words (usernames here) had to be manually replaced with PATTERN_WORD.  That is as hard as it gets.
 
   Now we see if it worked:
+
     log_bleach /var/log/secure | head
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:45:02 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:45:11 ut sshd[31356]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.134.65.120  user=root
-
     Jun  2 03:49:10 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:50:02 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:54:10 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:55:01 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 03:56:16 ut sshd[32466]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.134.65.120  user=root
-
     Jun  2 03:59:10 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
-
     Jun  2 04:00:02 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
 
 
   It worked we are filtering out lots of lines that looked similar to the ones that we entered as ignorable.  So we exclude some more:
 
     log_bleach --add-content --filter=secure_log_irrelevant --type=secure
-
     Jun  2 03:44:10 ut su: pam_unix(su:session): session opened for user PATTERN_WORD by (uid=0)
-
     Jun  2 03:45:11 ut sshd[31356]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=PATTERN_WORD  user=PATTERN_WORD
 
 
@@ -123,51 +90,28 @@ LogBleach
   And this is what we get:
 
     [wwalker@ut ~] [] $ log_bleach /var/log/secure
-
     Jun  2 19:23:01 ut sshd[11983]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     Jun  2 23:19:56 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker/git ; USER=root ; COMMAND=/bin/su -
-
     Jun  2 23:40:01 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r /var/log/secure
-
     Jun  3 00:08:41 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r /var/log/secure-20130602
-
     Jun  3 00:17:07 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r log_bleach /var/log/secure-20130526
-
     [wwalker@ut ~] [] $ log_bleach /var/log/secure-20130602 
-
     May 27 02:10:54 ut sshd[2604]: Received disconnect from 113.165.106.243: 3: com.jcraft.jsch.JSchException: Auth cancel
-
     May 29 09:50:40 ut sshd[32763]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     May 31 03:18:24 ut sshd[19773]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
-
     May 31 03:18:37 ut sshd[19782]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
-
     May 31 03:18:50 ut sshd[19788]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
-
     May 31 03:18:58 ut sshd[19794]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
-
     May 31 09:55:45 ut sshd[19159]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     May 31 16:45:29 ut sshd[8670]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     Jun  1 13:12:53 ut webmin[3246]: Timeout of session for root
-
     Jun  1 21:04:00 ut sshd[10192]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     Jun  1 21:06:25 ut sshd[10732]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     Jun  1 21:07:10 ut sshd[10819]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-
     [wwalker@ut ~] [] $ wc -l /var/log/secure /var/log/secure-20130602 
-
        5462 /var/log/secure
-
       35693 /var/log/secure-20130602
-
       41155 total
-
     [wwalker@ut ~] [] $ 
 
   Now we've stripped down 41,000+ lines to 17 relevant lines.  In 10 minutes.
@@ -179,7 +123,6 @@ LogBleach
   You teach log_bleach about each log file type you have.  log_bleach brings almost nothing pre-learned to the game.
 
   log_bleach does know a few things to generalize, that's all:
-
 
     IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
     TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
