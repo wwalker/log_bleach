@@ -18,7 +18,9 @@ my $debug = 0;
         $self->{opts} = {};
         bless $self;
 
-        GetOptions( $self->{opts}, "init", "add-filter=s" );
+        GetOptions( $self->{opts}, "init", "add-filter=s", "debug" );
+
+        $debug = 1 if ( $self->{'opts'}->{'debug'} );
 
         if ( $self->{'opts'}->{'init'} ) {
             exit $self->init();
