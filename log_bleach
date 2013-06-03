@@ -4,9 +4,11 @@
 use strict;
 
 my $debug = 0;
+
 #my $debug = 1;
 
 {
+
     package LogBleach;
     use Data::Dumper;
     use Getopt::Long;
@@ -18,30 +20,219 @@ my $debug = 0;
         $self->{opts} = {};
         bless $self;
 
-        GetOptions( $self->{opts}, "init", "add-filter=s", "debug" );
+        GetOptions(
+            $self->{opts},
+            "init",
+            "type=s",
+            "filter=s",
+            "add-filter=s",
+            "add-content",
+            "debug",
+            "help|?|h",
+            "show-parsed|sp",
+            "show-regex|show-perlre|sr",
+            "opts-dump"
+        );
 
         $debug = 1 if ( $self->{'opts'}->{'debug'} );
+        if ( $self->{'opts'}->{'opts-dump'} ) {
+            print Dumper $self->{opts};
+            exit 0;
+        }
+
+        if ( $self->{'opts'}->{'help'} ) {
+            $self->usage();
+            exit 0;
+        }
 
         if ( $self->{'opts'}->{'init'} ) {
             exit $self->init();
         }
 
         $self->{'basedir'} = $ENV{'HOME'} . '/.log_bleach/';
-        $self->{'file_config_yaml_name'} = $self->{'basedir'} . 'file_config.yaml';
+        $self->{'file_config_yaml_name'} =
+          $self->{'basedir'} . 'file_config.yaml';
 
         print $self->{'file_config_yaml_name'}, "\n" if $debug;
 
-        die 'no file_config file found' if ! -r $self->{'file_config_yaml_name'};
+        die 'no file_config file found' if !-r $self->{'file_config_yaml_name'};
         open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
         $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
 
         return $self;
     }
 
+    sub usage {
+        print "Usage:\n";
+        print "\n";
+        print "  log_bleach --init\n";
+        print "\n";
+        print "  log_bleach --help|-h|-?\n";
+        print "\n";
+        print "  log_bleach [--type=<filetype>] <filename>\n";
+        print "\n";
+        print "  log_bleach --show-parsed --type=<filetype>|<filename>\n";
+        print "\n";
+        print "  log_bleach --show-perlre --type=<filetype>|<filename>\n";
+        print "\n";
+        print "  log_bleach --add-filter --type=<filetype>|<filename>\n";
+        print "\n";
+        print
+"  log_bleach --add-content [--filter=<filter_filename>] --type=<filetype>|<filename>\n";
+    }
+
+    sub exit_on_usage {
+        my $self = shift;
+        my $msg  = shift;
+
+        print STDERR "$msg\n";
+        $self->usage();
+        exit 1;
+    }
+
+    sub filter_name_to_source_file_name {
+        my $self = shift;
+        map { $self->{'basedir'} . 'source/' . $_ ; } @_;
+    }
+
+    sub filter_name_to_regex_file_name {
+        my $self = shift;
+        map { $self->{'basedir'} . 'perlre/' . $_  . '.perlre'; } @_;
+    }
+
+    sub filter_name_to_parsed_file_name {
+        my $self = shift;
+        map { $self->{'basedir'} . 'parsed/' . $_ . '.parsed' ; } @_;
+    }
+
+    sub get_filter_source_name {
+        my $self = shift;
+        my $file_type = $self->get_file_type();
+        my @filter_names = $self->get_filter_names();
+        my $opts_filter = $self->{'opts'}->{'filter'};
+
+        if ($opts_filter) {
+            return $opts_filter if grep( /^$opts_filter$/, @filter_names);
+            $self->exit_on_usage(
+                "--filter was used, but the filter doesn't exist in the config"
+            );
+        }
+
+        if ( $#filter_names == -1 ) {
+            $self->exit_on_usage( "There are no filters defined for this type <$file_type>"
+            );
+        }
+
+        if ( $#filter_names > 0 ) {
+            $self->exit_on_usage( "--filter was not used, and the config has more than one filter for this type <$file_type>"
+            );
+        }
+
+        return $filter_names[0];
+    }
+
+
+    sub get_filter_source_file_name {
+        my $self = shift;
+        my $file_type = $self->get_file_type();
+
+        my @regex_files = $self->source_file_names();
+        my $opts_filter = $self->{'opts'}->{'filter'};
+
+    }
+
+    sub add_content {
+        my $self = shift;
+        my $source_file_name = $self->get_filter_source_file_name();
+
+        # If we got here, everything is good, however the file may not exist yet.
+        print "Paste or type in your source lines that should be ignored, then Control D on a blank line";
+        `cat >> $source_file_name`;
+
+        # Now update the parsed and regex files
+        my $source_file_basename = basename($source_file_name);
+        `update_log_filter $$source_file_basename`;
+    }
+
+    sub add_filter {
+        my $self = shift;
+        my $file_type = $self->get_file_type();
+        my @filter_names = $self->get_filter_names();
+        my $opts_filter = $self->{'opts'}->{'filter'};
+
+        if ($opts_filter) {
+            if (grep( /^$opts_filter$/, @filter_names)) {
+                $self->exit_on_usage( "--filter was used, but the filter already exists in the config");
+            }
+        }
+        else {
+            $self->exit_on_usage( "--filter must be used.");
+        }
+
+        $self->add_filter_to_type_in_config($file_type, $opts_filter);
+        $self->rewrite_config_on_disk();
+    }
+
+    sub add_filter_to_type_in_config {
+        my $self = shift;
+        my $file_type = shift;
+        my $filter_name = shift;
+
+        push(@{$self->{'file_config'}->{$file_type}->{'filters'}}, $filter_name);
+    }
+
+    sub add_pattern_to_type_in_config {
+        my $self = shift;
+        my $file_type = shift;
+        my $pattern = shift;
+
+        push(@{$self->{'file_config'}->{$file_type}->{'patterns'}}, $pattern);
+    }
+
+    sub show_regex {
+        my $self = shift;
+        my @regex_files = $self->regex_file_names();
+
+        foreach my $regex_file (@regex_files) {
+            print "$regex_file:\n";
+            `cat $regex_file`;
+        }
+    }
+
+    sub show_parsed {
+        my $self = shift;
+        my @parsed_files = $self->parsed_file_names();
+
+        foreach my $parsed_file (@parsed_files) {
+            print "$parsed_file:\n";
+            `cat $parsed_file`;
+        }
+    }
+
     sub get_file_type {
         my $self            = shift;
         my $input_file_name = $self->{'input_file_name'};
         my $file_config     = $self->{'file_config'};
+        my $opts_type       = $self->{'opts'}->{'type'};
+
+        return $self->{'file_type'} if $self->{'file_type'};
+
+# if --type was used on the command line, verify that it is in the config, or exit.
+        if ($opts_type) {
+            if ( !$file_config->{$opts_type} ) {
+                $self->exit_on_usage(
+"The passed file type <$opts_type> does not exist in the file_config.yaml"
+                );
+            }
+            $self->{'file_type'} = $opts_type;
+            return $opts_type;
+        }
+
+        # --type was not used
+        if ( !$self->{'input_file_name'} ) {
+            $self->exit_on_usage(
+                "Neither --type= nor a filename were passed in");
+        }
 
         my $file_type = undef;
         foreach my $key ( keys(%$file_config) ) {
@@ -49,26 +240,52 @@ my $debug = 0;
                 $file_type = $key if $input_file_name =~ $pattern;
             }
         }
+
+        if ( !$file_type ) {
+            $self->exit_on_usage(
+"The filename passed in did not match any type patterns in the file_config.yaml"
+            );
+        }
+        $self->{'file_type'} = $file_type;
         return $file_type;
     }
 
-    sub regex_file_names {
+    sub get_filter_names {
         my $self     = shift;
         my $filetype = $self->get_file_type();
         my @results =
           @{ $self->{'file_config'}->{$filetype}->{'config_filters'} };
-        my @results2 =
-          map { $self->{'basedir'} . 'perlre/' . $_ . '.perlre'; } @results;
-        return @results2;
+        return @results;
+    }
+
+    sub source_file_names {
+        my $self     = shift;
+        $self->filter_name_to_source_file_name($self->get_filter_names());
+    }
+
+    sub parsed_file_names {
+        my $self     = shift;
+        $self->filter_name_to_parsed_file_name($self->get_filter_names());
+    }
+
+    sub regex_file_names {
+        my $self     = shift;
+        $self->filter_name_to_regex_file_name($self->get_filter_names());
     }
 
     sub run {
         my $self = shift;
         my $opts = $self->{'opts'};
 
-        if ( $opts->{'add-filter'} ) {
-            exit $self->add_filter( $opts->{'add-filter'} );
-        }
+        exit $self->add_filter( $opts->{'add-filter'} )
+          if ( $opts->{'add-filter'} );
+        exit $self->add_content( $opts->{'add-content'} )
+          if ( $opts->{'add-content'} );
+        exit $self->show_parsed( $opts->{'show-parsed'} )
+          if ( $opts->{'show-parsed'} );
+        exit $self->show_regex( $opts->{'show-regex'} )
+          if ( $opts->{'show-regex'} );
+
         exit $self->filter();
     }
 
