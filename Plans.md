@@ -1,10 +1,8 @@
 log_bleach - make the cruft disappear from your log files
 
-* compression support
 * auto_tune (put regexes that match the most often earliest in the pattern list)
 * editor
 * multiple files at once support (can easily use xargs in the mean time)
-* rails support (a decolorization input filter so things will match, no I will NOT put the color back in the output stream)
 * currently require ruby, and perl+YAML; should require only one language.
 + that language will be perl as it's ubiquitous
 

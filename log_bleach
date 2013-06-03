@@ -435,8 +435,16 @@ my $debug = 0;
         }
         while (<INPUT_FILE>) {
             print if $debug;
+
             # Windows is evil
             s///g;
+
+            # Rails color logs are evil, but not as bad as windows ^M
+            # So we strip ansi codes (color):
+            s/\e\[?.*?[\@-~]//g;
+
+            print if $debug;
+
             my $matched = 0;
             foreach my $regex (@regexes) {
                 print $regex, "\n" if $debug;
