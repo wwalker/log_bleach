@@ -8,7 +8,7 @@ BASE_DIR = ENV['HOME'] + '/.log_bleach/'
 
 IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
 TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
-THREE_LETTER_WEEKDAY       = '(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)'
+THREE_LETTER_WEEKDAY       = '\b(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b'
 TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY + '\s+' + TS_SYSLOG
 SYSLOG_PREFIX              = TS_SYSLOG + ' \S+ \S+(?:\[\d+\])?: '
 ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d'
