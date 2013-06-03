@@ -192,7 +192,7 @@ my $debug = 0;
 
         if ($opts_pattern) {
             if (grep( /^$opts_pattern$/, @pattern_names)) {
-                $self->exit_on_usage( "--add-pattern was used, but the pattern already exists in the config");
+                $self->exit_on_usage( "--add-pattern was used, but the pattern <$opts_pattern> already exists in the config");
             }
         }
         else {
