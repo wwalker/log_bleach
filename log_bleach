@@ -429,7 +429,7 @@ my $debug = 0;
 
     sub init {
         `mkdir -p $ENV{'HOME'}/.log_bleach/{source,parsed,perlre}`;
-        `echo -e "---\nmessages:\n  patterns:\n    - messages\n  config_filters:\n    - messages\n" > $ENV{'HOME'}/.log_bleach/file_config.yaml`;
+        `echo -e "---\n" > $ENV{'HOME'}/.log_bleach/file_config.yaml`;
     }
 }
 
