@@ -8,7 +8,8 @@ BASE_DIR = ENV['HOME'] + '/.log_bleach/'
 
 IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
 TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
-TS_SYSLOG_WITH_WEEKDAY     = '(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s+' + TS_SYSLOG
+THREE_LETTER_WEEKDAY       = '(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)'
+TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY + '\s+' + TS_SYSLOG
 SYSLOG_PREFIX              = TS_SYSLOG + ' \S+ \S+(?:\[\d+\])?: '
 ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d'
 ISODATE_WITH_TZ_TLA        = ISODATE + '\s+[A-Z]{3}\b'
@@ -42,6 +43,7 @@ source.lines.each do |line|
   line.gsub!(/#{SYSLOG_PREFIX}/              , '<%=SYSLOG_PREFIX%>')
   line.gsub!(/#{TS_SYSLOG_WITH_WEEKDAY}/     , '<%=TS_SYSLOG_WITH_WEEKDAY%>')
   line.gsub!(/#{TS_SYSLOG}/                  , '<%=TS_SYSLOG%>')
+  line.gsub!(/#{THREE_LETTER_WEEKDAY}/       , '<%=THREE_LETTER_WEEKDAY%>')
   line.gsub!(/#{RUBY_STACK_TRACE_FILE_LINE}/ , '<%=RUBY_STACK_TRACE_FILE_LINE%>')
   line.gsub!(/#{FULL_FILE_PATH}/             , '<%=FULL_FILE_PATH%>')
   line.gsub!(/#{IP_ADDRESS}/                 , '<%=IP_ADDRESS%>')
