@@ -422,6 +422,8 @@ my $debug = 0;
         }
         while (<INPUT_FILE>) {
             print if $debug;
+            # Windows is evil
+            s///g;
             my $matched = 0;
             foreach my $regex (@regexes) {
                 print $regex, "\n" if $debug;
