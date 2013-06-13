@@ -1,4 +1,4 @@
-LogBleach
+# LogBleach
 
 Makes the cruft in your logs disappear.
 
@@ -6,15 +6,54 @@ Makes the cruft in your logs disappear.
 
 This will output to stdout the _relevant_ log file lines
 
-Install it:
-Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version.
-Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
+# How it works
 
+log_bleach begins knowning *nothing* about your log file.  You simply tell
+log_bleach lines, straight from the log file, that you consider irrelevant.
+
+### Create a new log file type in log_bleach
+
+    log_bleach --add-type=secure
+    log_bleach --add-pattern='secure' --type=secure
+    log_bleach --add-pattern='secure-.*' --type=secure    # logrotated files
+    log_bleach --add-filter=secure-basic --type=secure
+
+### Teach log_bleach about your new file type:
+    log_bleach /var/log/secure | head
+    Jun 10 07:39:05 speedy gdm-password][11697]: pam_unix(gdm-password:session): session opened for user wwalker by (unknown)(uid=0)
+    Jun 10 07:39:05 speedy gdm-launch-environment][1402]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+    Jun 10 07:39:05 speedy polkitd[974]: Unregistered Authentication Agent for unix-session:1 (system bus name :1.55, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+    Jun 10 07:39:08 speedy polkitd[974]: Registered Authentication Agent for unix-session:961 (system bus name :1.1987 [/usr/libexec/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+    Jun 10 11:16:55 speedy sudo:  wwalker : TTY=pts/15 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/mount -t cifs -o user=wwalker,domain=commstor //hqdata/groups /mnt/hqdata
+    Jun 10 11:16:59 speedy sudo:  wwalker : TTY=pts/15 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/mount -o soft,intr devshare:/array1 /mnt/devshare
+
+Those all look irrelevant...
+
+    log_bleach --add-content /var/log/secure
+    Jun 10 13:42:30 speedy xscreensaver: pam_unix(xscreensaver:auth): conversation failed
+    Jun 10 13:42:30 speedy xscreensaver: pam_unix(xscreensaver:auth): auth could not identify password for [wwalker]
+    Jun 11 01:10:01 speedy polkitd[20910]: Loading rules from directory /etc/polkit-1/rules.d
+    Jun 11 01:10:01 speedy polkitd[20910]: Loading rules from directory /usr/share/polkit-1/rules.d
+
+The lines we taught it, and others like them are now quietly discarded by
+log_bleach.
+
+Keep running log_bleach and then log_bleach --add-content until log_bleach
+is quietly discarding all the irrelevant lines from your log; leaving you with
+only the relevant lines to analyze.
+
+# INSTALL
+1. Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version).
+1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
+1. Install it:
     git clone https://github.com/wwalker/log_bleach.git
     cd log_bleach
     ln -s `pwd`/log_bleach ~/bin/
     ln -s `pwd`/update_log_filter ~/bin/
 
+That's it, it's installed.  (Assumes that ~/bin is in your PATH)
+
+#
   Get the usage info:
 
     log_bleach --help
