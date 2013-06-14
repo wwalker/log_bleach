@@ -48,12 +48,10 @@ only the relevant lines to analyze.
 1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 1. Install it:
 
-This line exists because of a bug in markdown.....
-
-    git clone https://github.com/wwalker/log_bleach.git
-    cd log_bleach
-    ln -s `pwd`/log_bleach ~/bin/
-    ln -s `pwd`/update_log_filter ~/bin/
+        git clone https://github.com/wwalker/log_bleach.git
+        cd log_bleach
+        ln -s `pwd`/log_bleach ~/bin/
+        ln -s `pwd`/update_log_filter ~/bin/
 
 That's it, it's installed.  (Assumes that ~/bin is in your PATH)
 
