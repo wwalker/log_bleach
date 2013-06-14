@@ -48,6 +48,7 @@ only the relevant lines to analyze.
 1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 1. Install it:
 
+This line exists because of a bug in markdown.....
 
     git clone https://github.com/wwalker/log_bleach.git
     cd log_bleach
@@ -137,7 +138,7 @@ That's it, it's installed.  (Assumes that ~/bin is in your PATH)
     Jun  2 23:40:01 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r /var/log/secure
     Jun  3 00:08:41 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r /var/log/secure-20130602
     Jun  3 00:17:07 ut sudo:  wwalker : TTY=pts/6 ; PWD=/home/wwalker ; USER=root ; COMMAND=/bin/chmod +r log_bleach /var/log/secure-20130526
-    [wwalker@ut ~] [] $ log_bleach /var/log/secure-20130602 
+    [wwalker@ut ~] [] $ log_bleach /var/log/secure-20130602
     May 27 02:10:54 ut sshd[2604]: Received disconnect from 113.165.106.243: 3: com.jcraft.jsch.JSchException: Auth cancel
     May 29 09:50:40 ut sshd[32763]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
     May 31 03:18:24 ut sshd[19773]: Received disconnect from 118.68.166.17: 3: java.net.SocketTimeoutException: Read timed out
@@ -150,11 +151,11 @@ That's it, it's installed.  (Assumes that ~/bin is in your PATH)
     Jun  1 21:04:00 ut sshd[10192]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
     Jun  1 21:06:25 ut sshd[10732]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
     Jun  1 21:07:10 ut sshd[10819]: error: RSA_public_decrypt failed: error:0407006A:lib(4):func(112):reason(106)
-    [wwalker@ut ~] [] $ wc -l /var/log/secure /var/log/secure-20130602 
+    [wwalker@ut ~] [] $ wc -l /var/log/secure /var/log/secure-20130602
        5462 /var/log/secure
       35693 /var/log/secure-20130602
       41155 total
-    [wwalker@ut ~] [] $ 
+    [wwalker@ut ~] [] $
 
   Now we've stripped down 41,000+ lines to 17 relevant lines.  In 10 minutes.
 
