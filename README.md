@@ -48,6 +48,7 @@ only the relevant lines to analyze.
 1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 1. Install it:
 
+
     git clone https://github.com/wwalker/log_bleach.git
     cd log_bleach
     ln -s `pwd`/log_bleach ~/bin/
