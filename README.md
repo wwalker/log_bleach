@@ -9,7 +9,8 @@ This will output to stdout the _relevant_ log file lines
 # How it works
 
 log_bleach begins knowning *nothing* about your log file.  You simply tell
-log_bleach lines, straight from the log file, that you consider irrelevant.
+log_bleach which lines, straight from the log file, that you consider
+irrelevant.
 
 ### Create a new log file type in log_bleach
 
@@ -38,14 +39,15 @@ Those all look irrelevant...
 The lines we taught it, and others like them are now quietly discarded by
 log_bleach.
 
-Keep running log_bleach and then log_bleach --add-content until log_bleach
+Keep running "log_bleach" and then "log_bleach --add-content" until "log_bleach"
 is quietly discarding all the irrelevant lines from your log; leaving you with
 only the relevant lines to analyze.
 
 # INSTALL
-1. Have Ruby available (even 1.8.7) with YAML (shoudl be built in with any Ruby version).
+1. Have Ruby available (even 1.8.7) with YAML (should be built in with any Ruby version).
 1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 1. Install it:
+
     git clone https://github.com/wwalker/log_bleach.git
     cd log_bleach
     ln -s `pwd`/log_bleach ~/bin/
