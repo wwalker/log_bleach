@@ -1,70 +1,72 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env perl
+# vim: ft=perl
 
 # Copyright 2013 L. Wayne Walker <wwalker@solid-constructs.com,wwalker@bybent.com> All Rights Reserved.
 
-require 'erb'
+our $BASE_DIR = $ENV{'HOME'} . '/.log_bleach/';
 
-BASE_DIR = ENV['HOME'] + '/.log_bleach/'
+our $IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b';
+our $TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d';
+our $THREE_LETTER_WEEKDAY       = '\b(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b';
+our $TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY . '\s+' . TS_SYSLOG;
+our $SYSLOG_PREFIX              = TS_SYSLOG . ' \S+ \S+(?:\[\d+\])?: ';
+our $SYSLOG_PREFIX_WITH_WEEKDAY = TS_SYSLOG_WITH_WEEKDAY . ' \S+ \S+(?:\[\d+\])?: ';
+our $ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d';
+our $ISODATE_WITH_TZ_TLA        = ISODATE . '\s+[A-Z]{3}\b';
+our $ISODATE_WITH_USEC          = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d.\d\d\d\d\d\d';
+our $RN_LOG_PREFIX              = ISODATE_WITH_USEC . '\s+\d+\s+($line|DEBUG|WARNING|NOTICE|INFO|CRITICAL|ERROR)\s+--\s+\d+\s+\| ';
+#HEXNUM                    = '(?:\b|0[xX])[A-Fa-f0-9]*[A-Fa-f][A-Fa-f0-9]*\b';
+our $HEXNUM                     = '(?:\b|0[xX])[A-Fa-f0-9]{2 , }\b';
+our $FLOAT                      = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
+our $INTEGER                    = '[\-+]?\d+';
+our $REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]';
+our $FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?';
+our $RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH . ':\d+:in\s+\S+';
+our $WHITESPACE_REGION          = '\s+';
 
-IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b'
-TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d'
-THREE_LETTER_WEEKDAY       = '\b(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b'
-TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY + '\s+' + TS_SYSLOG
-SYSLOG_PREFIX              = TS_SYSLOG + ' \S+ \S+(?:\[\d+\])?: '
-SYSLOG_PREFIX_WITH_WEEKDAY = TS_SYSLOG_WITH_WEEKDAY + ' \S+ \S+(?:\[\d+\])?: '
-ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d'
-ISODATE_WITH_TZ_TLA        = ISODATE + '\s+[A-Z]{3}\b'
-ISODATE_WITH_USEC          = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d.\d\d\d\d\d\d'
-RN_LOG_PREFIX              = ISODATE_WITH_USEC + '\s+\d+\s+(LINE|DEBUG|WARNING|NOTICE|INFO|CRITICAL|ERROR)\s+--\s+\d+\s+\| '
-#HEXNUM                     = '(?:\b|0[xX])[A-Fa-f0-9]*[A-Fa-f][A-Fa-f0-9]*\b'
-HEXNUM                     = '(?:\b|0[xX])[A-Fa-f0-9]{2,}\b'
-FLOAT                      = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?'
-INTEGER                    = '[\-+]?\d+'
-REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]'
-FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?'
-RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH + ':\d+:in\s+\S+'
-WHITESPACE_REGION          = '\s+'
+our $PATTERN_WORD               = '\S+';
+our $PATTERN_END_MATCHING       = '.*';
 
-PATTERN_WORD               = '\S+'
-PATTERN_END_MATCHING       = '.*'
+$basename = $ARGV[0];
 
-basename = ARGV[0]
+open(my $source, "<", BASE_DIR . 'source/' . $basename);
+open(my $parsed, '>', BASE_DIR . 'parsed/' . $basename . '.parsed');
+open(my $perlre, '>', BASE_DIR . 'perlre/' . $basename . '.perlre');
 
-source = File.open(BASE_DIR + 'source/' + basename)
-parsed = File.open(BASE_DIR + 'parsed/' + basename + '.parsed', 'w')
-perlre = File.open(BASE_DIR + 'perlre/' + basename + '.perlre', 'w')
-
-
-
-source.lines.each do |line|
-  line.chomp!
+foreach my $line (<$source>) {
+  chomp $line;
   # Windows is evil
-  line.gsub!(//,'')
+  $line =~ s///;
 
-  next if line.match(/^\s+$/)
+  next if not $line;
+
   # Find datestamp if any and replace it
-  line.gsub!(/#{RN_LOG_PREFIX}/              , '<%=RN_LOG_PREFIX%>')
-  line.gsub!(/#{ISODATE_WITH_TZ_TLA}/        , '<%=ISODATE_WITH_TZ_TLA%>')
-  line.gsub!(/#{ISODATE_WITH_USEC}/          , '<%=ISODATE_WITH_USEC%>')
-  line.gsub!(/#{ISODATE}/                    , '<%=ISODATE%>')
-  line.gsub!(/#{SYSLOG_PREFIX_WITH_WEEKDAY}/ , '<%=SYSLOG_PREFIX_WITH_WEEKDAY%>')
-  line.gsub!(/#{SYSLOG_PREFIX}/              , '<%=SYSLOG_PREFIX%>')
-  line.gsub!(/#{TS_SYSLOG_WITH_WEEKDAY}/     , '<%=TS_SYSLOG_WITH_WEEKDAY%>')
-  line.gsub!(/#{TS_SYSLOG}/                  , '<%=TS_SYSLOG%>')
-  line.gsub!(/#{THREE_LETTER_WEEKDAY}/       , '<%=THREE_LETTER_WEEKDAY%>')
-  line.gsub!(/#{RUBY_STACK_TRACE_FILE_LINE}/ , '<%=RUBY_STACK_TRACE_FILE_LINE%>')
-  line.gsub!(/#{FULL_FILE_PATH}/             , '<%=FULL_FILE_PATH%>')
-  line.gsub!(/#{IP_ADDRESS}/                 , '<%=IP_ADDRESS%>')
-  line.gsub!(/#{FLOAT}/                      , '<%=FLOAT%>')
-  line.gsub!(/#{HEXNUM}/                     , '<%=HEXNUM%>')
-  line.gsub!(/#{INTEGER}/                    , '<%=INTEGER%>')
-  line.gsub!(/#{WHITESPACE_REGION}/          , '<%=WHITESPACE_REGION%>')
-  line.gsub!(/(#{REGEX_SPECIAL_CHAR})/) { |m| '\\' + m }
-  line.gsub!(/PATTERN_WORD/, '<%=PATTERN_WORD%>')
-  line.gsub!(/PATTERN_END_MATCHING/, '<%=PATTERN_END_MATCHING%>')
-  line = '\\A' + line + '\\s*\\Z'
-  perlre.puts ERB.new(line).result
-  line.gsub!(/<%=/, '<%= ')
-  line.gsub!(/%>/, ' %>')
-  parsed.puts line
-end
+  $line =~ s/${RN_LOG_PREFIX}/<%=RN_LOG_PREFIX%>/;
+  $line =~ s/${ISODATE_WITH_TZ_TLA}/<%=ISODATE_WITH_TZ_TLA%>/;
+  $line =~ s/${ISODATE_WITH_USEC}/<%=ISODATE_WITH_USEC%>/;
+  $line =~ s/${ISODATE}/<%=ISODATE%>/;
+  $line =~ s/${SYSLOG_PREFIX_WITH_WEEKDAY}/<%=SYSLOG_PREFIX_WITH_WEEKDAY%>/;
+  $line =~ s/${SYSLOG_PREFIX}/<%=SYSLOG_PREFIX%>/;
+  $line =~ s/${TS_SYSLOG_WITH_WEEKDAY}/<%=TS_SYSLOG_WITH_WEEKDAY%>/;
+  $line =~ s/${TS_SYSLOG}/<%=TS_SYSLOG%>/;
+  $line =~ s/${THREE_LETTER_WEEKDAY}/<%=THREE_LETTER_WEEKDAY%>/;
+  $line =~ s/${RUBY_STACK_TRACE_FILE_LINE}/<%=RUBY_STACK_TRACE_FILE_LINE%>/;
+  $line =~ s/${FULL_FILE_PATH}/<%=FULL_FILE_PATH%>/;
+  $line =~ s/${IP_ADDRESS}/<%=IP_ADDRESS%>/;
+  $line =~ s/${FLOAT}/<%=FLOAT%>/;
+  $line =~ s/${HEXNUM}/<%=HEXNUM%>/;
+  $line =~ s/${INTEGER}/<%=INTEGER%>/;
+  $line =~ s/${WHITESPACE_REGION}/<%=WHITESPACE_REGION%>/;
+  $line =~ s/(${REGEX_SPECIAL_CHAR})/\\$1/g;
+  $line =~ s/${PATTERN_WORD}/<%=PATTERN_WORD%>/;
+  $line =~ s/${PATTERN_END_MATCHING}/<%=PATTERN_END_MATCHING%>/;
+  $line = '\\A' + $line + '\\s*\\Z/';
+  
+  $line =~ s/<%=([A-Z_]*)%>/${$1}/;
+  print $perlre $line, "\n";
+
+  $line =~ s/<%=/<%= /;
+  $line =~ s/%>/ %>/;
+
+  print $parsed $line, "\n";
+}
