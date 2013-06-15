@@ -41,29 +41,30 @@ foreach my $line (<$source>) {
   next if not $line;
 
   # Find datestamp if any and replace it
-  $line =~ s/${RN_LOG_PREFIX}/<%=RN_LOG_PREFIX%>/;
-  $line =~ s/${ISODATE_WITH_TZ_TLA}/<%=ISODATE_WITH_TZ_TLA%>/;
-  $line =~ s/${ISODATE_WITH_USEC}/<%=ISODATE_WITH_USEC%>/;
-  $line =~ s/${ISODATE}/<%=ISODATE%>/;
-  $line =~ s/${SYSLOG_PREFIX_WITH_WEEKDAY}/<%=SYSLOG_PREFIX_WITH_WEEKDAY%>/;
-  $line =~ s/${SYSLOG_PREFIX}/<%=SYSLOG_PREFIX%>/;
-  $line =~ s/${TS_SYSLOG_WITH_WEEKDAY}/<%=TS_SYSLOG_WITH_WEEKDAY%>/;
-  $line =~ s/${TS_SYSLOG}/<%=TS_SYSLOG%>/;
-  $line =~ s/${THREE_LETTER_WEEKDAY}/<%=THREE_LETTER_WEEKDAY%>/;
-  $line =~ s/${RUBY_STACK_TRACE_FILE_LINE}/<%=RUBY_STACK_TRACE_FILE_LINE%>/;
-  $line =~ s/${FULL_FILE_PATH}/<%=FULL_FILE_PATH%>/;
-  $line =~ s/${IP_ADDRESS}/<%=IP_ADDRESS%>/;
-  $line =~ s/${FLOAT}/<%=FLOAT%>/;
-  $line =~ s/${HEXNUM}/<%=HEXNUM%>/;
-  $line =~ s/${INTEGER}/<%=INTEGER%>/;
-  $line =~ s/${WHITESPACE_REGION}/<%=WHITESPACE_REGION%>/;
+  $line =~ s/${RN_LOG_PREFIX}/<%=RN_LOG_PREFIX%>/g;
+  $line =~ s/${ISODATE_WITH_TZ_TLA}/<%=ISODATE_WITH_TZ_TLA%>/g;
+  $line =~ s/${ISODATE_WITH_USEC}/<%=ISODATE_WITH_USEC%>/g;
+  $line =~ s/${ISODATE}/<%=ISODATE%>/g;
+  $line =~ s/${SYSLOG_PREFIX_WITH_WEEKDAY}/<%=SYSLOG_PREFIX_WITH_WEEKDAY%>/g;
+  $line =~ s/${SYSLOG_PREFIX}/<%=SYSLOG_PREFIX%>/g;
+  $line =~ s/${TS_SYSLOG_WITH_WEEKDAY}/<%=TS_SYSLOG_WITH_WEEKDAY%>/g;
+  $line =~ s/${TS_SYSLOG}/<%=TS_SYSLOG%>/g;
+  $line =~ s/${THREE_LETTER_WEEKDAY}/<%=THREE_LETTER_WEEKDAY%>/g;
+  $line =~ s/${RUBY_STACK_TRACE_FILE_LINE}/<%=RUBY_STACK_TRACE_FILE_LINE%>/g;
+  $line =~ s/${FULL_FILE_PATH}/<%=FULL_FILE_PATH%>/g;
+  $line =~ s/${IP_ADDRESS}/<%=IP_ADDRESS%>/g;
+  $line =~ s/${FLOAT}/<%=FLOAT%>/g;
+  $line =~ s/${HEXNUM}/<%=HEXNUM%>/g;
+  $line =~ s/${INTEGER}/<%=INTEGER%>/g;
+  $line =~ s/${WHITESPACE_REGION}/<%=WHITESPACE_REGION%>/g;
   $line =~ s/(${REGEX_SPECIAL_CHAR})/\\$1/g;
-  $line =~ s/${PATTERN_WORD}/<%=PATTERN_WORD%>/;
-  $line =~ s/${PATTERN_END_MATCHING}/<%=PATTERN_END_MATCHING%>/;
-  $line = '\\A' + $line + '\\s*\\Z/';
+  $line =~ s/PATTERN_WORD/<%=PATTERN_WORD%>/g;
+  $line =~ s/PATTERN_END_MATCHING.*/<%=PATTERN_END_MATCHING%>/;
+  $line = '\\A' . $line . '\\s*\\Z';
   
-  $line =~ s/<%=([A-Z_]*)%>/${$1}/;
-  print $perlre $line, "\n";
+  $regex = $line;
+  $regex =~ s/<%=([A-Z_]*)%>/${$1}/g;
+  print $perlre $regex, "\n";
 
   $line =~ s/<%=/<%= /;
   $line =~ s/%>/ %>/;
