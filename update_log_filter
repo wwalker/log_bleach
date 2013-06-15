@@ -8,20 +8,20 @@ our $BASE_DIR = $ENV{'HOME'} . '/.log_bleach/';
 our $IP_ADDRESS                 = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b';
 our $TS_SYSLOG                  = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0123][0-9] \d\d:\d\d:\d\d';
 our $THREE_LETTER_WEEKDAY       = '\b(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)\b';
-our $TS_SYSLOG_WITH_WEEKDAY     = THREE_LETTER_WEEKDAY . '\s+' . TS_SYSLOG;
-our $SYSLOG_PREFIX              = TS_SYSLOG . ' \S+ \S+(?:\[\d+\])?: ';
-our $SYSLOG_PREFIX_WITH_WEEKDAY = TS_SYSLOG_WITH_WEEKDAY . ' \S+ \S+(?:\[\d+\])?: ';
+our $TS_SYSLOG_WITH_WEEKDAY     = $THREE_LETTER_WEEKDAY . '\s+' . $TS_SYSLOG;
+our $SYSLOG_PREFIX              = $TS_SYSLOG . ' \S+ \S+(?:\[\d+\])?: ';
+our $SYSLOG_PREFIX_WITH_WEEKDAY = $TS_SYSLOG_WITH_WEEKDAY . ' \S+ \S+(?:\[\d+\])?: ';
 our $ISODATE                    = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d';
-our $ISODATE_WITH_TZ_TLA        = ISODATE . '\s+[A-Z]{3}\b';
+our $ISODATE_WITH_TZ_TLA        = $ISODATE . '\s+[A-Z]{3}\b';
 our $ISODATE_WITH_USEC          = '\d\d\d\d-\d\d-\d\d[ T]\d\d:\d\d:\d\d.\d\d\d\d\d\d';
-our $RN_LOG_PREFIX              = ISODATE_WITH_USEC . '\s+\d+\s+($line|DEBUG|WARNING|NOTICE|INFO|CRITICAL|ERROR)\s+--\s+\d+\s+\| ';
+our $RN_LOG_PREFIX              = $ISODATE_WITH_USEC . '\s+\d+\s+($line|DEBUG|WARNING|NOTICE|INFO|CRITICAL|ERROR)\s+--\s+\d+\s+\| ';
 #HEXNUM                    = '(?:\b|0[xX])[A-Fa-f0-9]*[A-Fa-f][A-Fa-f0-9]*\b';
 our $HEXNUM                     = '(?:\b|0[xX])[A-Fa-f0-9]{2 , }\b';
 our $FLOAT                      = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
 our $INTEGER                    = '[\-+]?\d+';
 our $REGEX_SPECIAL_CHAR         = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]';
 our $FULL_FILE_PATH             = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?';
-our $RUBY_STACK_TRACE_FILE_LINE = FULL_FILE_PATH . ':\d+:in\s+\S+';
+our $RUBY_STACK_TRACE_FILE_LINE = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION          = '\s+';
 
 our $PATTERN_WORD               = '\S+';
@@ -29,9 +29,9 @@ our $PATTERN_END_MATCHING       = '.*';
 
 $basename = $ARGV[0];
 
-open(my $source, "<", BASE_DIR . 'source/' . $basename);
-open(my $parsed, '>', BASE_DIR . 'parsed/' . $basename . '.parsed');
-open(my $perlre, '>', BASE_DIR . 'perlre/' . $basename . '.perlre');
+open(my $source, "<", $BASE_DIR . 'source/' . $basename);
+open(my $parsed, '>', $BASE_DIR . 'parsed/' . $basename . '.parsed');
+open(my $perlre, '>', $BASE_DIR . 'perlre/' . $basename . '.perlre');
 
 foreach my $line (<$source>) {
   chomp $line;
