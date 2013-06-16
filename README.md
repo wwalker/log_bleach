@@ -55,7 +55,71 @@ only the relevant lines to analyze.
 
 That's it, it's installed.  (Assumes that ~/bin is in your PATH)
 
-#
+# CAVEATS
+
+So, the example above wouldn't really work as advertised.  Some problems require more complex patterns than just cut and paste.  For these we have a few special patterns (still no regex knowledge required):
+
+* PATTERN_WORD
+* PATTERN_END_MATCHING
+* PATTERN_LITERAL (not yet implemented)
+
+## PATTERN_WORD
+
+PATTERN_WORD will be replaced with a regex that will match any simple word.
+
+Why do we need it?  Consider these:
+
+    Jun 15 19:54:10 ut su: pam_unix(su:session): session opened for user wwalker by (uid=0)
+    Jun 15 19:55:02 ut su: pam_unix(su:session): session opened for user postgres by (uid=0)
+    Jun 15 19:59:10 ut su: pam_unix(su:session): session opened for user root by (uid=0)
+
+Rather than cut and paste multiple times, you can just cut and paste one line:
+
+    Jun 15 19:54:10 ut su: pam_unix(su:session): session opened for user PATTERN_WORD by (uid=0)
+
+
+You could also catch open and close messages with one line; however, in most cases I would have separate lines:
+
+    Jun 15 19:54:10 ut su: pam_unix(su:session): session PATTERN_WORD for user PATTERN_WORD by (uid=0)
+
+## PATTERN_END_MATCHING
+
+PATTERN_END_MATCHING means that nothing from this point in the line to the end should be checked for matching.
+
+Why?  Considering the following actual log lines.  Without some special logic, log_bleach can't figure out that the ===s series should be allowed to be an arbitrary number of characters.
+
+    ==  MigrateLogArchiveToDataPartition: migrated (1.1704s) ======================
+    ==  MigrateLogArchiveToDataPartition: migrating ===============================
+    ==  RemoveFiberConfig: migrated (0.0000s) =====================================
+    ==  RemoveFiberConfig: migrating ==============================================
+    ==  RemoveKernelRPM: migrated (0.0805s) =======================================
+    ==  RemoveKernelRPM: migrated (3.6702s) =======================================
+    ==  RemoveKernelRPM: migrating ================================================
+
+You could use the following:
+
+    ==  PATTERN_WORD: migrating =PATTERN_END_MATCHING
+    ==  PATTERN_WORD: migrated (0.1034s) =PATTERN_END_MATCHING
+
+## PATTERN_LITERAL
+
+PATTERN_LITERAL is formatted like an HTML/XML tag.  It will prevent the text it surrounds from being replaced with a pattern match, instead requiring that the exact text occur in a line in order to match and be ignored.
+
+Why?  Consider the following actual log lines; we can ignore every time we are monitoring 0 jobs, but we can't ignore when there are jobs to monitor:
+
+    May 02 13:47:50 EDT archive_verify[2146]:(INFO) Monitoring 0 verify jobs
+    May 02 13:48:00 EDT archive_verify[2146]:(INFO) Monitoring 0 verify jobs
+    May 02 13:48:10 EDT archive_verify[2146]:(INFO) Monitoring 0 verify jobs
+    May 02 13:48:20 EDT archive_verify[2146]:(INFO) Monitoring 0 verify jobs
+    May 02 13:48:30 EDT archive_verify[2146]:(INFO) Monitoring 0 verify jobs
+    May 02 13:48:41 EDT archive_verify[2146]:(INFO) Monitoring 7 verify jobs
+
+You could use the following:
+
+    May 02 13:47:50 EDT archive_verify[2146]:(INFO) <PATTERN_LITERAL>Monitoring 0<PATTERN_LITERAL/> verify jobs
+
+# USAGE
+
   Get the usage info:
 
     log_bleach --help
