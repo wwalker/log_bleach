@@ -66,8 +66,8 @@ foreach my $line (<$source>) {
   $regex =~ s/<%=([A-Z_]*)%>/${$1}/g;
   print $perlre $regex, "\n";
 
-  $line =~ s/<%=/<%= /;
-  $line =~ s/%>/ %>/;
+  $line =~ s/<%=/<%= /g;
+  $line =~ s/%>/ %>/g;
 
   print $parsed $line, "\n";
 }
