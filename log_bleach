@@ -277,7 +277,7 @@ my $debug = 0;
 
         foreach my $parsed_file (@parsed_files) {
             print "$parsed_file:\n";
-            print `cat $parsed_file`;
+            print `cat $parsed_file | sed -e 's/<%= WHITESPACE_REGION %>/ /g'`;
         }
     }
 
