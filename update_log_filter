@@ -40,6 +40,11 @@ foreach my $line (<$source>) {
 
   next if not $line;
 
+  my @literals;
+  while ($line =~ s#<PATTERN_LITERAL>([^<]*)<PATTERN_LITERAL/>#PATTERN_LITERAL_PLACEHOLDER#)
+  {
+    push(@literals, $1);
+  }
   # Find datestamp if any and replace it
   $line =~ s/${RN_LOG_PREFIX}/<%=RN_LOG_PREFIX%>/g;
   $line =~ s/${ISODATE_WITH_TZ_TLA}/<%=ISODATE_WITH_TZ_TLA%>/g;
@@ -57,11 +62,17 @@ foreach my $line (<$source>) {
   $line =~ s/${HEXNUM}/<%=HEXNUM%>/g;
   $line =~ s/${INTEGER}/<%=INTEGER%>/g;
   $line =~ s/${WHITESPACE_REGION}/<%=WHITESPACE_REGION%>/g;
+
+  foreach my $literal (@literals)
+  {
+    $line =~ s/PATTERN_LITERAL_PLACEHOLDER/$literal/;
+  }
+
   $line =~ s/(${REGEX_SPECIAL_CHAR})/\\$1/g;
   $line =~ s/PATTERN_WORD/<%=PATTERN_WORD%>/g;
   $line =~ s/PATTERN_END_MATCHING.*/<%=PATTERN_END_MATCHING%>/;
   $line = '\\A' . $line . '\\s*\\Z';
-  
+
   $regex = $line;
   $regex =~ s/<%=([A-Z_]*)%>/${$1}/g;
   print $perlre $regex, "\n";
