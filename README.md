@@ -44,14 +44,17 @@ is quietly discarding all the irrelevant lines from your log; leaving you with
 only the relevant lines to analyze.
 
 # INSTALL
+
 1. Have Ruby available (even 1.8.7) with YAML (should be built in with any Ruby version).
 1. Have perl 5.x available, install perl's YAML library (yum install perl-YAML).
 1. Install it:
 
-        git clone https://github.com/wwalker/log_bleach.git
-        cd log_bleach
-        ln -s `pwd`/log_bleach ~/bin/
-        ln -s `pwd`/update_log_filter ~/bin/
+    ```
+    git clone https://github.com/wwalker/log_bleach.git
+    cd log_bleach
+    ln -s `pwd`/log_bleach ~/bin/
+    ln -s `pwd`/update_log_filter ~/bin/
+    ```
 
 That's it, it's installed.  (Assumes that ~/bin is in your PATH)
 
