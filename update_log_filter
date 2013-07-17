@@ -27,8 +27,9 @@ our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?';
 our $RUBY_STACK_TRACE_FILE_LINE           = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION                    = '\s+';
 
-our $PATTERN_WORD               = '\S+';
-our $PATTERN_END_MATCHING       = '.*';
+our $PATTERN_WORD         = '\S+';
+our $PATTERN_END_MATCHING = '.*';
+our $PATTERN_MATCH_ALL    = '.*';
 
 $basename = $ARGV[0];
 
@@ -78,6 +79,7 @@ foreach my $line (<$source>) {
   $line =~ s/(${REGEX_SPECIAL_CHAR})/\\$1/g;
   $line =~ s/PATTERN_WORD/<%=PATTERN_WORD%>/g;
   $line =~ s/PATTERN_END_MATCHING.*/<%=PATTERN_END_MATCHING%>/;
+  $line =~ s/PATTERN_MATCH_ALL/<%=PATTERN_MATCH_ALL%>/;
   $line = '\\A' . $line . '\\s*\\Z';
 
   $regex = $line;
