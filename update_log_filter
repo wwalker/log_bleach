@@ -23,7 +23,7 @@ our $HEXNUM                               = '(?:\b|0[xX])[A-Fa-f0-9]{2,}\b';
 our $FLOAT                                = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
 our $INTEGER                              = '[\-+]?\d+';
 our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]';
-our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,]+){2,}\/?';
+our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,:]+){2,}\/?';
 our $RUBY_STACK_TRACE_FILE_LINE           = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION                    = '\s+';
 
