@@ -80,6 +80,7 @@ foreach my $line (<$source>) {
   $line =~ s/PATTERN_WORD/<%=PATTERN_WORD%>/g;
   $line =~ s/PATTERN_END_MATCHING.*/<%=PATTERN_END_MATCHING%>/;
   $line =~ s/PATTERN_MATCH_ALL/<%=PATTERN_MATCH_ALL%>/;
+  $line =~ s/PATTERN_FILE_PATH/<%=FULL_FILE_PATH%>/;
   $line = '\\A' . $line . '\\s*\\Z';
 
   $regex = $line;
