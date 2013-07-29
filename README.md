@@ -64,6 +64,9 @@ So, the example above wouldn't really work as advertised.  Some problems require
 
 * PATTERN_WORD
 * PATTERN_END_MATCHING
+* PATTERN_MATCH_ALL
+* PATTERN_FILE_PATH
+* PATTERN_EMAIL
 * PATTERN_LITERAL (not yet implemented)
 
 ## PATTERN_WORD

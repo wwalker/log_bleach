@@ -24,6 +24,7 @@ our $FLOAT                                = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
 our $INTEGER                              = '[\-+]?\d+';
 our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]';
 our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,:]+){2,}\/?';
+our $BASIC_EMAIL                          = '\w+([-+.'']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*';
 our $RUBY_STACK_TRACE_FILE_LINE           = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION                    = '\s+';
 
@@ -81,6 +82,7 @@ foreach my $line (<$source>) {
   $line =~ s/PATTERN_END_MATCHING.*/<%=PATTERN_END_MATCHING%>/;
   $line =~ s/PATTERN_MATCH_ALL/<%=PATTERN_MATCH_ALL%>/g;
   $line =~ s/PATTERN_FILE_PATH/<%=FULL_FILE_PATH%>/g;
+  $line =~ s/PATTERN_EMAIL/<%=BASIC_EMAIL%>/g;
   $line = '\\A' . $line . '\\s*\\Z';
 
   $regex = $line;
