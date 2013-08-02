@@ -38,7 +38,7 @@ my $debug = 0;
             "show-patterns|show_patterns|sp",
             "show-filters|show_filters|sf",
             "show-source|show_source|ss",
-            "show-parsed|show_parsed",
+            "show-human-readable|show-human|sh",
             "show-regex|sr",
             "vim",
             "opts-dump"
@@ -83,7 +83,7 @@ my $debug = 0;
         print "\n";
         print "  log_bleach [--type=<filetype>] <filename>\n";
         print "\n";
-        print "  log_bleach --show-parsed --type=<filetype>|<filename>\n";
+        print "  log_bleach --show-human-readable --type=<filetype>|<filename>\n";
         print "\n";
         print "  log_bleach --show-perlre --type=<filetype>|<filename>\n";
         print "\n";
@@ -112,7 +112,7 @@ my $debug = 0;
         map { $self->{'basedir'} . 'perlre/' . $_  . '.perlre'; } @_;
     }
 
-    sub filter_name_to_parsed_file_name {
+    sub filter_name_to_human_readable_file_name {
         my $self = shift;
         map { $self->{'basedir'} . 'parsed/' . $_ . '.parsed' ; } @_;
     }
@@ -158,7 +158,7 @@ my $debug = 0;
         print "Paste or type in your source lines that should be ignored, then Control D on a blank line\n";
         `cat >> $source_file_name`;
 
-        # Now update the parsed and regex files
+        # Now update the human_readable and regex files
         my $source_file_basename = basename($source_file_name);
         print "update_log_filter $source_file_basename\n";
         print `update_log_filter $source_file_basename 2>&1`;
@@ -271,13 +271,13 @@ my $debug = 0;
         }
     }
 
-    sub show_parsed {
+    sub show_human_readable {
         my $self = shift;
-        my @parsed_files = $self->parsed_file_names();
+        my @human_readable_files = $self->human_readable_file_names();
 
-        foreach my $parsed_file (@parsed_files) {
-            print "$parsed_file:\n";
-            print `cat $parsed_file | sed -e 's/<%= WHITESPACE_REGION %>/ /g'`;
+        foreach my $human_readable_file (@human_readable_files) {
+            print "$human_readable_file:\n";
+            print `cat $human_readable_file | sed -e 's/<%= WHITESPACE_REGION %>/ /g'`;
         }
     }
 
@@ -345,9 +345,9 @@ my $debug = 0;
         $self->filter_name_to_source_file_name($self->get_filter_names());
     }
 
-    sub parsed_file_names {
+    sub human_readable_file_names {
         my $self     = shift;
-        $self->filter_name_to_parsed_file_name($self->get_filter_names());
+        $self->filter_name_to_human_readable_file_name($self->get_filter_names());
     }
 
     sub regex_file_names {
@@ -375,8 +375,8 @@ my $debug = 0;
           if ( $opts->{'show-filters'} );
         exit $self->show_types( $opts->{'show-types'} )
           if ( $opts->{'show-types'} );
-        exit $self->show_parsed( $opts->{'show-parsed'} )
-          if ( $opts->{'show-parsed'} );
+        exit $self->show_human_readable( $opts->{'show-human-readable'} )
+          if ( $opts->{'show-human-readable'} );
         exit $self->show_regex( $opts->{'show-regex'} )
           if ( $opts->{'show-regex'} );
 
