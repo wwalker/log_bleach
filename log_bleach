@@ -417,6 +417,10 @@ my $debug = 0;
 
         print Dumper \@regexes if $debug;
 
+        if ((! defined $self->{'input_file_name'}) || ($self->{'input_file_name'} eq '')) {
+            $self->exit_on_usage( "a file name Must be passed (use - if you are piping in)");
+        }
+
         if ($self->{'input_file_name'} eq '-') {
             *INPUT_FILE = *STDIN;
         }
