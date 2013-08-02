@@ -22,9 +22,12 @@ our $RN_LOG_PREFIX                        = $ISODATE_WITH_USEC . '\s+\d+\s+($lin
 our $HEXNUM                               = '(?:\b|0[xX])[A-Fa-f0-9]{2,}\b';
 our $FLOAT                                = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
 our $INTEGER                              = '[\-+]?\d+';
-our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`]';
+our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`\/\.]';
 our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,:]+){2,}\/?';
 our $BASIC_EMAIL                          = '\w+([-+.\']\w+)*\@\w+([-.]\w+)*\.\w+([-.]\w+)*';
+our $BASIC_HOSTNAME                       = '\b(?:[\w-]+\.)+[\w-]+\b\.?';
+our $BASIC_TUPLE_LIST                     = '\b(?:\w+=\S+\b,?\s*)+\b';
+
 our $RUBY_STACK_TRACE_FILE_LINE           = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION                    = '\s+';
 
@@ -83,6 +86,8 @@ foreach my $line (<$source>) {
   $line =~ s/PATTERN_MATCH_ALL/<%=PATTERN_MATCH_ALL%>/g;
   $line =~ s/PATTERN_FILE_PATH/<%=FULL_FILE_PATH%>/g;
   $line =~ s/PATTERN_EMAIL/<%=BASIC_EMAIL%>/g;
+  $line =~ s/PATTERN_HOSTNAME/<%=BASIC_HOSTNAME%>/g;
+  $line =~ s/PATTERN_TUPLE_LIST/<%=BASIC_TUPLE_LIST%>/g;
   $line = '\\A' . $line . '\\s*\\Z';
 
   $regex = $line;
