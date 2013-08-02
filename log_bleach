@@ -126,7 +126,7 @@ my $debug = 0;
         if ($opts_filter) {
             return $opts_filter if grep( /^$opts_filter$/, @filter_names);
             $self->exit_on_usage(
-                "--filter was used, but the filter doesn't exist in the config"
+                "--filter was used, but the filter doesn't exist in the config: " . join(", ", @filter_names)
             );
         }
 
@@ -136,8 +136,7 @@ my $debug = 0;
         }
 
         if ( $#filter_names > 0 ) {
-            $self->exit_on_usage( "--filter was not used, and the config has more than one filter for this type <$file_type>"
-            );
+            $self->exit_on_usage( "--filter was not used, and the config has more than one filter for this type <$file_type>: " . join(", ", @filter_names));
         }
 
         return $filter_names[0];
