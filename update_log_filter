@@ -5,6 +5,10 @@
 
 our $BASE_DIR = $ENV{'HOME'} . '/.log_bleach/';
 
+if ( ! -d $BASE_DIR) {
+  print `log_bleach --init`;
+}
+
 our $IP_ADDRESS                           = '\b(?:[012]?\d?\d\.){3}[012]?\d?\d\b';
 our $TS_SYSLOG                            = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) *[ 0123][0-9] \d\d:\d\d:\d\d';
 our $TS_SYSLOG_WITH_TIMEZONE              = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) *[ 0123][0-9] \d\d:\d\d:\d\d\s+[A-Z]{3,4}\b';

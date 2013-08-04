@@ -60,6 +60,9 @@ my $debug = 0;
         }
 
         $self->{'basedir'} = $ENV{'HOME'} . '/.log_bleach/';
+        if (! -d $self->{'basedir'}) {
+          $self->init();
+        }
         $self->{'file_config_yaml_name'} =
           $self->{'basedir'} . 'file_config.yaml';
 
@@ -69,8 +72,7 @@ my $debug = 0;
         open my $file_config_yaml, $self->{'file_config_yaml_name'} || die $!;
         $self->{'file_config'} = YAML::LoadFile($file_config_yaml);
 
-        $self->{'input_file_name'} = shift @ARGV;
-
+        $self->{'input_file_name'} = shift @ARGV; 
         return $self;
     }
 
