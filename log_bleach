@@ -133,8 +133,10 @@ my $debug = 0;
         }
 
         if ( $#filter_names == -1 ) {
-            $self->exit_on_usage( "There are no filters defined for this type <$file_type>"
-            );
+            print STDERR "There are no filters defined for this type <$file_type>\n";
+            print STDERR "Automatcially creating the filter <${file_type}-basic>\n";
+            $self->{'opts'}->{'add-filter'} = "${file_type}-basic";
+            $self->add_filter();
         }
 
         if ( $#filter_names > 0 ) {

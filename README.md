@@ -14,9 +14,14 @@ irrelevant.
 
 ### Create a new log file type in log_bleach
 
+    # Add the new type
     log_bleach --add-type=secure
+    # Add a regex to match filenames for this file type
     log_bleach --add-pattern='secure' --type=secure
     log_bleach --add-pattern='secure-.*' --type=secure    # logrotated files
+    # Add a filter name under which to store the match template lines (optional
+    # as <type-name>-basic will be created if no filter name exists when
+    # first needed)
     log_bleach --add-filter=secure-basic --type=secure
 
 ### Teach log_bleach about your new file type:
