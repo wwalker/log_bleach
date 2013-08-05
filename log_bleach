@@ -59,7 +59,7 @@ my $debug = 0;
             exit $self->init();
         }
 
-        $self->{'basedir'} = $ENV{'HOME'} . '/.log_bleach/';
+        $self->{'basedir'} = ($ENV{'LOG_BLEACH_TEST_HOME'} || $ENV{'HOME'}) . '/.log_bleach/';
         if (! -d $self->{'basedir'}) {
           $self->init();
         }

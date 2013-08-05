@@ -3,7 +3,7 @@
 
 # Copyright 2013 L. Wayne Walker <wwalker@solid-constructs.com,wwalker@bybent.com> All Rights Reserved.
 
-our $BASE_DIR = $ENV{'HOME'} . '/.log_bleach/';
+our $BASE_DIR = ($ENV{'LOG_BLEACH_TEST_HOME'} || $ENV{'HOME'}) . '/.log_bleach/';
 
 if ( ! -d $BASE_DIR) {
   print `log_bleach --init`;
