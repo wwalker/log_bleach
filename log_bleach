@@ -40,7 +40,7 @@ my $debug = 0;
             "show-source|show_source|ss",
             "show-human-readable|show-human|sh",
             "show-regex|sr",
-            "vim",
+            "edit|e",
             "opts-dump"
         );
 
@@ -85,14 +85,17 @@ my $debug = 0;
         print "\n";
         print "  log_bleach [--type=<filetype>] <filename>\n";
         print "\n";
+        print "  log_bleach --show-source --type=<filetype>|<filename>\n";
+        print "\n";
         print "  log_bleach --show-human-readable --type=<filetype>|<filename>\n";
         print "\n";
         print "  log_bleach --show-perlre --type=<filetype>|<filename>\n";
         print "\n";
+        print "  log_bleach --add-type=<filetype>\n";
+        print "\n";
         print "  log_bleach --add-filter --type=<filetype>|<filename>\n";
         print "\n";
-        print
-"  log_bleach --add-content [--filter=<filter_filename>] --type=<filetype>|<filename>\n";
+        print "  log_bleach --add-content [--filter=<filter_filename>] [--edit] --type=<filetype>|<filename>\n";
     }
 
     sub exit_on_usage {
@@ -156,10 +159,18 @@ my $debug = 0;
         my $self = shift;
         my $source_file_name = $self->get_filter_source_file_name();
 
-        print "$source_file_name\n";
-        # If we got here, everything is good, however the file may not exist yet.
-        print "Paste or type in your source lines that should be ignored, then Control D on a blank line\n";
-        `cat >> $source_file_name`;
+        if ($self->{'opts'}->{'edit'}) {
+          shift @ARGV;
+          my $tty = `tty`;
+          chomp($tty);
+          my $editor = $ENV{'VISUAL'} || $ENV{'EDITOR'} || 'vim';
+          `$editor $source_file_name < $tty > $tty 2> $tty`;
+        } else {
+          print "$source_file_name\n";
+          # If we got here, everything is good, however the file may not exist yet.
+          print "Paste or type in your source lines that should be ignored, then Control D on a blank line\n";
+          `cat >> $source_file_name`;
+        }
 
         # Now update the human_readable and regex files
         my $source_file_basename = basename($source_file_name);

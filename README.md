@@ -177,6 +177,9 @@ You could use the following:
     Jun  2 03:44:12 ut saslauthd[8507]: pam_unix(smtp:auth): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=•
     Jun  2 03:44:12 ut saslauthd[8507]: pam_succeed_if(smtp:auth): error retrieving information about user PATTERN_WORD
 
+    # Or open the filter in $VISUAL || $EDITOR || vim
+    log_bleach --add-content --filter=secure_log_irrelevant --type=secure --edit
+    
 
   You see that some of the words (usernames here) had to be manually replaced with PATTERN_WORD.  That is as hard as it gets.
 
