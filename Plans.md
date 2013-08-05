@@ -1,10 +1,7 @@
 log_bleach - make the cruft disappear from your log files
 
 * auto_tune (put regexes that match the most often earliest in the pattern list)
-* editor
 * multiple files at once support (can easily use xargs in the mean time)
-* currently require ruby, and perl+YAML; should require only one language.
-+ that language will be perl as it's ubiquitous
 
 log_bleach log_file_name
 
