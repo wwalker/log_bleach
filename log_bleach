@@ -458,6 +458,9 @@ my $debug = 0;
             # Windows is evil
             s///g;
 
+            # Non printable characters are hard to cut and paste
+            s/[^[:print:]]\s//g;
+
             # Rails color logs are evil, but not as bad as windows ^M
             # So we strip ansi codes (color):
             s/\e\[?.*?[\@-~]//g;
