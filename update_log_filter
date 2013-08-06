@@ -30,7 +30,7 @@ our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`\/\.
 our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,:]+){2,}\/?';
 our $BASIC_EMAIL                          = '\w+([-+.\']\w+)*\@\w+([-.]\w+)*\.\w+([-.]\w+)*';
 our $BASIC_HOSTNAME                       = '\b(?:[\w-]+\.)+[\w-]+\b\.?';
-our $BASIC_TUPLE_LIST                     = '\b(?:\w+=(?:\S*|"[^"]*")\b,?\s*)+\b';
+our $BASIC_TUPLE_LIST                     = '\b(?:\w+=(?:\S*|"[^"]*"\b),?\s*)+\b';
 
 our $RUBY_STACK_TRACE_FILE_LINE           = $FULL_FILE_PATH . ':\d+:in\s+\S+';
 our $WHITESPACE_REGION                    = '\s+';
