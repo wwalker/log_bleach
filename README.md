@@ -260,3 +260,5 @@ You could use the following:
 
 
   Everything else it knows, you teach it, quickly and simply.
+
+  partially inspired by "petit"
