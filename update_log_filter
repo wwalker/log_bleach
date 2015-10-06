@@ -28,7 +28,7 @@ our $FLOAT                                = '[\-+]?\d+\.\d+(?:[eE][\-+]?\d+)?';
 our $INTEGER                              = '[\-+]?\d+';
 our $REGEX_SPECIAL_CHAR                   = '[\|\+\{\}\(\)\[\]\$\^\?\\\\\*\`\/\.]';
 our $FULL_FILE_PATH                       = '(?:\/[\-A-Za-z0-9_.,:]+){2,}\/?';
-our $BASIC_EMAIL                          = '\w+([-+.\']\w+)*\@\w+([-.]\w+)*\.\w+([-.]\w+)*';
+our $BASIC_EMAIL                          = '\w+([-=+.\']\w+)*\@\w+([-.]\w+)*\.\w+([-.]\w+)*';
 our $BASIC_HOSTNAME                       = '\b(?:[\w-]+\.)+[\w-]+\b\.?';
 our $BASIC_TUPLE_LIST                     = '\b(?:\w+=(?:\S*|"[^"]*"\b),?\s*)+';
 
